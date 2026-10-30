@@ -1,0 +1,17 @@
+# benchmark: void (empty shelf space) detectors, YOLOv8s vs RF-DETR Small.
+# Python 3.12. Torch is built for CUDA 12.8; install a matching build for other CUDA versions.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+ultralytics==8.4.178             # YOLOv8
+rfdetr==1.11.2                   # RF-DETR
+supervision==0.31.0
+pytorch-lightning==2.6.6
+torchmetrics==1.8.2
+torch-hungarian==0.1.0rc0
+pycocotools==2.0.11
+numpy==2.5.2
+opencv-python-headless==5.0.0.93
+pillow==12.3.0
+PyYAML==6.0.3
+scipy==1.18.1

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Room Scan Viewer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='none' stroke='%234c9aff' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/static/vendor/three/build/three.module.js",
+      "three/addons/": "/static/vendor/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <!-- ===================== LEFT: scans + upload ===================== -->
+    <aside id="scans-panel">
+      <section id="scans-head">
+        <div class="row head-row">
+          <h2>Scans</h2>
+          <span class="spacer"></span>
+          <button id="add-scan-btn" type="button" class="primary" title="Upload a .usdz scan, or a store video (.mov/.mp4) to convert into a shelf scan. You can also drop either anywhere on the page.">Add scan</button>
+          <input id="file-input" type="file" accept=".usdz,.mov,.mp4,.m4v,video/quicktime,video/mp4" class="hidden">
+        </div>
+        <details id="upload-opts">
+          <summary>Upload settings</summary>
+          <label for="upload-prompts" class="field-label">Prompts <span class="muted">(comma or one per line)</span></label>
+          <textarea id="upload-prompts" rows="4" spellcheck="false"></textarea>
+          <div class="row">
+            <label class="check"><input type="checkbox" id="auto-run" checked> Auto-run after upload</label>
+            <span class="spacer"></span>
+            <button id="upload-prompts-reset" type="button" class="small-btn" title="Restore the default prompts">Defaults</button>
+          </div>
+        </details>
+        <div id="upload-status" class="hidden">
+          <div class="row job-head">
+            <span id="upload-name" class="ellipsis small"></span>
+            <span id="upload-pct" class="muted small mono">0%</span>
+          </div>
+          <div class="progress"><div id="upload-bar" class="bar"></div></div>
+          <div id="upload-msg" class="muted small"></div>
+        </div>
+      </section>
+      <div id="scan-list"></div>
+    </aside>
+
+    <!-- ===================== CENTER: 3D view ===================== -->
+    <main id="viewport">
+      <div id="canvas-host"></div>
+
+      <div id="topbar">
+        <span id="scene-title">No scan selected</span>
+        <span id="dirty-indicator" class="hidden" title="You have review changes that have not been sent yet">&#9679; Unsaved changes</span>
+        <span class="spacer"></span>
+        <label class="switch" title="Show the floating class labels">
+          <input type="checkbox" id="show-labels" checked>
+          <span>Show labels</span>
+        </label>
+        <button id="video-btn" type="button" title="Show the capture video this scan was made from" disabled>Video</button>
+        <button id="reset-view" type="button">Reset view</button>
+      </div>
+
+      <!-- source video: the capture footage the 3D model was made from -->
+      <section id="video-panel" class="hidden" aria-label="Source video">
+        <div class="vp-head">
+          <span class="vp-title">Source video</span>
+          <span class="spacer"></span>
+          <button id="video-replace" type="button" class="small-btn hidden" title="Attach a different video to this scan">Replace</button>
+          <button id="video-close" type="button" class="small-btn" title="Hide the video">&#10005;</button>
+        </div>
+        <video id="video-el" class="hidden" controls playsinline preload="metadata"></video>
+        <div id="video-caption" class="vp-caption hidden">
+          <span id="video-name" class="ellipsis small"></span>
+          <span class="spacer"></span>
+          <button id="label-open" type="button" class="small-btn hidden" title="Label empty shelf slots on the keyframe nearest to the current video time">Label</button>
+          <button id="video-remove" type="button" class="link-btn" title="Remove the video from this scan (the scan itself is kept)">Remove</button>
+        </div>
+        <div id="video-empty" class="vp-empty hidden">
+          <div id="video-empty-title">No source video for this scan.</div>
+          <div id="video-empty-hint" class="muted small">Attach the capture video (.mp4 or .webm) that the 3D model was made from.</div>
+          <button id="video-attach" type="button" class="primary">Attach video</button>
+        </div>
+        <div id="video-upload" class="vp-upload hidden">
+          <div class="progress"><div id="video-bar" class="bar"></div></div>
+          <div id="video-msg" class="muted small"></div>
+        </div>
+        <input id="video-input" type="file" accept=".mp4,.m4v,.webm,video/mp4,video/webm" class="hidden">
+      </section>
+
+      <div id="loading" class="overlay hidden">
+        <div class="spinner"></div>
+        <div id="loading-text">Loading model…</div>
+      </div>
+      <div id="model-error" class="banner hidden"></div>
+
+      <div id="empty-state" class="overlay hidden">
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0">
+          <div class="drop-icon">&#8679;</div>
+          <div class="empty-title">Add a .usdz scan or a store video to start</div>
+          <div class="muted">Drop a file here, or click to choose one. Videos (.mov/.mp4) become shelf scans.</div>
+        </div>
+      </div>
+
+      <div id="hint">Left-drag: orbit · Right-drag: pan · Wheel: zoom · Click a box to select</div>
+      <div id="toasts"></div>
+    </main>
+
+    <!-- ===================== RIGHT: per-scan panels ===================== -->
+    <aside id="sidebar">
+      <div id="no-scan" class="muted small pad">Select a scan on the left, or add one.</div>
+
+      <div id="scan-panels" class="hidden">
+        <!-- ORIENTATION -->
+        <section id="orient-section">
+          <h2>Orientation</h2>
+          <div id="orient-text">–</div>
+          <div class="row orient-row">
+            <span id="orient-detail" class="muted small"></span>
+            <button id="flip-btn" type="button" title="Rotate the scan 180° about X and rebuild the model">Flip upside down</button>
+          </div>
+          <div id="stale-warn" class="warn-box hidden">
+            <div>The results were computed before the orientation changed and are now stale.</div>
+            <div class="row"><span class="spacer"></span><button id="stale-rerun" type="button" class="primary">Re-run</button></div>
+          </div>
+        </section>
+
+        <!-- SCALE (shelf scans only) -->
+        <section id="scale-section" class="hidden">
+          <h2>Scale</h2>
+          <div id="scale-text">–</div>
+          <div id="scale-detail" class="muted small"></div>
+          <div class="row">
+            <button id="measure-btn" type="button" title="Click two points on the model to measure their distance; type the real distance to calibrate the whole scan">Measure…</button>
+            <span class="spacer"></span>
+            <button id="scale-reset" type="button" class="small-btn" title="Go back to the provisional scale (assumed shelf height)">Reset scale</button>
+          </div>
+          <div id="measure-panel" class="measure-panel hidden">
+            <div id="measure-hint" class="small">Click the first point on the model.</div>
+            <div id="measure-dist" class="mono"></div>
+            <div id="measure-cal" class="hidden">
+              <label class="field-label" for="measure-cm">Real distance between the two points (cm)</label>
+              <div class="row tight">
+                <input id="measure-cm" type="number" min="0.5" max="100000" step="0.1" placeholder="e.g. 120">
+                <button id="measure-apply" type="button" class="primary">Calibrate</button>
+              </div>
+            </div>
+            <div class="row"><span class="muted small">Esc or Cancel to stop measuring.</span><span class="spacer"></span><button id="measure-cancel" type="button" class="small-btn">Cancel</button></div>
+          </div>
+        </section>
+
+        <!-- EMPTY-SLOT LABELS (shelf scans: ground truth) -->
+        <section id="labels-section" class="hidden">
+          <div class="row tight">
+            <h2>Empty-slot labels</h2>
+            <span id="labels-count" class="muted small"></span>
+            <span class="spacer"></span>
+            <button id="labels-open" type="button" class="small-btn" title="Open the labelling window">Label…</button>
+          </div>
+          <div class="muted small">Your marks of real empty slots, drawn on video keyframes. Gap detection is scored against them.</div>
+          <div id="labels-list"></div>
+        </section>
+
+        <!-- GAP DETECTION (shelf scans) -->
+        <section id="gaps-section" class="hidden">
+          <div class="row tight">
+            <h2>Gap detection</h2>
+            <span class="spacer"></span>
+            <button id="gaps-run" type="button" class="primary small-btn" title="Run both gap-detection baselines on this scan's keyframes (a few minutes)">Detect gaps</button>
+          </div>
+          <div id="gaps-info" class="muted small"></div>
+          <div id="gaps-methods"></div>
+        </section>
+
+        <!-- RUN -->
+        <section id="run-section">
+          <h2 id="run-title">Pipeline run</h2>
+          <div class="row job-head tight">
+            <span id="job-state" class="badge">–</span>
+            <span id="job-stage" class="muted small"></span>
+            <span class="spacer"></span>
+            <span id="job-queue" class="muted small"></span>
+            <span id="job-pct" class="muted small mono"></span>
+          </div>
+          <div class="progress"><div id="job-bar" class="bar"></div></div>
+          <div id="job-message" class="muted small"></div>
+          <details id="job-log-wrap">
+            <summary>Log</summary>
+            <pre id="job-log">(no output yet)</pre>
+          </details>
+          <div id="convert-row" class="row hidden">
+            <span class="muted small">Video &rarr; 3D conversion (frames, camera solve, depth, mesh, texture).</span>
+            <span class="spacer"></span>
+            <button id="convert-btn" type="button" class="primary" title="Run the video to 3D conversion again">Retry conversion</button>
+          </div>
+          <details id="rerun-wrap">
+            <summary>Prompts / re-run</summary>
+            <textarea id="prompts" rows="4" spellcheck="false"></textarea>
+            <div class="row">
+              <button id="prompts-reset" type="button" class="small-btn" title="Restore the default prompts">Defaults</button>
+              <span class="spacer"></span>
+              <button id="run-btn" type="button" class="primary">Re-run</button>
+            </div>
+          </details>
+        </section>
+
+        <!-- OBJECTS / REVIEW -->
+        <section id="objects-section">
+          <div class="row tight">
+            <h2>Objects</h2>
+            <span id="obj-count" class="muted small"></span>
+          </div>
+          <div id="review-head" class="review-head raw">Raw result (unreviewed)</div>
+          <div class="row threshold-row">
+            <label for="threshold" class="field-label inline">Min confidence</label>
+            <input id="threshold" type="range" min="0" max="1" step="0.01" value="0">
+            <span id="threshold-val" class="mono">0.00</span>
+          </div>
+          <div id="object-list"></div>
+          <div class="row send-row">
+            <button id="view-json" type="button" class="small-btn" disabled>View JSON</button>
+            <span class="spacer"></span>
+            <button id="send-btn" type="button" class="primary" disabled>Send to backend</button>
+          </div>
+          <div class="row json-row">
+            <button id="dl-raw" type="button" class="link-btn" disabled>Download raw JSON</button>
+            <button id="dl-reviewed" type="button" class="link-btn" disabled>Download reviewed JSON</button>
+          </div>
+        </section>
+
+        <!-- SELECTED -->
+        <section id="selected-section">
+          <h2>Selected</h2>
+          <div id="selected-empty" class="muted small">Click a box or a list item.</div>
+          <div id="selected-details" class="hidden">
+            <div class="sel-head">
+              <span id="sel-swatch" class="swatch"></span>
+              <span id="sel-class" class="sel-class"></span>
+              <span id="sel-id" class="muted small"></span>
+            </div>
+            <table class="kv">
+              <tr><th>Confidence</th><td id="sel-conf" class="mono"></td></tr>
+              <tr><th>Position (m)</th><td id="sel-pos" class="mono"></td></tr>
+              <tr><th>Size dx·dy·dz (m)</th><td id="sel-size" class="mono"></td></tr>
+              <tr><th>Views</th><td id="sel-views" class="mono"></td></tr>
+            </table>
+            <label for="rename-input" class="field-label">Rename</label>
+            <div class="row tight">
+              <input id="rename-input" type="text" list="class-options" autocomplete="off" spellcheck="false">
+              <button id="rename-revert" type="button" title="Revert to the detected class name">Revert</button>
+            </div>
+            <div class="row">
+              <button id="sel-accept" type="button" class="seg">Accept</button>
+              <button id="sel-reject" type="button" class="seg">Reject</button>
+              <span class="spacer"></span>
+              <button id="sel-focus" type="button">Focus</button>
+            </div>
+          </div>
+          <datalist id="class-options"></datalist>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+  <!-- drag-and-drop overlay (whole page) -->
+  <div id="drop-overlay" class="hidden"><div class="drop-card">Drop a .usdz scan, or a store video (.mov/.mp4) to create a shelf scan</div></div>
+
+  <!-- labelling modal: draw empty-slot boxes on a keyframe -->
+  <div id="label-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="label-title">
+    <div class="modal-card label-card">
+      <div class="row tight modal-head">
+        <span id="label-title" class="modal-title">Label empty slots</span>
+        <button id="kf-prev" type="button" class="small-btn" title="Previous keyframe (←)">&#9664;</button>
+        <span id="kf-name" class="mono small"></span>
+        <button id="kf-next" type="button" class="small-btn" title="Next keyframe (→)">&#9654;</button>
+        <span class="seg-group" title="Type of the next box you draw">
+          <button id="kind-empty" type="button" class="seg on">Empty</button>
+          <button id="kind-pushed" type="button" class="seg">Pushed back</button>
+        </span>
+        <span class="spacer"></span>
+        <button id="label-delete" type="button" class="small-btn" disabled title="Delete the selected box (Del)">Delete box</button>
+        <button id="label-close" type="button" class="small-btn" title="Close (Esc)">Close</button>
+      </div>
+      <div class="muted small label-help">Drag on the image to draw a box around an empty slot. Click a box to select it. ← / → change keyframe.</div>
+      <div id="label-stage" class="label-stage">
+        <img id="kf-img" alt="keyframe" draggable="false">
+        <canvas id="kf-canvas"></canvas>
+      </div>
+      <div class="row tight"><span id="label-status" class="muted small"></span></div>
+    </div>
+  </div>
+
+  <!-- JSON modal -->
+  <div id="json-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="json-title">
+    <div class="modal-card">
+      <div class="row tight modal-head">
+        <span id="json-title" class="modal-title">JSON</span>
+        <span class="seg-group">
+          <button id="json-tab-raw" type="button" class="seg">Raw</button>
+          <button id="json-tab-reviewed" type="button" class="seg">Reviewed</button>
+        </span>
+        <span class="spacer"></span>
+        <button id="json-copy" type="button" class="small-btn">Copy</button>
+        <button id="json-close" type="button" class="small-btn" title="Close (Esc)">Close</button>
+      </div>
+      <pre id="json-pre" class="mono"></pre>
+    </div>
+  </div>
+
+  <script type="module" src="/static/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+    doc = """Upright wrapper for ../../room_scan.usda (client asset, untouched).
+    The source scan declares upAxis = Y but its content is upside down: the
+    floor sits at +Y. A 180-degree rotation about X (y -> -y, z -> -z) makes
+    it upright. This is a proper rotation, not a mirror, so text in the
+    scan still reads correctly."""
+)
+
+def Xform "World" (
+    references = @../../room_scan.usda@</World>
+)
+{
+    double3 xformOp:rotateXYZ = (180, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+}

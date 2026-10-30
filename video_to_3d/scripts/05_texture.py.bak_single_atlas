@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""Step 5: UV-unwrap the fused mesh (xatlas) and bake a texture atlas from the
+full-resolution undistorted keyframes.
+
+View selection per triangle: every keyframe is ray-cast against the mesh (Open3D
+Embree); a triangle's score in a view = number of pixels where it is the FIRST
+hit (occlusion-aware, grows with resolution and frontality) x a sharpness weight.
+The best view wins; labels are smoothed by a few neighbour-majority passes to
+reduce seams. Texels are filled by ray-casting the UV layout (texel -> triangle +
+barycentrics -> 3D point -> project into the triangle's view -> bilinear sample).
+
+usage: 05_texture.py WORK_DIR [--atlas 4096] [--sfm sfm_sr]
+Writes WORK_DIR/tex/{atlas_<i>.jpg, textured.npz, texture_info.json}
+"""
+import argparse, json, os, time
+import numpy as np, cv2, open3d as o3d, pycolmap, xatlas
+
+
+def raycast(scene, K, T_cw, W, H):
+    v, u = np.mgrid[0:H, 0:W]
+    pix = np.stack([u.ravel() + .5, v.ravel() + .5, np.ones(H * W)], 0)
+    R, t = T_cw[:3, :3], T_cw[:3, 3]
+    d = (R.T @ (np.linalg.inv(K) @ pix)).T
+    o = np.broadcast_to(-R.T @ t, d.shape)
+    r = scene.cast_rays(o3d.core.Tensor(np.concatenate([o, d], 1).astype(np.float32)))
+    return r["primitive_ids"].numpy().astype(np.int64)
+
+
+def bilinear(img, x, y):
+    h, w = img.shape[:2]
+    x = np.clip(x - 0.5, 0, w - 1.001); y = np.clip(y - 0.5, 0, h - 1.001)
+    x0, y0 = x.astype(np.int64), y.astype(np.int64)
+    fx, fy = (x - x0)[:, None], (y - y0)[:, None]
+    I = img.astype(np.float32)
+    return ((I[y0, x0] * (1 - fx) + I[y0, x0 + 1] * fx) * (1 - fy)
+            + (I[y0 + 1, x0] * (1 - fx) + I[y0 + 1, x0 + 1] * fx) * fy)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("work"); ap.add_argument("--sfm", default="sfm_sr")
+    ap.add_argument("--mesh", default=None)
+    ap.add_argument("--atlas", type=int, default=4096)
+    ap.add_argument("--vis-scale", type=float, default=0.5, help="ray-cast res for view scoring")
+    ap.add_argument("--smooth-iters", type=int, default=3)
+    a = ap.parse_args()
+    t0 = time.time()
+    out = os.path.join(a.work, "tex"); os.makedirs(out, exist_ok=True)
+    mesh = o3d.io.read_triangle_mesh(a.mesh or os.path.join(a.work, "mesh", "fused.ply"))
+    V = np.asarray(mesh.vertices).astype(np.float64); F = np.asarray(mesh.triangles).astype(np.int64)
+    nT = len(F)
+    # ---- cameras (full resolution, undistorted pinhole with the SfM K) ----
+    rec = pycolmap.Reconstruction(os.path.join(a.work, a.sfm, "sparse", "0"))
+    cam = next(iter(rec.cameras.values()))
+    f, cx, cy, k1 = cam.params; W0, H0 = cam.width, cam.height
+    K0 = np.array([[f, 0, cx], [0, f, cy], [0, 0, 1]])
+    mapx, mapy = cv2.initUndistortRectifyMap(K0, np.array([k1, 0, 0, 0]), None, K0, (W0, H0), cv2.CV_32FC1)
+    finfo = json.load(open(os.path.join(a.work, "frames.json")))
+    blur = dict(zip([f"{i:05d}" for i in range(finfo["num_frames"])], finfo["blur_scores"]))
+    views = []
+    for iid in sorted(rec.images, key=lambda i: rec.images[i].name):
+        im = rec.images[iid]
+        T = np.eye(4); T[:3] = im.cam_from_world().matrix()
+        views.append((os.path.splitext(im.name)[0], T))
+    bmed = np.median([blur[n] for n, _ in views])
+    # ---- view scoring ----
+    scene = o3d.t.geometry.RaycastingScene()
+    scene.add_triangles(V.astype(np.float32), F.astype(np.uint32))
+    Kv = K0.copy(); Kv[:2] *= a.vis_scale
+    Wv, Hv = int(W0 * a.vis_scale), int(H0 * a.vis_scale)
+    score = np.zeros((len(views), nT), np.float32)
+    for vi, (n, T) in enumerate(views):
+        pid = raycast(scene, Kv, T, Wv, Hv)
+        pid = pid[pid < nT]
+        # sharpness weight; also down-weight a 3% image border (undistortion edge)
+        score[vi] = np.bincount(pid, minlength=nT)[:nT] * np.clip(blur[n] / bmed, 0.3, 1.5) ** 0.5
+    t1 = time.time()
+    label = score.argmax(0)
+    seen = score.max(0) > 0
+    # unseen tiny triangles: nearest view by centroid projection frontality
+    if (~seen).any():
+        cen = V[F[~seen]].mean(1)
+        best = np.full(len(cen), -1e9); lab = np.zeros(len(cen), np.int64)
+        for vi, (n, T) in enumerate(views):
+            Xc = cen @ T[:3, :3].T + T[:3, 3]
+            q = Xc @ K0.T; z = Xc[:, 2]
+            u, v = q[:, 0] / np.maximum(z, 1e-9), q[:, 1] / np.maximum(z, 1e-9)
+            ok = (z > 0) & (u > 0) & (u < W0) & (v > 0) & (v < H0)
+            s = np.where(ok, -np.hypot(u - W0 / 2, v - H0 / 2), -1e9)
+            upd = s > best; best[upd] = s[upd]; lab[upd] = vi
+        label[~seen] = lab
+    # neighbour-majority smoothing (only switch to a view that also sees the triangle)
+    adj_src, adj_dst = [], []
+    edges = {}
+    for t_, (i, j, k) in enumerate(F):
+        for e in ((i, j), (j, k), (k, i)):
+            key = (min(e), max(e))
+            if key in edges:
+                adj_src.append(t_); adj_dst.append(edges[key])
+            else:
+                edges[key] = t_
+    adj_src = np.array(adj_src + adj_dst); adj_dst = np.array(adj_dst + adj_src[:len(adj_dst)].tolist())
+    for _ in range(a.smooth_iters):
+        nb_lab = label[adj_dst]
+        # votes: for each triangle, the neighbour labels that also see this triangle well
+        cand_ok = score[nb_lab, adj_src] >= 0.5 * score[label[adj_src], adj_src]
+        key = adj_src[cand_ok] * len(views) + nb_lab[cand_ok]
+        cnt = np.bincount(key, minlength=nT * len(views)).reshape(nT, len(views))
+        cnt[np.arange(nT), label] += 1                    # keep own label on ties
+        new = cnt.argmax(1)
+        label = np.where(cnt.max(1) >= 2, new, label)
+    t2 = time.time()
+    # ---- UV unwrap ----
+    mesh.compute_vertex_normals()
+    atlas = xatlas.Atlas()
+    atlas.add_mesh(V.astype(np.float32), F.astype(np.uint32), np.asarray(mesh.vertex_normals).astype(np.float32))
+    co = xatlas.ChartOptions(); po = xatlas.PackOptions()
+    po.resolution = a.atlas; po.padding = 2; po.bilinear = True; po.rotate_charts = True
+    atlas.generate(co, po)
+    vmap, idx, uvs = atlas.get_mesh(0)
+    idx = idx.astype(np.int64)
+    vat = atlas.get_mesh_vertex_assignment(0)
+    atlas_of_vert = np.asarray(vat[0] if isinstance(vat, tuple) else vat[:, 0]).astype(np.int64)
+    tri_atlas = atlas_of_vert[idx[:, 0]]
+    AW, AH = atlas.width, atlas.height
+    t3 = time.time()
+    print(f"xatlas: {atlas.atlas_count} atlas(es) {AW}x{AH}, charts={atlas.chart_count}, "
+          f"util={atlas.utilization}, {t3 - t2:.1f}s", flush=True)
+    # face order is preserved by xatlas: idx[t] corresponds to F[t]
+    assert len(idx) == nT and np.all(vmap[idx] == F)
+    # ---- bake ----
+    imgs = {}
+    def get_img(vi):
+        if vi not in imgs:
+            n = views[vi][0]
+            bgr = cv2.imread(os.path.join(a.work, a.sfm, "images", n + ".jpg"))
+            imgs[vi] = cv2.remap(bgr, mapx, mapy, cv2.INTER_LINEAR)[..., ::-1]
+        return imgs[vi]
+    textures = []
+    for ai in range(atlas.atlas_count):
+        sel = np.nonzero(tri_atlas == ai)[0]
+        uv_px = uvs[idx[sel]] * np.array([AW, AH])           # (t, 3, 2) pixels, v down? see below
+        verts2 = np.concatenate([uv_px.reshape(-1, 2), np.zeros((len(sel) * 3, 1))], 1).astype(np.float32)
+        sc2 = o3d.t.geometry.RaycastingScene()
+        sc2.add_triangles(verts2, np.arange(len(sel) * 3, dtype=np.uint32).reshape(-1, 3))
+        tex = np.zeros((AH, AW, 3), np.float32); filled = np.zeros((AH, AW), bool)
+        rows = max(1, 2_000_000 // AW)
+        for y0 in range(0, AH, rows):
+            yy, xx = np.mgrid[y0:min(AH, y0 + rows), 0:AW]
+            o = np.stack([xx.ravel() + .5, yy.ravel() + .5, np.ones(xx.size)], 1)
+            d = np.broadcast_to([0, 0, -1.0], o.shape)
+            r = sc2.cast_rays(o3d.core.Tensor(np.concatenate([o, d], 1).astype(np.float32)))
+            p = r["primitive_ids"].numpy().astype(np.int64)
+            hit = p < len(sel)
+            if not hit.any():
+                continue
+            b = r["primitive_uvs"].numpy()[hit]
+            tl = sel[p[hit]]
+            P = ((1 - b[:, 0:1] - b[:, 1:2]) * V[F[tl, 0]] + b[:, 0:1] * V[F[tl, 1]]
+                 + b[:, 1:2] * V[F[tl, 2]])
+            col = np.zeros((len(tl), 3), np.float32)
+            lab = label[tl]
+            for vi in np.unique(lab):
+                m = lab == vi
+                T = views[vi][1]
+                Xc = P[m] @ T[:3, :3].T + T[:3, 3]
+                q = Xc @ K0.T
+                col[m] = bilinear(get_img(vi), q[:, 0] / q[:, 2], q[:, 1] / q[:, 2])
+            flat_y = yy.ravel()[hit]; flat_x = xx.ravel()[hit]
+            tex[flat_y, flat_x] = col; filled[flat_y, flat_x] = True
+            if len(imgs) > 40:
+                imgs.clear()
+        # pad charts: push colours into empty texels (8 px) to avoid seams under bilinear/mips
+        t8 = (tex + 0.5).clip(0, 255).astype(np.uint8)          # samples are already 0..255
+        msk = filled.astype(np.uint8)
+        for _ in range(8):
+            dil = cv2.dilate(t8, np.ones((3, 3), np.uint8))
+            mdil = cv2.dilate(msk, np.ones((3, 3), np.uint8))
+            new = (mdil > 0) & (msk == 0)
+            # average of filled neighbours
+            s = cv2.blur(t8.astype(np.float32) * msk[..., None], (3, 3))
+            c = cv2.blur(msk.astype(np.float32), (3, 3))[..., None]
+            avg = (s / np.maximum(c, 1e-6)).clip(0, 255).astype(np.uint8)
+            t8[new] = avg[new]; msk = np.maximum(msk, new.astype(np.uint8))
+        # xatlas uv origin: top-left in pixels (y down). USD st origin is bottom-left ->
+        # flip the image vertically when saving so st = (u/AW, v/AH) works with v up.
+        path = os.path.join(out, f"atlas_{ai}.jpg")
+        cv2.imwrite(path, t8[::-1, :, ::-1], [cv2.IMWRITE_JPEG_QUALITY, 92])
+        textures.append({"file": os.path.basename(path), "triangles": int(len(sel)),
+                         "filled_frac": float(filled.mean())})
+        print(f"atlas {ai}: {len(sel)} tris, filled {filled.mean():.3f}", flush=True)
+    st = uvs[idx].astype(np.float32)                         # (T, 3, 2) in [0,1], v measured from top
+    np.savez_compressed(os.path.join(out, "textured.npz"), V=V, F=F, st=st, tri_atlas=tri_atlas,
+                        label=label)
+    info = {"atlas_count": int(atlas.atlas_count), "atlas_size": [int(AW), int(AH)],
+            "utilization": [float(u) for u in np.atleast_1d(atlas.utilization)],
+            "triangles": int(nT), "unseen_triangles": int((~seen).sum()),
+            "views_used": int(len(np.unique(label))), "textures": textures,
+            "seconds": {"view_scoring": round(t1 - t0, 1), "label_smoothing": round(t2 - t1, 1),
+                        "xatlas": round(t3 - t2, 1), "bake": round(time.time() - t3, 1)}}
+    json.dump(info, open(os.path.join(out, "texture_info.json"), "w"), indent=1)
+    print(json.dumps(info, indent=1))
+
+
+if __name__ == "__main__":
+    main()

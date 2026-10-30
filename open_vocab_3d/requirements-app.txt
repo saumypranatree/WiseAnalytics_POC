@@ -1,0 +1,18 @@
+# App env: python3.12 -m venv .venv && .venv/bin/pip install --no-cache-dir -r requirements-app.txt
+# RTX 50xx (Blackwell, sm_120) needs a CUDA 12.8+ torch build:
+--extra-index-url https://download.pytorch.org/whl/cu128
+fastapi==0.142.2
+httpx==0.28.1
+huggingface_hub==1.33.0
+numpy==2.5.2
+open3d==0.20.0
+pillow==12.3.0
+pytest==9.1.1
+python-multipart==0.0.32
+safetensors==0.8.0
+scikit-learn==1.9.1
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+transformers==5.18.0
+usd-core==26.8
+uvicorn==0.54.0

@@ -1,0 +1,91 @@
+{
+ "test_set": {
+  "images": 20,
+  "boxes": 85,
+  "source": "Kaggle aminefaris/retail-shelf-void-detection-dataset (CC BY-NC-SA 4.0)"
+ },
+ "models": {
+  "yolov8s_downloaded": {
+   "mAP50": 0.27,
+   "mAP50_95": 0.088,
+   "mAP50_95ci": [
+    0.196,
+    0.364
+   ],
+   "precision@0.25": 0.374,
+   "recall@0.25": 0.4,
+   "tp_fp_fn": [
+    34,
+    57,
+    51
+   ],
+   "latency_ms_median": 7.2
+  },
+  "yolov8s_trained": {
+   "mAP50": 0.693,
+   "mAP50_95": 0.34,
+   "mAP50_95ci": [
+    0.599,
+    0.8
+   ],
+   "precision@0.25": 0.598,
+   "recall@0.25": 0.753,
+   "tp_fp_fn": [
+    64,
+    43,
+    21
+   ],
+   "latency_ms_median": 6.7
+  },
+  "rfdetr_small_trained": {
+   "mAP50": 0.744,
+   "mAP50_95": 0.373,
+   "mAP50_95ci": [
+    0.663,
+    0.821
+   ],
+   "precision@0.25": 0.556,
+   "recall@0.25": 0.824,
+   "tp_fp_fn": [
+    70,
+    56,
+    15
+   ],
+   "latency_ms_median": 26.7
+  }
+ },
+ "store_aisles_no_ground_truth": {
+  "IMG_5196_2.mov": {
+   "views": 15,
+   "detections_at_conf_0.25": {
+    "yolov8s_downloaded": 0,
+    "yolov8s_trained": 4,
+    "rfdetr_small_trained": 18
+   }
+  },
+  "IMG_5198_2.mov": {
+   "views": 12,
+   "detections_at_conf_0.25": {
+    "yolov8s_downloaded": 2,
+    "yolov8s_trained": 2,
+    "rfdetr_small_trained": 21
+   }
+  },
+  "IMG_5199_2.mov": {
+   "views": 9,
+   "detections_at_conf_0.25": {
+    "yolov8s_downloaded": 0,
+    "yolov8s_trained": 5,
+    "rfdetr_small_trained": 50
+   }
+  },
+  "IMG_5200_2.mp4": {
+   "views": 21,
+   "detections_at_conf_0.25": {
+    "yolov8s_downloaded": 1,
+    "yolov8s_trained": 4,
+    "rfdetr_small_trained": 59
+   }
+  }
+ }
+}

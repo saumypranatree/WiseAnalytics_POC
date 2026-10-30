@@ -1,0 +1,18 @@
+# video_to_3d: phone video -> textured .usdz (see INSTALLED.md for licenses and sizes).
+# Python 3.12. Torch is built for CUDA 12.8 (RTX 50xx / sm_120); the GPU is used only in step 3 (depth).
+--extra-index-url https://download.pytorch.org/whl/cu128
+pycolmap==4.2.1                  # CPU build: SIFT, matching, incremental SfM
+av==19.0.1                       # PyAV: HEVC decode, H.264 encode
+opencv-python-headless==5.0.0.93
+numpy==2.5.4
+open3d==0.20.0                   # TSDF fusion, mesh cleanup (CPU)
+usd-core==26.8                   # USD / USDZ writing
+xatlas==0.0.11                   # UV atlas
+pillow==12.3.0
+scipy==1.18.1
+trimesh==5.1.1
+transformers==5.19.0             # Depth Anything V2 loading
+huggingface_hub==2.2.0
+safetensors
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128

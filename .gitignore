@@ -1,0 +1,43 @@
+# Python virtual environments and caches
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated outputs and intermediates (rebuild with the pipelines)
+out/
+work/
+runs/
+validate/
+models/
+weights/
+
+# Model weights and checkpoints (too large for git)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+
+# Input video and generated binary scan outputs (too large for git)
+*.MOV
+*.mov
+*.MP4
+*.mp4
+*.usdz
+*.glb
+*.ply
+*.db
+*.zip
+
+# Benchmark dataset (CC BY-NC-SA 4.0, do not redistribute; see benchmark/README.md)
+benchmark/data/
+
+# Logs and editor/OS files
+*.log
+.DS_Store
+.idea/
+.vscode/
