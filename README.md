@@ -7,6 +7,28 @@ Tools for turning scans of retail rooms and shelves into 3D data:
 3. **Empty-shelf (void) detector benchmark** (`benchmark/`): trains and evaluates YOLOv8s and RF-DETR Small on shelf void detection.
 4. **Research notes** (`research/`): background notes on the approaches above.
 
+## Results
+
+**Video → 3D scan.** A phone video of a shelf is reconstructed into a textured 3D mesh. The image below is a frontal render of the textured `.usdz` (`video_to_3d/validate/`), with real product packaging and price labels.
+
+![Textured 3D render of a shelf](docs/images/video_to_3d_render.png)
+
+**Empty-shelf (void) detection.** Both detectors were run on views of the same store scan. Boxes mark detected empty shelf space.
+
+| YOLOv8s (trained) | RF-DETR Small (trained) |
+|---|---|
+| ![YOLOv8s void detections](docs/images/benchmark_yolov8s_overlay.jpg) | ![RF-DETR void detections](docs/images/benchmark_rfdetr_overlay.jpg) |
+
+**Benchmark numbers** (test set: 20 held-out shelf photos, 85 void boxes; from `benchmark/results/benchmark.json`):
+
+| Model | mAP@50 | mAP@50:95 | Precision @0.25 | Recall @0.25 | Median latency (ms) |
+|---|---|---|---|---|---|
+| YOLOv8s, COCO weights only | 0.270 | 0.088 | 0.374 | 0.400 | 7.2 |
+| YOLOv8s, trained on this data | 0.693 | 0.340 | 0.598 | 0.753 | 6.7 |
+| RF-DETR Small, trained on this data | 0.744 | 0.373 | 0.556 | 0.824 | 26.7 |
+
+The test set is small (20 images), so treat the differences as indicative.
+
 ## Repository layout
 
 | Path | What it is | Docs |
