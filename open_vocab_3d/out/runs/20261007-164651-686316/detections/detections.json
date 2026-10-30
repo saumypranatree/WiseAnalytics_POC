@@ -1,0 +1,6146 @@
+{
+  "detector": "IDEA-Research/grounding-dino-base",
+  "segmenter": "facebook/sam-vit-base",
+  "prompts": [
+    "table",
+    "bench seat",
+    "cushion",
+    "laptop",
+    "backpack",
+    "headphones",
+    "phone",
+    "decorative plate",
+    "window",
+    "light switch",
+    "hanging plant",
+    "artificial turf",
+    "plywood panel"
+  ],
+  "box_threshold": 0.2,
+  "text_threshold": 0.25,
+  "frames": [
+    {
+      "frame_id": "0000",
+      "detections": [
+        {
+          "det_id": "0000_00",
+          "class_name": "plywood panel",
+          "score": 0.4954,
+          "bbox_xyxy": [
+            669.17,
+            269.88,
+            725.8,
+            449.27
+          ],
+          "mask": "masks/0000_00.png"
+        },
+        {
+          "det_id": "0000_01",
+          "class_name": "table",
+          "score": 0.4126,
+          "bbox_xyxy": [
+            728.07,
+            405.81,
+            811.06,
+            467.79
+          ],
+          "mask": "masks/0000_01.png"
+        },
+        {
+          "det_id": "0000_02",
+          "class_name": "bench seat",
+          "score": 0.3955,
+          "bbox_xyxy": [
+            785.48,
+            434.62,
+            861.37,
+            475.11
+          ],
+          "mask": "masks/0000_02.png"
+        },
+        {
+          "det_id": "0000_03",
+          "class_name": "window",
+          "score": 0.3841,
+          "bbox_xyxy": [
+            351.47,
+            352.27,
+            476.43,
+            465.36
+          ],
+          "mask": "masks/0000_03.png"
+        },
+        {
+          "det_id": "0000_04",
+          "class_name": "artificial turf",
+          "score": 0.3762,
+          "bbox_xyxy": [
+            422.69,
+            439.92,
+            697.88,
+            517.08
+          ],
+          "mask": "masks/0000_04.png"
+        },
+        {
+          "det_id": "0000_05",
+          "class_name": "hanging plant",
+          "score": 0.3658,
+          "bbox_xyxy": [
+            349.71,
+            212.94,
+            604.61,
+            512.03
+          ],
+          "mask": "masks/0000_05.png"
+        },
+        {
+          "det_id": "0000_06",
+          "class_name": "bench seat",
+          "score": 0.3434,
+          "bbox_xyxy": [
+            671.77,
+            419.31,
+            744.65,
+            459.61
+          ],
+          "mask": "masks/0000_06.png"
+        },
+        {
+          "det_id": "0000_07",
+          "class_name": "cushion",
+          "score": 0.2963,
+          "bbox_xyxy": [
+            727.41,
+            405.67,
+            812.67,
+            448.93
+          ],
+          "mask": "masks/0000_07.png"
+        },
+        {
+          "det_id": "0000_08",
+          "class_name": "cushion",
+          "score": 0.2881,
+          "bbox_xyxy": [
+            402.56,
+            268.06,
+            476.92,
+            375.77
+          ],
+          "mask": "masks/0000_08.png"
+        },
+        {
+          "det_id": "0000_09",
+          "class_name": "cushion",
+          "score": 0.2864,
+          "bbox_xyxy": [
+            350.01,
+            348.54,
+            479.56,
+            468.91
+          ],
+          "mask": "masks/0000_09.png"
+        },
+        {
+          "det_id": "0000_10",
+          "class_name": "decorative plate",
+          "score": 0.2784,
+          "bbox_xyxy": [
+            727.24,
+            404.27,
+            812.31,
+            449.38
+          ],
+          "mask": "masks/0000_10.png"
+        },
+        {
+          "det_id": "0000_11",
+          "class_name": "hanging plant",
+          "score": 0.266,
+          "bbox_xyxy": [
+            666.09,
+            260.34,
+            938.65,
+            526.84
+          ],
+          "mask": "masks/0000_11.png"
+        },
+        {
+          "det_id": "0000_12",
+          "class_name": "window",
+          "score": 0.2626,
+          "bbox_xyxy": [
+            350.71,
+            267.58,
+            494.65,
+            507.34
+          ],
+          "mask": "masks/0000_12.png"
+        },
+        {
+          "det_id": "0000_13",
+          "class_name": "decorative plate",
+          "score": 0.2572,
+          "bbox_xyxy": [
+            665.36,
+            260.08,
+            941.41,
+            525.82
+          ],
+          "mask": "masks/0000_13.png"
+        },
+        {
+          "det_id": "0000_14",
+          "class_name": "cushion",
+          "score": 0.2513,
+          "bbox_xyxy": [
+            670.4,
+            269.37,
+            726.55,
+            452.08
+          ],
+          "mask": "masks/0000_14.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0001",
+      "detections": [
+        {
+          "det_id": "0001_00",
+          "class_name": "table",
+          "score": 0.5917,
+          "bbox_xyxy": [
+            698.51,
+            426.48,
+            823.77,
+            494.37
+          ],
+          "mask": "masks/0001_00.png"
+        },
+        {
+          "det_id": "0001_01",
+          "class_name": "plywood panel",
+          "score": 0.5706,
+          "bbox_xyxy": [
+            665.79,
+            279.21,
+            760.4,
+            454.64
+          ],
+          "mask": "masks/0001_01.png"
+        },
+        {
+          "det_id": "0001_02",
+          "class_name": "hanging plant",
+          "score": 0.4781,
+          "bbox_xyxy": [
+            351.81,
+            204.65,
+            622.55,
+            474.49
+          ],
+          "mask": "masks/0001_02.png"
+        },
+        {
+          "det_id": "0001_03",
+          "class_name": "artificial turf",
+          "score": 0.3938,
+          "bbox_xyxy": [
+            428.66,
+            435.68,
+            703.31,
+            482.6
+          ],
+          "mask": "masks/0001_03.png"
+        },
+        {
+          "det_id": "0001_04",
+          "class_name": "decorative plate",
+          "score": 0.378,
+          "bbox_xyxy": [
+            699.61,
+            425.24,
+            822.68,
+            476.12
+          ],
+          "mask": "masks/0001_04.png"
+        },
+        {
+          "det_id": "0001_05",
+          "class_name": "bench seat",
+          "score": 0.3616,
+          "bbox_xyxy": [
+            352.28,
+            331.24,
+            552.69,
+            469.71
+          ],
+          "mask": "masks/0001_05.png"
+        },
+        {
+          "det_id": "0001_06",
+          "class_name": "cushion",
+          "score": 0.3512,
+          "bbox_xyxy": [
+            354.2,
+            333.54,
+            532.86,
+            424.38
+          ],
+          "mask": "masks/0001_06.png"
+        },
+        {
+          "det_id": "0001_07",
+          "class_name": "cushion",
+          "score": 0.2873,
+          "bbox_xyxy": [
+            437.86,
+            253.2,
+            531.75,
+            344.37
+          ],
+          "mask": "masks/0001_07.png"
+        },
+        {
+          "det_id": "0001_08",
+          "class_name": "laptop",
+          "score": 0.2782,
+          "bbox_xyxy": [
+            702.91,
+            423.08,
+            730.29,
+            449.92
+          ],
+          "mask": "masks/0001_08.png"
+        },
+        {
+          "det_id": "0001_09",
+          "class_name": "artificial turf",
+          "score": 0.2629,
+          "bbox_xyxy": [
+            356.03,
+            335.8,
+            531.39,
+            431.22
+          ],
+          "mask": "masks/0001_09.png"
+        },
+        {
+          "det_id": "0001_10",
+          "class_name": "window",
+          "score": 0.2627,
+          "bbox_xyxy": [
+            666.85,
+            279.98,
+            761.64,
+            453.83
+          ],
+          "mask": "masks/0001_10.png"
+        },
+        {
+          "det_id": "0001_11",
+          "class_name": "hanging plant",
+          "score": 0.2557,
+          "bbox_xyxy": [
+            664.18,
+            266.09,
+            910.2,
+            577.91
+          ],
+          "mask": "masks/0001_11.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0002",
+      "detections": [
+        {
+          "det_id": "0002_00",
+          "class_name": "plywood panel",
+          "score": 0.4628,
+          "bbox_xyxy": [
+            654.31,
+            285.33,
+            769.07,
+            461.63
+          ],
+          "mask": "masks/0002_00.png"
+        },
+        {
+          "det_id": "0002_01",
+          "class_name": "hanging plant",
+          "score": 0.4229,
+          "bbox_xyxy": [
+            422.99,
+            201.44,
+            662.78,
+            440.09
+          ],
+          "mask": "masks/0002_01.png"
+        },
+        {
+          "det_id": "0002_02",
+          "class_name": "bench seat",
+          "score": 0.3943,
+          "bbox_xyxy": [
+            423.31,
+            320.64,
+            624.07,
+            435.69
+          ],
+          "mask": "masks/0002_02.png"
+        },
+        {
+          "det_id": "0002_03",
+          "class_name": "table",
+          "score": 0.3886,
+          "bbox_xyxy": [
+            655.15,
+            447.82,
+            785.59,
+            523.51
+          ],
+          "mask": "masks/0002_03.png"
+        },
+        {
+          "det_id": "0002_04",
+          "class_name": "artificial turf",
+          "score": 0.3271,
+          "bbox_xyxy": [
+            424.6,
+            323.46,
+            610.01,
+            409.85
+          ],
+          "mask": "masks/0002_04.png"
+        },
+        {
+          "det_id": "0002_05",
+          "class_name": "cushion",
+          "score": 0.3117,
+          "bbox_xyxy": [
+            653.93,
+            282.61,
+            770.98,
+            471.41
+          ],
+          "mask": "masks/0002_05.png"
+        },
+        {
+          "det_id": "0002_06",
+          "class_name": "plywood panel",
+          "score": 0.3063,
+          "bbox_xyxy": [
+            654.97,
+            372.39,
+            765.42,
+            458.56
+          ],
+          "mask": "masks/0002_06.png"
+        },
+        {
+          "det_id": "0002_07",
+          "class_name": "decorative plate",
+          "score": 0.3058,
+          "bbox_xyxy": [
+            425.26,
+            203.05,
+            642.39,
+            439.58
+          ],
+          "mask": "masks/0002_07.png"
+        },
+        {
+          "det_id": "0002_08",
+          "class_name": "decorative plate",
+          "score": 0.2661,
+          "bbox_xyxy": [
+            653.14,
+            278.84,
+            807.52,
+            561.92
+          ],
+          "mask": "masks/0002_08.png"
+        },
+        {
+          "det_id": "0002_09",
+          "class_name": "table",
+          "score": 0.2632,
+          "bbox_xyxy": [
+            652.63,
+            280.37,
+            790.95,
+            526.51
+          ],
+          "mask": "masks/0002_09.png"
+        },
+        {
+          "det_id": "0002_10",
+          "class_name": "window",
+          "score": 0.2523,
+          "bbox_xyxy": [
+            660.01,
+            310.45,
+            768.0,
+            373.87
+          ],
+          "mask": "masks/0002_10.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0003",
+      "detections": [
+        {
+          "det_id": "0003_00",
+          "class_name": "plywood panel",
+          "score": 0.4989,
+          "bbox_xyxy": [
+            541.94,
+            285.82,
+            751.48,
+            527.22
+          ],
+          "mask": "masks/0003_00.png"
+        },
+        {
+          "det_id": "0003_01",
+          "class_name": "table",
+          "score": 0.4485,
+          "bbox_xyxy": [
+            580.06,
+            452.58,
+            722.19,
+            579.49
+          ],
+          "mask": "masks/0003_01.png"
+        },
+        {
+          "det_id": "0003_02",
+          "class_name": "bench seat",
+          "score": 0.3786,
+          "bbox_xyxy": [
+            528.27,
+            509.69,
+            685.59,
+            600.22
+          ],
+          "mask": "masks/0003_02.png"
+        },
+        {
+          "det_id": "0003_03",
+          "class_name": "bench seat",
+          "score": 0.3722,
+          "bbox_xyxy": [
+            687.81,
+            473.86,
+            743.51,
+            537.61
+          ],
+          "mask": "masks/0003_03.png"
+        },
+        {
+          "det_id": "0003_04",
+          "class_name": "plywood panel",
+          "score": 0.3635,
+          "bbox_xyxy": [
+            639.89,
+            376.6,
+            740.81,
+            478.41
+          ],
+          "mask": "masks/0003_04.png"
+        },
+        {
+          "det_id": "0003_05",
+          "class_name": "artificial turf",
+          "score": 0.3558,
+          "bbox_xyxy": [
+            528.87,
+            468.29,
+            799.86,
+            631.46
+          ],
+          "mask": "masks/0003_05.png"
+        },
+        {
+          "det_id": "0003_06",
+          "class_name": "cushion",
+          "score": 0.354,
+          "bbox_xyxy": [
+            691.46,
+            473.22,
+            742.99,
+            503.8
+          ],
+          "mask": "masks/0003_06.png"
+        },
+        {
+          "det_id": "0003_07",
+          "class_name": "decorative plate",
+          "score": 0.3288,
+          "bbox_xyxy": [
+            596.96,
+            337.93,
+            617.64,
+            375.01
+          ],
+          "mask": "masks/0003_07.png"
+        },
+        {
+          "det_id": "0003_08",
+          "class_name": "decorative plate",
+          "score": 0.3271,
+          "bbox_xyxy": [
+            589.55,
+            376.93,
+            608.57,
+            406.06
+          ],
+          "mask": "masks/0003_08.png"
+        },
+        {
+          "det_id": "0003_09",
+          "class_name": "cushion",
+          "score": 0.295,
+          "bbox_xyxy": [
+            675.08,
+            445.17,
+            705.67,
+            472.06
+          ],
+          "mask": "masks/0003_09.png"
+        },
+        {
+          "det_id": "0003_10",
+          "class_name": "artificial turf",
+          "score": 0.2825,
+          "bbox_xyxy": [
+            542.07,
+            288.24,
+            742.59,
+            542.47
+          ],
+          "mask": "masks/0003_10.png"
+        },
+        {
+          "det_id": "0003_11",
+          "class_name": "bench seat",
+          "score": 0.2808,
+          "bbox_xyxy": [
+            691.71,
+            472.91,
+            743.19,
+            505.07
+          ],
+          "mask": "masks/0003_11.png"
+        },
+        {
+          "det_id": "0003_12",
+          "class_name": "cushion",
+          "score": 0.277,
+          "bbox_xyxy": [
+            524.69,
+            503.7,
+            692.41,
+            587.09
+          ],
+          "mask": "masks/0003_12.png"
+        },
+        {
+          "det_id": "0003_13",
+          "class_name": "hanging plant",
+          "score": 0.2668,
+          "bbox_xyxy": [
+            524.71,
+            194.04,
+            757.71,
+            628.76
+          ],
+          "mask": "masks/0003_13.png"
+        },
+        {
+          "det_id": "0003_14",
+          "class_name": "bench seat",
+          "score": 0.265,
+          "bbox_xyxy": [
+            594.71,
+            505.33,
+            692.8,
+            571.51
+          ],
+          "mask": "masks/0003_14.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0004",
+      "detections": [
+        {
+          "det_id": "0004_00",
+          "class_name": "table",
+          "score": 0.7235,
+          "bbox_xyxy": [
+            518.8,
+            445.7,
+            635.21,
+            553.7
+          ],
+          "mask": "masks/0004_00.png"
+        },
+        {
+          "det_id": "0004_01",
+          "class_name": "bench seat",
+          "score": 0.5306,
+          "bbox_xyxy": [
+            588.49,
+            457.22,
+            689.93,
+            546.63
+          ],
+          "mask": "masks/0004_01.png"
+        },
+        {
+          "det_id": "0004_02",
+          "class_name": "bench seat",
+          "score": 0.5203,
+          "bbox_xyxy": [
+            475.28,
+            479.36,
+            576.8,
+            567.33
+          ],
+          "mask": "masks/0004_02.png"
+        },
+        {
+          "det_id": "0004_03",
+          "class_name": "decorative plate",
+          "score": 0.5014,
+          "bbox_xyxy": [
+            534.86,
+            363.51,
+            563.66,
+            395.53
+          ],
+          "mask": "masks/0004_03.png"
+        },
+        {
+          "det_id": "0004_04",
+          "class_name": "plywood panel",
+          "score": 0.4462,
+          "bbox_xyxy": [
+            621.74,
+            371.5,
+            688.21,
+            512.22
+          ],
+          "mask": "masks/0004_04.png"
+        },
+        {
+          "det_id": "0004_05",
+          "class_name": "window",
+          "score": 0.4209,
+          "bbox_xyxy": [
+            690.85,
+            245.74,
+            765.12,
+            428.24
+          ],
+          "mask": "masks/0004_05.png"
+        },
+        {
+          "det_id": "0004_06",
+          "class_name": "hanging plant",
+          "score": 0.3846,
+          "bbox_xyxy": [
+            655.45,
+            192.34,
+            759.41,
+            252.68
+          ],
+          "mask": "masks/0004_06.png"
+        },
+        {
+          "det_id": "0004_07",
+          "class_name": "artificial turf",
+          "score": 0.3714,
+          "bbox_xyxy": [
+            400.3,
+            412.56,
+            762.56,
+            603.0
+          ],
+          "mask": "masks/0004_07.png"
+        },
+        {
+          "det_id": "0004_08",
+          "class_name": "laptop",
+          "score": 0.3522,
+          "bbox_xyxy": [
+            572.31,
+            454.25,
+            592.71,
+            477.53
+          ],
+          "mask": "masks/0004_08.png"
+        },
+        {
+          "det_id": "0004_09",
+          "class_name": "plywood panel",
+          "score": 0.3502,
+          "bbox_xyxy": [
+            458.95,
+            283.72,
+            700.68,
+            545.46
+          ],
+          "mask": "masks/0004_09.png"
+        },
+        {
+          "det_id": "0004_10",
+          "class_name": "cushion",
+          "score": 0.3427,
+          "bbox_xyxy": [
+            599.93,
+            452.08,
+            690.57,
+            546.37
+          ],
+          "mask": "masks/0004_10.png"
+        },
+        {
+          "det_id": "0004_11",
+          "class_name": "cushion",
+          "score": 0.3244,
+          "bbox_xyxy": [
+            475.66,
+            478.9,
+            576.84,
+            548.4
+          ],
+          "mask": "masks/0004_11.png"
+        },
+        {
+          "det_id": "0004_12",
+          "class_name": "cushion",
+          "score": 0.3206,
+          "bbox_xyxy": [
+            606.7,
+            476.35,
+            688.71,
+            510.98
+          ],
+          "mask": "masks/0004_12.png"
+        },
+        {
+          "det_id": "0004_13",
+          "class_name": "cushion",
+          "score": 0.2895,
+          "bbox_xyxy": [
+            417.66,
+            509.59,
+            524.09,
+            560.37
+          ],
+          "mask": "masks/0004_13.png"
+        },
+        {
+          "det_id": "0004_14",
+          "class_name": "bench seat",
+          "score": 0.2755,
+          "bbox_xyxy": [
+            414.8,
+            506.51,
+            525.07,
+            592.48
+          ],
+          "mask": "masks/0004_14.png"
+        },
+        {
+          "det_id": "0004_15",
+          "class_name": "bench seat",
+          "score": 0.269,
+          "bbox_xyxy": [
+            417.96,
+            479.49,
+            577.98,
+            592.89
+          ],
+          "mask": "masks/0004_15.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0005",
+      "detections": [
+        {
+          "det_id": "0005_00",
+          "class_name": "table",
+          "score": 0.6714,
+          "bbox_xyxy": [
+            488.07,
+            436.14,
+            559.94,
+            539.88
+          ],
+          "mask": "masks/0005_00.png"
+        },
+        {
+          "det_id": "0005_01",
+          "class_name": "decorative plate",
+          "score": 0.5334,
+          "bbox_xyxy": [
+            513.73,
+            352.22,
+            543.25,
+            379.67
+          ],
+          "mask": "masks/0005_01.png"
+        },
+        {
+          "det_id": "0005_02",
+          "class_name": "bench seat",
+          "score": 0.5328,
+          "bbox_xyxy": [
+            559.61,
+            450.88,
+            621.4,
+            538.4
+          ],
+          "mask": "masks/0005_02.png"
+        },
+        {
+          "det_id": "0005_03",
+          "class_name": "artificial turf",
+          "score": 0.4984,
+          "bbox_xyxy": [
+            389.58,
+            426.09,
+            802.7,
+            560.08
+          ],
+          "mask": "masks/0005_03.png"
+        },
+        {
+          "det_id": "0005_04",
+          "class_name": "laptop",
+          "score": 0.4852,
+          "bbox_xyxy": [
+            516.91,
+            432.86,
+            555.49,
+            461.54
+          ],
+          "mask": "masks/0005_04.png"
+        },
+        {
+          "det_id": "0005_05",
+          "class_name": "bench seat",
+          "score": 0.4838,
+          "bbox_xyxy": [
+            424.7,
+            456.87,
+            494.53,
+            541.89
+          ],
+          "mask": "masks/0005_05.png"
+        },
+        {
+          "det_id": "0005_06",
+          "class_name": "plywood panel",
+          "score": 0.3888,
+          "bbox_xyxy": [
+            370.63,
+            282.33,
+            642.62,
+            541.68
+          ],
+          "mask": "masks/0005_06.png"
+        },
+        {
+          "det_id": "0005_07",
+          "class_name": "bench seat",
+          "score": 0.3548,
+          "bbox_xyxy": [
+            362.72,
+            463.69,
+            429.71,
+            540.58
+          ],
+          "mask": "masks/0005_07.png"
+        },
+        {
+          "det_id": "0005_08",
+          "class_name": "cushion",
+          "score": 0.3366,
+          "bbox_xyxy": [
+            559.56,
+            452.67,
+            611.48,
+            501.37
+          ],
+          "mask": "masks/0005_08.png"
+        },
+        {
+          "det_id": "0005_09",
+          "class_name": "cushion",
+          "score": 0.3275,
+          "bbox_xyxy": [
+            426.44,
+            457.71,
+            495.06,
+            507.87
+          ],
+          "mask": "masks/0005_09.png"
+        },
+        {
+          "det_id": "0005_10",
+          "class_name": "window",
+          "score": 0.3223,
+          "bbox_xyxy": [
+            368.85,
+            280.98,
+            643.92,
+            546.5
+          ],
+          "mask": "masks/0005_10.png"
+        },
+        {
+          "det_id": "0005_11",
+          "class_name": "plywood panel",
+          "score": 0.3121,
+          "bbox_xyxy": [
+            427.23,
+            334.53,
+            618.47,
+            469.61
+          ],
+          "mask": "masks/0005_11.png"
+        },
+        {
+          "det_id": "0005_12",
+          "class_name": "backpack",
+          "score": 0.2913,
+          "bbox_xyxy": [
+            432.61,
+            449.0,
+            476.52,
+            482.19
+          ],
+          "mask": "masks/0005_12.png"
+        },
+        {
+          "det_id": "0005_13",
+          "class_name": "cushion",
+          "score": 0.2848,
+          "bbox_xyxy": [
+            364.87,
+            464.4,
+            424.97,
+            510.1
+          ],
+          "mask": "masks/0005_13.png"
+        },
+        {
+          "det_id": "0005_14",
+          "class_name": "decorative plate",
+          "score": 0.2782,
+          "bbox_xyxy": [
+            529.69,
+            335.79,
+            562.92,
+            354.47
+          ],
+          "mask": "masks/0005_14.png"
+        },
+        {
+          "det_id": "0005_15",
+          "class_name": "hanging plant",
+          "score": 0.2716,
+          "bbox_xyxy": [
+            679.75,
+            203.3,
+            822.54,
+            453.82
+          ],
+          "mask": "masks/0005_15.png"
+        },
+        {
+          "det_id": "0005_16",
+          "class_name": "hanging plant",
+          "score": 0.2686,
+          "bbox_xyxy": [
+            367.17,
+            281.63,
+            641.36,
+            545.67
+          ],
+          "mask": "masks/0005_16.png"
+        },
+        {
+          "det_id": "0005_17",
+          "class_name": "cushion",
+          "score": 0.2657,
+          "bbox_xyxy": [
+            432.39,
+            449.33,
+            476.24,
+            487.4
+          ],
+          "mask": "masks/0005_17.png"
+        },
+        {
+          "det_id": "0005_18",
+          "class_name": "hanging plant",
+          "score": 0.2592,
+          "bbox_xyxy": [
+            681.67,
+            202.69,
+            799.36,
+            263.42
+          ],
+          "mask": "masks/0005_18.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0006",
+      "detections": [
+        {
+          "det_id": "0006_00",
+          "class_name": "table",
+          "score": 0.659,
+          "bbox_xyxy": [
+            450.03,
+            411.61,
+            557.1,
+            513.55
+          ],
+          "mask": "masks/0006_00.png"
+        },
+        {
+          "det_id": "0006_01",
+          "class_name": "bench seat",
+          "score": 0.5272,
+          "bbox_xyxy": [
+            508.71,
+            442.04,
+            605.65,
+            522.43
+          ],
+          "mask": "masks/0006_01.png"
+        },
+        {
+          "det_id": "0006_02",
+          "class_name": "decorative plate",
+          "score": 0.4684,
+          "bbox_xyxy": [
+            525.18,
+            336.22,
+            551.48,
+            364.85
+          ],
+          "mask": "masks/0006_02.png"
+        },
+        {
+          "det_id": "0006_03",
+          "class_name": "bench seat",
+          "score": 0.4624,
+          "bbox_xyxy": [
+            361.77,
+            428.53,
+            469.27,
+            503.83
+          ],
+          "mask": "masks/0006_03.png"
+        },
+        {
+          "det_id": "0006_04",
+          "class_name": "cushion",
+          "score": 0.4605,
+          "bbox_xyxy": [
+            419.89,
+            423.69,
+            447.14,
+            452.76
+          ],
+          "mask": "masks/0006_04.png"
+        },
+        {
+          "det_id": "0006_05",
+          "class_name": "artificial turf",
+          "score": 0.4219,
+          "bbox_xyxy": [
+            366.36,
+            445.72,
+            838.95,
+            546.78
+          ],
+          "mask": "masks/0006_05.png"
+        },
+        {
+          "det_id": "0006_06",
+          "class_name": "plywood panel",
+          "score": 0.4127,
+          "bbox_xyxy": [
+            402.04,
+            348.22,
+            468.42,
+            461.34
+          ],
+          "mask": "masks/0006_06.png"
+        },
+        {
+          "det_id": "0006_07",
+          "class_name": "plywood panel",
+          "score": 0.3845,
+          "bbox_xyxy": [
+            363.5,
+            265.41,
+            614.77,
+            517.43
+          ],
+          "mask": "masks/0006_07.png"
+        },
+        {
+          "det_id": "0006_08",
+          "class_name": "laptop",
+          "score": 0.3625,
+          "bbox_xyxy": [
+            488.4,
+            413.66,
+            536.94,
+            441.89
+          ],
+          "mask": "masks/0006_08.png"
+        },
+        {
+          "det_id": "0006_09",
+          "class_name": "hanging plant",
+          "score": 0.3614,
+          "bbox_xyxy": [
+            676.76,
+            219.11,
+            761.43,
+            268.21
+          ],
+          "mask": "masks/0006_09.png"
+        },
+        {
+          "det_id": "0006_10",
+          "class_name": "cushion",
+          "score": 0.3554,
+          "bbox_xyxy": [
+            364.13,
+            432.61,
+            407.12,
+            465.47
+          ],
+          "mask": "masks/0006_10.png"
+        },
+        {
+          "det_id": "0006_11",
+          "class_name": "cushion",
+          "score": 0.3279,
+          "bbox_xyxy": [
+            406.2,
+            444.03,
+            470.27,
+            475.54
+          ],
+          "mask": "masks/0006_11.png"
+        },
+        {
+          "det_id": "0006_12",
+          "class_name": "bench seat",
+          "score": 0.3184,
+          "bbox_xyxy": [
+            405.37,
+            443.86,
+            472.42,
+            503.46
+          ],
+          "mask": "masks/0006_12.png"
+        },
+        {
+          "det_id": "0006_13",
+          "class_name": "cushion",
+          "score": 0.3157,
+          "bbox_xyxy": [
+            508.91,
+            449.86,
+            575.04,
+            494.53
+          ],
+          "mask": "masks/0006_13.png"
+        },
+        {
+          "det_id": "0006_14",
+          "class_name": "laptop",
+          "score": 0.3105,
+          "bbox_xyxy": [
+            486.16,
+            414.98,
+            511.72,
+            435.03
+          ],
+          "mask": "masks/0006_14.png"
+        },
+        {
+          "det_id": "0006_15",
+          "class_name": "cushion",
+          "score": 0.3085,
+          "bbox_xyxy": [
+            571.63,
+            443.04,
+            608.16,
+            460.39
+          ],
+          "mask": "masks/0006_15.png"
+        },
+        {
+          "det_id": "0006_16",
+          "class_name": "artificial turf",
+          "score": 0.2927,
+          "bbox_xyxy": [
+            368.9,
+            339.43,
+            883.09,
+            548.45
+          ],
+          "mask": "masks/0006_16.png"
+        },
+        {
+          "det_id": "0006_17",
+          "class_name": "window",
+          "score": 0.2906,
+          "bbox_xyxy": [
+            363.51,
+            264.21,
+            616.59,
+            522.4
+          ],
+          "mask": "masks/0006_17.png"
+        },
+        {
+          "det_id": "0006_18",
+          "class_name": "cushion",
+          "score": 0.2904,
+          "bbox_xyxy": [
+            442.95,
+            419.57,
+            486.16,
+            443.11
+          ],
+          "mask": "masks/0006_18.png"
+        },
+        {
+          "det_id": "0006_19",
+          "class_name": "hanging plant",
+          "score": 0.2835,
+          "bbox_xyxy": [
+            801.75,
+            341.22,
+            878.57,
+            487.96
+          ],
+          "mask": "masks/0006_19.png"
+        },
+        {
+          "det_id": "0006_20",
+          "class_name": "headphones",
+          "score": 0.2794,
+          "bbox_xyxy": [
+            484.92,
+            414.26,
+            507.83,
+            434.83
+          ],
+          "mask": "masks/0006_20.png"
+        },
+        {
+          "det_id": "0006_21",
+          "class_name": "hanging plant",
+          "score": 0.271,
+          "bbox_xyxy": [
+            363.32,
+            264.76,
+            612.75,
+            519.07
+          ],
+          "mask": "masks/0006_21.png"
+        },
+        {
+          "det_id": "0006_22",
+          "class_name": "backpack",
+          "score": 0.2699,
+          "bbox_xyxy": [
+            442.33,
+            419.02,
+            484.61,
+            443.59
+          ],
+          "mask": "masks/0006_22.png"
+        },
+        {
+          "det_id": "0006_23",
+          "class_name": "hanging plant",
+          "score": 0.2654,
+          "bbox_xyxy": [
+            777.91,
+            220.82,
+            862.0,
+            282.75
+          ],
+          "mask": "masks/0006_23.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0007",
+      "detections": [
+        {
+          "det_id": "0007_00",
+          "class_name": "plywood panel",
+          "score": 0.603,
+          "bbox_xyxy": [
+            432.2,
+            250.19,
+            616.14,
+            452.94
+          ],
+          "mask": "masks/0007_00.png"
+        },
+        {
+          "det_id": "0007_01",
+          "class_name": "table",
+          "score": 0.5772,
+          "bbox_xyxy": [
+            465.5,
+            394.26,
+            587.08,
+            495.15
+          ],
+          "mask": "masks/0007_01.png"
+        },
+        {
+          "det_id": "0007_02",
+          "class_name": "artificial turf",
+          "score": 0.4802,
+          "bbox_xyxy": [
+            411.83,
+            422.98,
+            927.97,
+            535.8
+          ],
+          "mask": "masks/0007_02.png"
+        },
+        {
+          "det_id": "0007_03",
+          "class_name": "bench seat",
+          "score": 0.4097,
+          "bbox_xyxy": [
+            494.93,
+            430.67,
+            611.23,
+            480.5
+          ],
+          "mask": "masks/0007_03.png"
+        },
+        {
+          "det_id": "0007_04",
+          "class_name": "laptop",
+          "score": 0.3909,
+          "bbox_xyxy": [
+            466.35,
+            396.56,
+            517.56,
+            429.23
+          ],
+          "mask": "masks/0007_04.png"
+        },
+        {
+          "det_id": "0007_05",
+          "class_name": "decorative plate",
+          "score": 0.3739,
+          "bbox_xyxy": [
+            571.24,
+            301.72,
+            590.69,
+            334.09
+          ],
+          "mask": "masks/0007_05.png"
+        },
+        {
+          "det_id": "0007_06",
+          "class_name": "hanging plant",
+          "score": 0.3514,
+          "bbox_xyxy": [
+            651.05,
+            221.8,
+            712.72,
+            275.44
+          ],
+          "mask": "masks/0007_06.png"
+        },
+        {
+          "det_id": "0007_07",
+          "class_name": "cushion",
+          "score": 0.34,
+          "bbox_xyxy": [
+            464.9,
+            395.26,
+            492.49,
+            417.68
+          ],
+          "mask": "masks/0007_07.png"
+        },
+        {
+          "det_id": "0007_08",
+          "class_name": "cushion",
+          "score": 0.3005,
+          "bbox_xyxy": [
+            424.48,
+            406.6,
+            447.37,
+            424.16
+          ],
+          "mask": "masks/0007_08.png"
+        },
+        {
+          "det_id": "0007_09",
+          "class_name": "artificial turf",
+          "score": 0.2973,
+          "bbox_xyxy": [
+            466.1,
+            486.22,
+            868.43,
+            536.3
+          ],
+          "mask": "masks/0007_09.png"
+        },
+        {
+          "det_id": "0007_10",
+          "class_name": "hanging plant",
+          "score": 0.2895,
+          "bbox_xyxy": [
+            423.63,
+            249.61,
+            615.95,
+            503.82
+          ],
+          "mask": "masks/0007_10.png"
+        },
+        {
+          "det_id": "0007_11",
+          "class_name": "cushion",
+          "score": 0.271,
+          "bbox_xyxy": [
+            557.95,
+            431.54,
+            612.93,
+            449.76
+          ],
+          "mask": "masks/0007_11.png"
+        },
+        {
+          "det_id": "0007_12",
+          "class_name": "cushion",
+          "score": 0.2699,
+          "bbox_xyxy": [
+            494.63,
+            430.52,
+            613.08,
+            485.35
+          ],
+          "mask": "masks/0007_12.png"
+        },
+        {
+          "det_id": "0007_13",
+          "class_name": "decorative plate",
+          "score": 0.268,
+          "bbox_xyxy": [
+            546.35,
+            295.84,
+            591.02,
+            354.48
+          ],
+          "mask": "masks/0007_13.png"
+        },
+        {
+          "det_id": "0007_14",
+          "class_name": "cushion",
+          "score": 0.2599,
+          "bbox_xyxy": [
+            445.91,
+            416.48,
+            484.59,
+            439.78
+          ],
+          "mask": "masks/0007_14.png"
+        },
+        {
+          "det_id": "0007_15",
+          "class_name": "light switch",
+          "score": 0.2561,
+          "bbox_xyxy": [
+            425.44,
+            250.54,
+            617.83,
+            502.11
+          ],
+          "mask": "masks/0007_15.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0008",
+      "detections": [
+        {
+          "det_id": "0008_00",
+          "class_name": "table",
+          "score": 0.415,
+          "bbox_xyxy": [
+            714.79,
+            363.21,
+            796.76,
+            452.62
+          ],
+          "mask": "masks/0008_00.png"
+        },
+        {
+          "det_id": "0008_01",
+          "class_name": "artificial turf",
+          "score": 0.3971,
+          "bbox_xyxy": [
+            437.5,
+            372.03,
+            681.11,
+            542.3
+          ],
+          "mask": "masks/0008_01.png"
+        },
+        {
+          "det_id": "0008_02",
+          "class_name": "plywood panel",
+          "score": 0.3294,
+          "bbox_xyxy": [
+            723.26,
+            363.42,
+            796.15,
+            435.78
+          ],
+          "mask": "masks/0008_02.png"
+        },
+        {
+          "det_id": "0008_03",
+          "class_name": "bench seat",
+          "score": 0.31,
+          "bbox_xyxy": [
+            781.89,
+            390.78,
+            846.44,
+            457.84
+          ],
+          "mask": "masks/0008_03.png"
+        },
+        {
+          "det_id": "0008_04",
+          "class_name": "plywood panel",
+          "score": 0.3078,
+          "bbox_xyxy": [
+            667.71,
+            246.58,
+            714.6,
+            428.0
+          ],
+          "mask": "masks/0008_04.png"
+        },
+        {
+          "det_id": "0008_05",
+          "class_name": "cushion",
+          "score": 0.304,
+          "bbox_xyxy": [
+            724.74,
+            364.51,
+            796.17,
+            433.03
+          ],
+          "mask": "masks/0008_05.png"
+        },
+        {
+          "det_id": "0008_06",
+          "class_name": "decorative plate",
+          "score": 0.2967,
+          "bbox_xyxy": [
+            664.03,
+            242.12,
+            922.47,
+            486.9
+          ],
+          "mask": "masks/0008_06.png"
+        },
+        {
+          "det_id": "0008_07",
+          "class_name": "cushion",
+          "score": 0.2957,
+          "bbox_xyxy": [
+            670.39,
+            372.58,
+            741.55,
+            440.74
+          ],
+          "mask": "masks/0008_07.png"
+        },
+        {
+          "det_id": "0008_08",
+          "class_name": "bench seat",
+          "score": 0.2909,
+          "bbox_xyxy": [
+            717.27,
+            363.36,
+            796.08,
+            444.37
+          ],
+          "mask": "masks/0008_08.png"
+        },
+        {
+          "det_id": "0008_09",
+          "class_name": "cushion",
+          "score": 0.2892,
+          "bbox_xyxy": [
+            381.86,
+            355.06,
+            487.79,
+            527.2
+          ],
+          "mask": "masks/0008_09.png"
+        },
+        {
+          "det_id": "0008_10",
+          "class_name": "plywood panel",
+          "score": 0.2889,
+          "bbox_xyxy": [
+            663.38,
+            243.94,
+            919.49,
+            484.62
+          ],
+          "mask": "masks/0008_10.png"
+        },
+        {
+          "det_id": "0008_11",
+          "class_name": "hanging plant",
+          "score": 0.2876,
+          "bbox_xyxy": [
+            664.68,
+            239.78,
+            919.64,
+            485.22
+          ],
+          "mask": "masks/0008_11.png"
+        },
+        {
+          "det_id": "0008_12",
+          "class_name": "plywood panel",
+          "score": 0.2849,
+          "bbox_xyxy": [
+            671.07,
+            372.09,
+            740.98,
+            440.5
+          ],
+          "mask": "masks/0008_12.png"
+        },
+        {
+          "det_id": "0008_13",
+          "class_name": "bench seat",
+          "score": 0.2832,
+          "bbox_xyxy": [
+            671.72,
+            373.18,
+            739.41,
+            439.36
+          ],
+          "mask": "masks/0008_13.png"
+        },
+        {
+          "det_id": "0008_14",
+          "class_name": "decorative plate",
+          "score": 0.2816,
+          "bbox_xyxy": [
+            724.01,
+            363.11,
+            795.74,
+            436.29
+          ],
+          "mask": "masks/0008_14.png"
+        },
+        {
+          "det_id": "0008_15",
+          "class_name": "cushion",
+          "score": 0.2804,
+          "bbox_xyxy": [
+            782.02,
+            391.21,
+            843.78,
+            458.06
+          ],
+          "mask": "masks/0008_15.png"
+        },
+        {
+          "det_id": "0008_16",
+          "class_name": "decorative plate",
+          "score": 0.2734,
+          "bbox_xyxy": [
+            383.55,
+            222.47,
+            923.68,
+            543.35
+          ],
+          "mask": "masks/0008_16.png"
+        },
+        {
+          "det_id": "0008_17",
+          "class_name": "hanging plant",
+          "score": 0.268,
+          "bbox_xyxy": [
+            380.27,
+            221.17,
+            914.46,
+            545.82
+          ],
+          "mask": "masks/0008_17.png"
+        },
+        {
+          "det_id": "0008_18",
+          "class_name": "table",
+          "score": 0.2571,
+          "bbox_xyxy": [
+            670.64,
+            372.06,
+            741.74,
+            440.86
+          ],
+          "mask": "masks/0008_18.png"
+        },
+        {
+          "det_id": "0008_19",
+          "class_name": "decorative plate",
+          "score": 0.2547,
+          "bbox_xyxy": [
+            381.51,
+            352.6,
+            488.7,
+            531.44
+          ],
+          "mask": "masks/0008_19.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0009",
+      "detections": [
+        {
+          "det_id": "0009_00",
+          "class_name": "table",
+          "score": 0.5031,
+          "bbox_xyxy": [
+            708.87,
+            402.3,
+            821.93,
+            478.6
+          ],
+          "mask": "masks/0009_00.png"
+        },
+        {
+          "det_id": "0009_01",
+          "class_name": "phone",
+          "score": 0.4465,
+          "bbox_xyxy": [
+            699.92,
+            431.16,
+            719.2,
+            444.89
+          ],
+          "mask": "masks/0009_01.png"
+        },
+        {
+          "det_id": "0009_02",
+          "class_name": "plywood panel",
+          "score": 0.4305,
+          "bbox_xyxy": [
+            667.81,
+            269.1,
+            751.54,
+            442.42
+          ],
+          "mask": "masks/0009_02.png"
+        },
+        {
+          "det_id": "0009_03",
+          "class_name": "artificial turf",
+          "score": 0.3819,
+          "bbox_xyxy": [
+            421.19,
+            391.33,
+            677.41,
+            473.67
+          ],
+          "mask": "masks/0009_03.png"
+        },
+        {
+          "det_id": "0009_04",
+          "class_name": "hanging plant",
+          "score": 0.3815,
+          "bbox_xyxy": [
+            345.26,
+            206.07,
+            620.55,
+            468.66
+          ],
+          "mask": "masks/0009_04.png"
+        },
+        {
+          "det_id": "0009_05",
+          "class_name": "decorative plate",
+          "score": 0.3637,
+          "bbox_xyxy": [
+            711.36,
+            402.74,
+            819.98,
+            478.02
+          ],
+          "mask": "masks/0009_05.png"
+        },
+        {
+          "det_id": "0009_06",
+          "class_name": "bench seat",
+          "score": 0.3415,
+          "bbox_xyxy": [
+            756.44,
+            448.39,
+            862.13,
+            505.9
+          ],
+          "mask": "masks/0009_06.png"
+        },
+        {
+          "det_id": "0009_07",
+          "class_name": "plywood panel",
+          "score": 0.326,
+          "bbox_xyxy": [
+            709.87,
+            402.57,
+            821.01,
+            477.76
+          ],
+          "mask": "masks/0009_07.png"
+        },
+        {
+          "det_id": "0009_08",
+          "class_name": "cushion",
+          "score": 0.3139,
+          "bbox_xyxy": [
+            759.02,
+            449.61,
+            855.78,
+            501.21
+          ],
+          "mask": "masks/0009_08.png"
+        },
+        {
+          "det_id": "0009_09",
+          "class_name": "table",
+          "score": 0.3031,
+          "bbox_xyxy": [
+            758.69,
+            449.12,
+            862.92,
+            512.84
+          ],
+          "mask": "masks/0009_09.png"
+        },
+        {
+          "det_id": "0009_10",
+          "class_name": "bench seat",
+          "score": 0.2942,
+          "bbox_xyxy": [
+            711.87,
+            402.19,
+            822.19,
+            480.85
+          ],
+          "mask": "masks/0009_10.png"
+        },
+        {
+          "det_id": "0009_11",
+          "class_name": "cushion",
+          "score": 0.2862,
+          "bbox_xyxy": [
+            710.44,
+            403.34,
+            820.67,
+            478.37
+          ],
+          "mask": "masks/0009_11.png"
+        },
+        {
+          "det_id": "0009_12",
+          "class_name": "window",
+          "score": 0.2856,
+          "bbox_xyxy": [
+            349.04,
+            307.92,
+            509.23,
+            432.98
+          ],
+          "mask": "masks/0009_12.png"
+        },
+        {
+          "det_id": "0009_13",
+          "class_name": "decorative plate",
+          "score": 0.2654,
+          "bbox_xyxy": [
+            663.88,
+            264.0,
+            913.6,
+            584.58
+          ],
+          "mask": "masks/0009_13.png"
+        },
+        {
+          "det_id": "0009_14",
+          "class_name": "artificial turf",
+          "score": 0.2563,
+          "bbox_xyxy": [
+            346.62,
+            309.5,
+            510.67,
+            438.97
+          ],
+          "mask": "masks/0009_14.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0010",
+      "detections": [
+        {
+          "det_id": "0010_00",
+          "class_name": "table",
+          "score": 0.4705,
+          "bbox_xyxy": [
+            661.29,
+            428.03,
+            799.29,
+            514.55
+          ],
+          "mask": "masks/0010_00.png"
+        },
+        {
+          "det_id": "0010_01",
+          "class_name": "bench seat",
+          "score": 0.4433,
+          "bbox_xyxy": [
+            391.35,
+            276.69,
+            597.78,
+            401.67
+          ],
+          "mask": "masks/0010_01.png"
+        },
+        {
+          "det_id": "0010_02",
+          "class_name": "plywood panel",
+          "score": 0.4348,
+          "bbox_xyxy": [
+            657.66,
+            300.91,
+            769.33,
+            449.52
+          ],
+          "mask": "masks/0010_02.png"
+        },
+        {
+          "det_id": "0010_03",
+          "class_name": "phone",
+          "score": 0.4215,
+          "bbox_xyxy": [
+            687.81,
+            453.4,
+            707.99,
+            464.68
+          ],
+          "mask": "masks/0010_03.png"
+        },
+        {
+          "det_id": "0010_04",
+          "class_name": "laptop",
+          "score": 0.3916,
+          "bbox_xyxy": [
+            657.75,
+            300.79,
+            800.84,
+            512.92
+          ],
+          "mask": "masks/0010_04.png"
+        },
+        {
+          "det_id": "0010_05",
+          "class_name": "hanging plant",
+          "score": 0.3295,
+          "bbox_xyxy": [
+            388.06,
+            179.3,
+            654.99,
+            417.32
+          ],
+          "mask": "masks/0010_05.png"
+        },
+        {
+          "det_id": "0010_06",
+          "class_name": "decorative plate",
+          "score": 0.3279,
+          "bbox_xyxy": [
+            671.53,
+            445.2,
+            796.44,
+            511.32
+          ],
+          "mask": "masks/0010_06.png"
+        },
+        {
+          "det_id": "0010_07",
+          "class_name": "decorative plate",
+          "score": 0.309,
+          "bbox_xyxy": [
+            655.88,
+            280.69,
+            853.45,
+            666.39
+          ],
+          "mask": "masks/0010_07.png"
+        },
+        {
+          "det_id": "0010_08",
+          "class_name": "hanging plant",
+          "score": 0.2997,
+          "bbox_xyxy": [
+            609.97,
+            184.85,
+            649.13,
+            245.3
+          ],
+          "mask": "masks/0010_08.png"
+        },
+        {
+          "det_id": "0010_09",
+          "class_name": "cushion",
+          "score": 0.2898,
+          "bbox_xyxy": [
+            388.91,
+            203.59,
+            598.33,
+            403.07
+          ],
+          "mask": "masks/0010_09.png"
+        },
+        {
+          "det_id": "0010_10",
+          "class_name": "bench seat",
+          "score": 0.2776,
+          "bbox_xyxy": [
+            673.5,
+            450.69,
+            796.24,
+            510.04
+          ],
+          "mask": "masks/0010_10.png"
+        },
+        {
+          "det_id": "0010_11",
+          "class_name": "bench seat",
+          "score": 0.2773,
+          "bbox_xyxy": [
+            687.97,
+            509.17,
+            822.42,
+            573.34
+          ],
+          "mask": "masks/0010_11.png"
+        },
+        {
+          "det_id": "0010_12",
+          "class_name": "artificial turf",
+          "score": 0.2763,
+          "bbox_xyxy": [
+            391.88,
+            281.0,
+            582.26,
+            368.9
+          ],
+          "mask": "masks/0010_12.png"
+        },
+        {
+          "det_id": "0010_13",
+          "class_name": "cushion",
+          "score": 0.2714,
+          "bbox_xyxy": [
+            657.9,
+            301.06,
+            770.73,
+            457.4
+          ],
+          "mask": "masks/0010_13.png"
+        },
+        {
+          "det_id": "0010_14",
+          "class_name": "artificial turf",
+          "score": 0.2657,
+          "bbox_xyxy": [
+            656.24,
+            282.65,
+            852.56,
+            667.72
+          ],
+          "mask": "masks/0010_14.png"
+        },
+        {
+          "det_id": "0010_15",
+          "class_name": "cushion",
+          "score": 0.2611,
+          "bbox_xyxy": [
+            477.48,
+            207.52,
+            577.19,
+            287.59
+          ],
+          "mask": "masks/0010_15.png"
+        },
+        {
+          "det_id": "0010_16",
+          "class_name": "table",
+          "score": 0.2609,
+          "bbox_xyxy": [
+            656.73,
+            298.16,
+            801.7,
+            518.5
+          ],
+          "mask": "masks/0010_16.png"
+        },
+        {
+          "det_id": "0010_17",
+          "class_name": "artificial turf",
+          "score": 0.2585,
+          "bbox_xyxy": [
+            462.52,
+            365.93,
+            665.44,
+            446.74
+          ],
+          "mask": "masks/0010_17.png"
+        },
+        {
+          "det_id": "0010_18",
+          "class_name": "plywood panel",
+          "score": 0.256,
+          "bbox_xyxy": [
+            671.39,
+            449.36,
+            801.05,
+            509.99
+          ],
+          "mask": "masks/0010_18.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0011",
+      "detections": [
+        {
+          "det_id": "0011_00",
+          "class_name": "table",
+          "score": 0.4823,
+          "bbox_xyxy": [
+            611.36,
+            452.57,
+            751.03,
+            548.2
+          ],
+          "mask": "masks/0011_00.png"
+        },
+        {
+          "det_id": "0011_01",
+          "class_name": "plywood panel",
+          "score": 0.4553,
+          "bbox_xyxy": [
+            591.99,
+            309.63,
+            760.64,
+            560.77
+          ],
+          "mask": "masks/0011_01.png"
+        },
+        {
+          "det_id": "0011_02",
+          "class_name": "phone",
+          "score": 0.4015,
+          "bbox_xyxy": [
+            657.48,
+            468.04,
+            679.9,
+            480.24
+          ],
+          "mask": "masks/0011_02.png"
+        },
+        {
+          "det_id": "0011_03",
+          "class_name": "cushion",
+          "score": 0.3925,
+          "bbox_xyxy": [
+            591.49,
+            308.49,
+            760.35,
+            558.09
+          ],
+          "mask": "masks/0011_03.png"
+        },
+        {
+          "det_id": "0011_04",
+          "class_name": "bench seat",
+          "score": 0.3822,
+          "bbox_xyxy": [
+            612.78,
+            450.99,
+            749.3,
+            545.98
+          ],
+          "mask": "masks/0011_04.png"
+        },
+        {
+          "det_id": "0011_05",
+          "class_name": "bench seat",
+          "score": 0.3699,
+          "bbox_xyxy": [
+            606.02,
+            531.17,
+            727.24,
+            594.5
+          ],
+          "mask": "masks/0011_05.png"
+        },
+        {
+          "det_id": "0011_06",
+          "class_name": "bench seat",
+          "score": 0.3608,
+          "bbox_xyxy": [
+            486.59,
+            251.22,
+            656.04,
+            362.23
+          ],
+          "mask": "masks/0011_06.png"
+        },
+        {
+          "det_id": "0011_07",
+          "class_name": "artificial turf",
+          "score": 0.3446,
+          "bbox_xyxy": [
+            589.88,
+            449.68,
+            807.15,
+            693.49
+          ],
+          "mask": "masks/0011_07.png"
+        },
+        {
+          "det_id": "0011_08",
+          "class_name": "hanging plant",
+          "score": 0.3433,
+          "bbox_xyxy": [
+            487.16,
+            150.98,
+            700.84,
+            370.59
+          ],
+          "mask": "masks/0011_08.png"
+        },
+        {
+          "det_id": "0011_09",
+          "class_name": "cushion",
+          "score": 0.3429,
+          "bbox_xyxy": [
+            486.24,
+            252.66,
+            656.55,
+            362.35
+          ],
+          "mask": "masks/0011_09.png"
+        },
+        {
+          "det_id": "0011_10",
+          "class_name": "plywood panel",
+          "score": 0.3361,
+          "bbox_xyxy": [
+            613.26,
+            459.75,
+            751.7,
+            535.49
+          ],
+          "mask": "masks/0011_10.png"
+        },
+        {
+          "det_id": "0011_11",
+          "class_name": "plywood panel",
+          "score": 0.3256,
+          "bbox_xyxy": [
+            642.83,
+            383.54,
+            754.56,
+            473.41
+          ],
+          "mask": "masks/0011_11.png"
+        },
+        {
+          "det_id": "0011_12",
+          "class_name": "artificial turf",
+          "score": 0.3006,
+          "bbox_xyxy": [
+            487.44,
+            252.9,
+            658.42,
+            343.15
+          ],
+          "mask": "masks/0011_12.png"
+        },
+        {
+          "det_id": "0011_13",
+          "class_name": "window",
+          "score": 0.2926,
+          "bbox_xyxy": [
+            644.98,
+            331.49,
+            744.04,
+            398.56
+          ],
+          "mask": "masks/0011_13.png"
+        },
+        {
+          "det_id": "0011_14",
+          "class_name": "decorative plate",
+          "score": 0.2759,
+          "bbox_xyxy": [
+            589.88,
+            305.24,
+            759.5,
+            563.45
+          ],
+          "mask": "masks/0011_14.png"
+        },
+        {
+          "det_id": "0011_15",
+          "class_name": "table",
+          "score": 0.2709,
+          "bbox_xyxy": [
+            593.54,
+            308.99,
+            760.56,
+            562.27
+          ],
+          "mask": "masks/0011_15.png"
+        },
+        {
+          "det_id": "0011_16",
+          "class_name": "window",
+          "score": 0.2614,
+          "bbox_xyxy": [
+            586.95,
+            308.94,
+            762.01,
+            690.49
+          ],
+          "mask": "masks/0011_16.png"
+        },
+        {
+          "det_id": "0011_17",
+          "class_name": "decorative plate",
+          "score": 0.251,
+          "bbox_xyxy": [
+            485.95,
+            251.13,
+            658.65,
+            363.53
+          ],
+          "mask": "masks/0011_17.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0012",
+      "detections": [
+        {
+          "det_id": "0012_00",
+          "class_name": "table",
+          "score": 0.6304,
+          "bbox_xyxy": [
+            555.61,
+            458.49,
+            663.86,
+            585.81
+          ],
+          "mask": "masks/0012_00.png"
+        },
+        {
+          "det_id": "0012_01",
+          "class_name": "plywood panel",
+          "score": 0.5046,
+          "bbox_xyxy": [
+            483.81,
+            308.94,
+            721.61,
+            539.55
+          ],
+          "mask": "masks/0012_01.png"
+        },
+        {
+          "det_id": "0012_02",
+          "class_name": "laptop",
+          "score": 0.4879,
+          "bbox_xyxy": [
+            602.82,
+            482.9,
+            641.69,
+            511.15
+          ],
+          "mask": "masks/0012_02.png"
+        },
+        {
+          "det_id": "0012_03",
+          "class_name": "cushion",
+          "score": 0.4014,
+          "bbox_xyxy": [
+            603.48,
+            456.58,
+            709.0,
+            536.94
+          ],
+          "mask": "masks/0012_03.png"
+        },
+        {
+          "det_id": "0012_04",
+          "class_name": "table",
+          "score": 0.3863,
+          "bbox_xyxy": [
+            597.17,
+            453.54,
+            709.06,
+            562.97
+          ],
+          "mask": "masks/0012_04.png"
+        },
+        {
+          "det_id": "0012_05",
+          "class_name": "artificial turf",
+          "score": 0.3794,
+          "bbox_xyxy": [
+            457.01,
+            366.9,
+            763.75,
+            663.49
+          ],
+          "mask": "masks/0012_05.png"
+        },
+        {
+          "det_id": "0012_06",
+          "class_name": "bench seat",
+          "score": 0.3603,
+          "bbox_xyxy": [
+            597.14,
+            454.39,
+            709.17,
+            560.58
+          ],
+          "mask": "masks/0012_06.png"
+        },
+        {
+          "det_id": "0012_07",
+          "class_name": "window",
+          "score": 0.3494,
+          "bbox_xyxy": [
+            606.85,
+            233.31,
+            741.26,
+            371.53
+          ],
+          "mask": "masks/0012_07.png"
+        },
+        {
+          "det_id": "0012_08",
+          "class_name": "phone",
+          "score": 0.3422,
+          "bbox_xyxy": [
+            623.52,
+            470.86,
+            642.36,
+            485.88
+          ],
+          "mask": "masks/0012_08.png"
+        },
+        {
+          "det_id": "0012_09",
+          "class_name": "bench seat",
+          "score": 0.3386,
+          "bbox_xyxy": [
+            503.18,
+            507.11,
+            619.51,
+            629.91
+          ],
+          "mask": "masks/0012_09.png"
+        },
+        {
+          "det_id": "0012_10",
+          "class_name": "hanging plant",
+          "score": 0.3243,
+          "bbox_xyxy": [
+            613.67,
+            134.87,
+            748.56,
+            247.28
+          ],
+          "mask": "masks/0012_10.png"
+        },
+        {
+          "det_id": "0012_11",
+          "class_name": "bench seat",
+          "score": 0.2948,
+          "bbox_xyxy": [
+            456.23,
+            528.44,
+            617.78,
+            660.28
+          ],
+          "mask": "masks/0012_11.png"
+        },
+        {
+          "det_id": "0012_12",
+          "class_name": "window",
+          "score": 0.2912,
+          "bbox_xyxy": [
+            622.97,
+            332.45,
+            712.69,
+            429.53
+          ],
+          "mask": "masks/0012_12.png"
+        },
+        {
+          "det_id": "0012_13",
+          "class_name": "plywood panel",
+          "score": 0.2806,
+          "bbox_xyxy": [
+            627.46,
+            403.93,
+            708.65,
+            502.02
+          ],
+          "mask": "masks/0012_13.png"
+        },
+        {
+          "det_id": "0012_14",
+          "class_name": "cushion",
+          "score": 0.2748,
+          "bbox_xyxy": [
+            529.45,
+            510.95,
+            620.73,
+            596.21
+          ],
+          "mask": "masks/0012_14.png"
+        },
+        {
+          "det_id": "0012_15",
+          "class_name": "artificial turf",
+          "score": 0.2705,
+          "bbox_xyxy": [
+            604.91,
+            232.84,
+            740.55,
+            366.08
+          ],
+          "mask": "masks/0012_15.png"
+        },
+        {
+          "det_id": "0012_16",
+          "class_name": "bench seat",
+          "score": 0.2681,
+          "bbox_xyxy": [
+            460.71,
+            563.93,
+            576.43,
+            637.44
+          ],
+          "mask": "masks/0012_16.png"
+        },
+        {
+          "det_id": "0012_17",
+          "class_name": "backpack",
+          "score": 0.2672,
+          "bbox_xyxy": [
+            502.84,
+            516.24,
+            559.26,
+            559.62
+          ],
+          "mask": "masks/0012_17.png"
+        },
+        {
+          "det_id": "0012_18",
+          "class_name": "plywood panel",
+          "score": 0.2647,
+          "bbox_xyxy": [
+            620.64,
+            330.54,
+            712.36,
+            526.58
+          ],
+          "mask": "masks/0012_18.png"
+        },
+        {
+          "det_id": "0012_19",
+          "class_name": "cushion",
+          "score": 0.2646,
+          "bbox_xyxy": [
+            600.18,
+            452.24,
+            655.53,
+            487.95
+          ],
+          "mask": "masks/0012_19.png"
+        },
+        {
+          "det_id": "0012_20",
+          "class_name": "laptop",
+          "score": 0.2635,
+          "bbox_xyxy": [
+            589.69,
+            492.2,
+            620.28,
+            509.13
+          ],
+          "mask": "masks/0012_20.png"
+        },
+        {
+          "det_id": "0012_21",
+          "class_name": "decorative plate",
+          "score": 0.2617,
+          "bbox_xyxy": [
+            485.99,
+            308.59,
+            716.85,
+            543.08
+          ],
+          "mask": "masks/0012_21.png"
+        },
+        {
+          "det_id": "0012_22",
+          "class_name": "cushion",
+          "score": 0.2501,
+          "bbox_xyxy": [
+            455.65,
+            566.1,
+            578.05,
+            636.95
+          ],
+          "mask": "masks/0012_22.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0013",
+      "detections": [
+        {
+          "det_id": "0013_00",
+          "class_name": "table",
+          "score": 0.6425,
+          "bbox_xyxy": [
+            500.92,
+            436.86,
+            587.67,
+            565.98
+          ],
+          "mask": "masks/0013_00.png"
+        },
+        {
+          "det_id": "0013_01",
+          "class_name": "bench seat",
+          "score": 0.4863,
+          "bbox_xyxy": [
+            567.13,
+            445.42,
+            646.33,
+            556.18
+          ],
+          "mask": "masks/0013_01.png"
+        },
+        {
+          "det_id": "0013_02",
+          "class_name": "bench seat",
+          "score": 0.425,
+          "bbox_xyxy": [
+            448.13,
+            466.39,
+            520.97,
+            576.83
+          ],
+          "mask": "masks/0013_02.png"
+        },
+        {
+          "det_id": "0013_03",
+          "class_name": "laptop",
+          "score": 0.4142,
+          "bbox_xyxy": [
+            545.0,
+            465.68,
+            577.25,
+            493.41
+          ],
+          "mask": "masks/0013_03.png"
+        },
+        {
+          "det_id": "0013_04",
+          "class_name": "headphones",
+          "score": 0.403,
+          "bbox_xyxy": [
+            528.39,
+            466.32,
+            551.6,
+            496.52
+          ],
+          "mask": "masks/0013_04.png"
+        },
+        {
+          "det_id": "0013_05",
+          "class_name": "artificial turf",
+          "score": 0.3996,
+          "bbox_xyxy": [
+            407.99,
+            344.82,
+            792.81,
+            602.09
+          ],
+          "mask": "masks/0013_05.png"
+        },
+        {
+          "det_id": "0013_06",
+          "class_name": "decorative plate",
+          "score": 0.3904,
+          "bbox_xyxy": [
+            532.94,
+            343.38,
+            568.24,
+            373.19
+          ],
+          "mask": "masks/0013_06.png"
+        },
+        {
+          "det_id": "0013_07",
+          "class_name": "plywood panel",
+          "score": 0.374,
+          "bbox_xyxy": [
+            386.4,
+            300.81,
+            661.76,
+            572.46
+          ],
+          "mask": "masks/0013_07.png"
+        },
+        {
+          "det_id": "0013_08",
+          "class_name": "cushion",
+          "score": 0.3187,
+          "bbox_xyxy": [
+            432.66,
+            302.33,
+            623.43,
+            393.0
+          ],
+          "mask": "masks/0013_08.png"
+        },
+        {
+          "det_id": "0013_09",
+          "class_name": "bench seat",
+          "score": 0.3121,
+          "bbox_xyxy": [
+            381.04,
+            488.24,
+            467.17,
+            593.88
+          ],
+          "mask": "masks/0013_09.png"
+        },
+        {
+          "det_id": "0013_10",
+          "class_name": "backpack",
+          "score": 0.3093,
+          "bbox_xyxy": [
+            453.87,
+            466.27,
+            489.72,
+            505.98
+          ],
+          "mask": "masks/0013_10.png"
+        },
+        {
+          "det_id": "0013_11",
+          "class_name": "bench seat",
+          "score": 0.3086,
+          "bbox_xyxy": [
+            392.62,
+            301.43,
+            663.7,
+            576.33
+          ],
+          "mask": "masks/0013_11.png"
+        },
+        {
+          "det_id": "0013_12",
+          "class_name": "cushion",
+          "score": 0.3032,
+          "bbox_xyxy": [
+            566.51,
+            445.35,
+            645.06,
+            533.52
+          ],
+          "mask": "masks/0013_12.png"
+        },
+        {
+          "det_id": "0013_13",
+          "class_name": "window",
+          "score": 0.2947,
+          "bbox_xyxy": [
+            725.18,
+            206.26,
+            805.37,
+            421.57
+          ],
+          "mask": "masks/0013_13.png"
+        },
+        {
+          "det_id": "0013_14",
+          "class_name": "hanging plant",
+          "score": 0.2944,
+          "bbox_xyxy": [
+            679.15,
+            145.88,
+            809.39,
+            429.75
+          ],
+          "mask": "masks/0013_14.png"
+        },
+        {
+          "det_id": "0013_15",
+          "class_name": "plywood panel",
+          "score": 0.2917,
+          "bbox_xyxy": [
+            502.01,
+            437.19,
+            585.32,
+            521.21
+          ],
+          "mask": "masks/0013_15.png"
+        },
+        {
+          "det_id": "0013_16",
+          "class_name": "artificial turf",
+          "score": 0.2832,
+          "bbox_xyxy": [
+            643.33,
+            355.36,
+            788.73,
+            571.0
+          ],
+          "mask": "masks/0013_16.png"
+        },
+        {
+          "det_id": "0013_17",
+          "class_name": "hanging plant",
+          "score": 0.28,
+          "bbox_xyxy": [
+            680.63,
+            144.79,
+            788.54,
+            274.15
+          ],
+          "mask": "masks/0013_17.png"
+        },
+        {
+          "det_id": "0013_18",
+          "class_name": "cushion",
+          "score": 0.2782,
+          "bbox_xyxy": [
+            448.3,
+            464.8,
+            522.41,
+            556.95
+          ],
+          "mask": "masks/0013_18.png"
+        },
+        {
+          "det_id": "0013_19",
+          "class_name": "laptop",
+          "score": 0.2773,
+          "bbox_xyxy": [
+            505.22,
+            438.06,
+            577.48,
+            496.99
+          ],
+          "mask": "masks/0013_19.png"
+        },
+        {
+          "det_id": "0013_20",
+          "class_name": "cushion",
+          "score": 0.2701,
+          "bbox_xyxy": [
+            427.67,
+            302.47,
+            633.05,
+            483.97
+          ],
+          "mask": "masks/0013_20.png"
+        },
+        {
+          "det_id": "0013_21",
+          "class_name": "plywood panel",
+          "score": 0.2692,
+          "bbox_xyxy": [
+            391.26,
+            357.37,
+            650.84,
+            427.14
+          ],
+          "mask": "masks/0013_21.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0014",
+      "detections": [
+        {
+          "det_id": "0014_00",
+          "class_name": "table",
+          "score": 0.7041,
+          "bbox_xyxy": [
+            467.04,
+            402.71,
+            555.81,
+            522.9
+          ],
+          "mask": "masks/0014_00.png"
+        },
+        {
+          "det_id": "0014_01",
+          "class_name": "bench seat",
+          "score": 0.5147,
+          "bbox_xyxy": [
+            523.26,
+            428.64,
+            606.47,
+            531.98
+          ],
+          "mask": "masks/0014_01.png"
+        },
+        {
+          "det_id": "0014_02",
+          "class_name": "artificial turf",
+          "score": 0.4901,
+          "bbox_xyxy": [
+            375.26,
+            389.37,
+            813.58,
+            572.59
+          ],
+          "mask": "masks/0014_02.png"
+        },
+        {
+          "det_id": "0014_03",
+          "class_name": "bench seat",
+          "score": 0.4662,
+          "bbox_xyxy": [
+            359.83,
+            410.35,
+            497.6,
+            512.63
+          ],
+          "mask": "masks/0014_03.png"
+        },
+        {
+          "det_id": "0014_04",
+          "class_name": "decorative plate",
+          "score": 0.4404,
+          "bbox_xyxy": [
+            529.96,
+            316.45,
+            562.84,
+            344.9
+          ],
+          "mask": "masks/0014_04.png"
+        },
+        {
+          "det_id": "0014_05",
+          "class_name": "cushion",
+          "score": 0.4102,
+          "bbox_xyxy": [
+            526.38,
+            429.09,
+            610.14,
+            513.62
+          ],
+          "mask": "masks/0014_05.png"
+        },
+        {
+          "det_id": "0014_06",
+          "class_name": "headphones",
+          "score": 0.3967,
+          "bbox_xyxy": [
+            482.32,
+            428.1,
+            514.51,
+            457.3
+          ],
+          "mask": "masks/0014_06.png"
+        },
+        {
+          "det_id": "0014_07",
+          "class_name": "laptop",
+          "score": 0.3871,
+          "bbox_xyxy": [
+            504.15,
+            433.83,
+            541.37,
+            458.75
+          ],
+          "mask": "masks/0014_07.png"
+        },
+        {
+          "det_id": "0014_08",
+          "class_name": "plywood panel",
+          "score": 0.3647,
+          "bbox_xyxy": [
+            401.64,
+            357.38,
+            457.93,
+            474.84
+          ],
+          "mask": "masks/0014_08.png"
+        },
+        {
+          "det_id": "0014_09",
+          "class_name": "plywood panel",
+          "score": 0.3615,
+          "bbox_xyxy": [
+            354.37,
+            271.22,
+            614.86,
+            532.69
+          ],
+          "mask": "masks/0014_09.png"
+        },
+        {
+          "det_id": "0014_10",
+          "class_name": "hanging plant",
+          "score": 0.3322,
+          "bbox_xyxy": [
+            682.18,
+            238.17,
+            774.82,
+            300.43
+          ],
+          "mask": "masks/0014_10.png"
+        },
+        {
+          "det_id": "0014_11",
+          "class_name": "hanging plant",
+          "score": 0.3285,
+          "bbox_xyxy": [
+            794.14,
+            282.21,
+            851.99,
+            472.91
+          ],
+          "mask": "masks/0014_11.png"
+        },
+        {
+          "det_id": "0014_12",
+          "class_name": "cushion",
+          "score": 0.3185,
+          "bbox_xyxy": [
+            359.86,
+            409.6,
+            494.95,
+            493.19
+          ],
+          "mask": "masks/0014_12.png"
+        },
+        {
+          "det_id": "0014_13",
+          "class_name": "bench seat",
+          "score": 0.3027,
+          "bbox_xyxy": [
+            354.97,
+            272.25,
+            616.31,
+            534.93
+          ],
+          "mask": "masks/0014_13.png"
+        },
+        {
+          "det_id": "0014_14",
+          "class_name": "cushion",
+          "score": 0.2997,
+          "bbox_xyxy": [
+            439.48,
+            271.79,
+            612.15,
+            436.5
+          ],
+          "mask": "masks/0014_14.png"
+        },
+        {
+          "det_id": "0014_15",
+          "class_name": "backpack",
+          "score": 0.2956,
+          "bbox_xyxy": [
+            438.08,
+            407.41,
+            482.11,
+            444.67
+          ],
+          "mask": "masks/0014_15.png"
+        },
+        {
+          "det_id": "0014_16",
+          "class_name": "hanging plant",
+          "score": 0.2936,
+          "bbox_xyxy": [
+            797.51,
+            191.52,
+            849.66,
+            290.3
+          ],
+          "mask": "masks/0014_16.png"
+        },
+        {
+          "det_id": "0014_17",
+          "class_name": "laptop",
+          "score": 0.2687,
+          "bbox_xyxy": [
+            437.74,
+            407.38,
+            483.58,
+            444.01
+          ],
+          "mask": "masks/0014_17.png"
+        },
+        {
+          "det_id": "0014_18",
+          "class_name": "decorative plate",
+          "score": 0.2668,
+          "bbox_xyxy": [
+            481.38,
+            426.13,
+            513.4,
+            455.61
+          ],
+          "mask": "masks/0014_18.png"
+        },
+        {
+          "det_id": "0014_19",
+          "class_name": "laptop",
+          "score": 0.2594,
+          "bbox_xyxy": [
+            464.76,
+            402.66,
+            554.03,
+            477.77
+          ],
+          "mask": "masks/0014_19.png"
+        },
+        {
+          "det_id": "0014_20",
+          "class_name": "decorative plate",
+          "score": 0.2538,
+          "bbox_xyxy": [
+            681.93,
+            239.25,
+            774.4,
+            299.53
+          ],
+          "mask": "masks/0014_20.png"
+        },
+        {
+          "det_id": "0014_21",
+          "class_name": "plywood panel",
+          "score": 0.2514,
+          "bbox_xyxy": [
+            434.86,
+            271.95,
+            611.2,
+            439.7
+          ],
+          "mask": "masks/0014_21.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0015",
+      "detections": [
+        {
+          "det_id": "0015_00",
+          "class_name": "table",
+          "score": 0.6168,
+          "bbox_xyxy": [
+            458.36,
+            369.54,
+            575.49,
+            471.78
+          ],
+          "mask": "masks/0015_00.png"
+        },
+        {
+          "det_id": "0015_01",
+          "class_name": "bench seat",
+          "score": 0.5135,
+          "bbox_xyxy": [
+            500.07,
+            408.83,
+            609.7,
+            505.97
+          ],
+          "mask": "masks/0015_01.png"
+        },
+        {
+          "det_id": "0015_02",
+          "class_name": "cushion",
+          "score": 0.4566,
+          "bbox_xyxy": [
+            445.49,
+            366.81,
+            474.7,
+            397.74
+          ],
+          "mask": "masks/0015_02.png"
+        },
+        {
+          "det_id": "0015_03",
+          "class_name": "laptop",
+          "score": 0.45,
+          "bbox_xyxy": [
+            495.31,
+            384.3,
+            523.52,
+            403.92
+          ],
+          "mask": "masks/0015_03.png"
+        },
+        {
+          "det_id": "0015_04",
+          "class_name": "plywood panel",
+          "score": 0.4063,
+          "bbox_xyxy": [
+            401.92,
+            227.52,
+            617.25,
+            435.01
+          ],
+          "mask": "masks/0015_04.png"
+        },
+        {
+          "det_id": "0015_05",
+          "class_name": "hanging plant",
+          "score": 0.3779,
+          "bbox_xyxy": [
+            669.52,
+            254.16,
+            734.26,
+            327.78
+          ],
+          "mask": "masks/0015_05.png"
+        },
+        {
+          "det_id": "0015_06",
+          "class_name": "bench seat",
+          "score": 0.3746,
+          "bbox_xyxy": [
+            430.46,
+            384.42,
+            497.18,
+            451.08
+          ],
+          "mask": "masks/0015_06.png"
+        },
+        {
+          "det_id": "0015_07",
+          "class_name": "artificial turf",
+          "score": 0.365,
+          "bbox_xyxy": [
+            394.33,
+            363.35,
+            921.88,
+            537.75
+          ],
+          "mask": "masks/0015_07.png"
+        },
+        {
+          "det_id": "0015_08",
+          "class_name": "cushion",
+          "score": 0.3629,
+          "bbox_xyxy": [
+            553.81,
+            408.61,
+            610.19,
+            445.06
+          ],
+          "mask": "masks/0015_08.png"
+        },
+        {
+          "det_id": "0015_09",
+          "class_name": "cushion",
+          "score": 0.3354,
+          "bbox_xyxy": [
+            399.86,
+            372.71,
+            430.47,
+            404.35
+          ],
+          "mask": "masks/0015_09.png"
+        },
+        {
+          "det_id": "0015_10",
+          "class_name": "bench seat",
+          "score": 0.3214,
+          "bbox_xyxy": [
+            400.15,
+            370.03,
+            484.85,
+            452.09
+          ],
+          "mask": "masks/0015_10.png"
+        },
+        {
+          "det_id": "0015_11",
+          "class_name": "plywood panel",
+          "score": 0.3109,
+          "bbox_xyxy": [
+            421.11,
+            312.03,
+            506.88,
+            401.19
+          ],
+          "mask": "masks/0015_11.png"
+        },
+        {
+          "det_id": "0015_12",
+          "class_name": "cushion",
+          "score": 0.2968,
+          "bbox_xyxy": [
+            499.22,
+            422.3,
+            578.15,
+            482.73
+          ],
+          "mask": "masks/0015_12.png"
+        },
+        {
+          "det_id": "0015_13",
+          "class_name": "decorative plate",
+          "score": 0.2922,
+          "bbox_xyxy": [
+            466.62,
+            398.0,
+            517.04,
+            432.14
+          ],
+          "mask": "masks/0015_13.png"
+        },
+        {
+          "det_id": "0015_14",
+          "class_name": "artificial turf",
+          "score": 0.2872,
+          "bbox_xyxy": [
+            477.71,
+            445.15,
+            871.71,
+            543.72
+          ],
+          "mask": "masks/0015_14.png"
+        },
+        {
+          "det_id": "0015_15",
+          "class_name": "cushion",
+          "score": 0.2837,
+          "bbox_xyxy": [
+            428.94,
+            387.69,
+            484.13,
+            430.81
+          ],
+          "mask": "masks/0015_15.png"
+        },
+        {
+          "det_id": "0015_16",
+          "class_name": "bench seat",
+          "score": 0.2684,
+          "bbox_xyxy": [
+            398.61,
+            372.68,
+            433.11,
+            434.31
+          ],
+          "mask": "masks/0015_16.png"
+        },
+        {
+          "det_id": "0015_17",
+          "class_name": "bench seat",
+          "score": 0.265,
+          "bbox_xyxy": [
+            552.54,
+            407.73,
+            611.55,
+            447.56
+          ],
+          "mask": "masks/0015_17.png"
+        },
+        {
+          "det_id": "0015_18",
+          "class_name": "decorative plate",
+          "score": 0.2648,
+          "bbox_xyxy": [
+            554.22,
+            291.02,
+            580.03,
+            322.38
+          ],
+          "mask": "masks/0015_18.png"
+        },
+        {
+          "det_id": "0015_19",
+          "class_name": "headphones",
+          "score": 0.2524,
+          "bbox_xyxy": [
+            493.26,
+            384.38,
+            507.5,
+            403.35
+          ],
+          "mask": "masks/0015_19.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0016",
+      "detections": [
+        {
+          "det_id": "0016_00",
+          "class_name": "decorative plate",
+          "score": 0.5468,
+          "bbox_xyxy": [
+            482.49,
+            194.89,
+            625.5,
+            459.82
+          ],
+          "mask": "masks/0016_00.png"
+        },
+        {
+          "det_id": "0016_01",
+          "class_name": "plywood panel",
+          "score": 0.5141,
+          "bbox_xyxy": [
+            482.34,
+            196.7,
+            624.86,
+            446.85
+          ],
+          "mask": "masks/0016_01.png"
+        },
+        {
+          "det_id": "0016_02",
+          "class_name": "bench seat",
+          "score": 0.5049,
+          "bbox_xyxy": [
+            506.72,
+            386.99,
+            620.26,
+            434.56
+          ],
+          "mask": "masks/0016_02.png"
+        },
+        {
+          "det_id": "0016_03",
+          "class_name": "artificial turf",
+          "score": 0.4114,
+          "bbox_xyxy": [
+            460.98,
+            353.82,
+            925.93,
+            567.61
+          ],
+          "mask": "masks/0016_03.png"
+        },
+        {
+          "det_id": "0016_04",
+          "class_name": "hanging plant",
+          "score": 0.3847,
+          "bbox_xyxy": [
+            481.65,
+            194.01,
+            624.57,
+            467.61
+          ],
+          "mask": "masks/0016_04.png"
+        },
+        {
+          "det_id": "0016_05",
+          "class_name": "table",
+          "score": 0.3754,
+          "bbox_xyxy": [
+            481.09,
+            194.95,
+            624.54,
+            466.01
+          ],
+          "mask": "masks/0016_05.png"
+        },
+        {
+          "det_id": "0016_06",
+          "class_name": "table",
+          "score": 0.3403,
+          "bbox_xyxy": [
+            491.53,
+            338.35,
+            610.28,
+            395.1
+          ],
+          "mask": "masks/0016_06.png"
+        },
+        {
+          "det_id": "0016_07",
+          "class_name": "hanging plant",
+          "score": 0.3397,
+          "bbox_xyxy": [
+            639.93,
+            275.26,
+            666.97,
+            337.76
+          ],
+          "mask": "masks/0016_07.png"
+        },
+        {
+          "det_id": "0016_08",
+          "class_name": "plywood panel",
+          "score": 0.3357,
+          "bbox_xyxy": [
+            490.91,
+            268.55,
+            584.96,
+            340.44
+          ],
+          "mask": "masks/0016_08.png"
+        },
+        {
+          "det_id": "0016_09",
+          "class_name": "light switch",
+          "score": 0.3319,
+          "bbox_xyxy": [
+            483.6,
+            197.5,
+            624.71,
+            468.73
+          ],
+          "mask": "masks/0016_09.png"
+        },
+        {
+          "det_id": "0016_10",
+          "class_name": "cushion",
+          "score": 0.32,
+          "bbox_xyxy": [
+            506.88,
+            391.42,
+            620.75,
+            432.88
+          ],
+          "mask": "masks/0016_10.png"
+        },
+        {
+          "det_id": "0016_11",
+          "class_name": "cushion",
+          "score": 0.3105,
+          "bbox_xyxy": [
+            483.25,
+            197.49,
+            623.99,
+            422.51
+          ],
+          "mask": "masks/0016_11.png"
+        },
+        {
+          "det_id": "0016_12",
+          "class_name": "decorative plate",
+          "score": 0.2787,
+          "bbox_xyxy": [
+            459.59,
+            188.56,
+            931.28,
+            569.15
+          ],
+          "mask": "masks/0016_12.png"
+        },
+        {
+          "det_id": "0016_13",
+          "class_name": "cushion",
+          "score": 0.2761,
+          "bbox_xyxy": [
+            553.01,
+            393.58,
+            621.37,
+            426.36
+          ],
+          "mask": "masks/0016_13.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0017",
+      "detections": [
+        {
+          "det_id": "0017_00",
+          "class_name": "artificial turf",
+          "score": 0.5168,
+          "bbox_xyxy": [
+            409.33,
+            277.72,
+            690.36,
+            572.27
+          ],
+          "mask": "masks/0017_00.png"
+        },
+        {
+          "det_id": "0017_01",
+          "class_name": "plywood panel",
+          "score": 0.4958,
+          "bbox_xyxy": [
+            718.96,
+            306.31,
+            786.42,
+            412.24
+          ],
+          "mask": "masks/0017_01.png"
+        },
+        {
+          "det_id": "0017_02",
+          "class_name": "plywood panel",
+          "score": 0.4465,
+          "bbox_xyxy": [
+            667.06,
+            311.37,
+            727.75,
+            404.31
+          ],
+          "mask": "masks/0017_02.png"
+        },
+        {
+          "det_id": "0017_03",
+          "class_name": "cushion",
+          "score": 0.3698,
+          "bbox_xyxy": [
+            667.46,
+            312.64,
+            728.12,
+            402.66
+          ],
+          "mask": "masks/0017_03.png"
+        },
+        {
+          "det_id": "0017_04",
+          "class_name": "table",
+          "score": 0.3571,
+          "bbox_xyxy": [
+            714.98,
+            306.79,
+            786.2,
+            420.42
+          ],
+          "mask": "masks/0017_04.png"
+        },
+        {
+          "det_id": "0017_05",
+          "class_name": "hanging plant",
+          "score": 0.3445,
+          "bbox_xyxy": [
+            665.43,
+            227.04,
+            913.77,
+            426.24
+          ],
+          "mask": "masks/0017_05.png"
+        },
+        {
+          "det_id": "0017_06",
+          "class_name": "decorative plate",
+          "score": 0.3138,
+          "bbox_xyxy": [
+            717.19,
+            306.73,
+            785.77,
+            412.97
+          ],
+          "mask": "masks/0017_06.png"
+        },
+        {
+          "det_id": "0017_07",
+          "class_name": "plywood panel",
+          "score": 0.3116,
+          "bbox_xyxy": [
+            776.3,
+            325.15,
+            891.47,
+            415.76
+          ],
+          "mask": "masks/0017_07.png"
+        },
+        {
+          "det_id": "0017_08",
+          "class_name": "cushion",
+          "score": 0.2985,
+          "bbox_xyxy": [
+            713.58,
+            307.96,
+            787.46,
+            421.54
+          ],
+          "mask": "masks/0017_08.png"
+        },
+        {
+          "det_id": "0017_09",
+          "class_name": "table",
+          "score": 0.2918,
+          "bbox_xyxy": [
+            667.18,
+            311.44,
+            728.88,
+            403.67
+          ],
+          "mask": "masks/0017_09.png"
+        },
+        {
+          "det_id": "0017_10",
+          "class_name": "plywood panel",
+          "score": 0.2893,
+          "bbox_xyxy": [
+            665.46,
+            312.78,
+            897.59,
+            419.55
+          ],
+          "mask": "masks/0017_10.png"
+        },
+        {
+          "det_id": "0017_11",
+          "class_name": "table",
+          "score": 0.2815,
+          "bbox_xyxy": [
+            666.68,
+            308.47,
+            900.98,
+            424.09
+          ],
+          "mask": "masks/0017_11.png"
+        },
+        {
+          "det_id": "0017_12",
+          "class_name": "decorative plate",
+          "score": 0.2814,
+          "bbox_xyxy": [
+            662.63,
+            230.24,
+            909.3,
+            425.58
+          ],
+          "mask": "masks/0017_12.png"
+        },
+        {
+          "det_id": "0017_13",
+          "class_name": "decorative plate",
+          "score": 0.275,
+          "bbox_xyxy": [
+            667.43,
+            311.93,
+            728.02,
+            403.17
+          ],
+          "mask": "masks/0017_13.png"
+        },
+        {
+          "det_id": "0017_14",
+          "class_name": "cushion",
+          "score": 0.2722,
+          "bbox_xyxy": [
+            412.11,
+            319.61,
+            459.21,
+            428.83
+          ],
+          "mask": "masks/0017_14.png"
+        },
+        {
+          "det_id": "0017_15",
+          "class_name": "decorative plate",
+          "score": 0.2667,
+          "bbox_xyxy": [
+            410.27,
+            220.45,
+            910.49,
+            574.57
+          ],
+          "mask": "masks/0017_15.png"
+        },
+        {
+          "det_id": "0017_16",
+          "class_name": "decorative plate",
+          "score": 0.2643,
+          "bbox_xyxy": [
+            410.47,
+            272.33,
+            687.11,
+            572.3
+          ],
+          "mask": "masks/0017_16.png"
+        },
+        {
+          "det_id": "0017_17",
+          "class_name": "cushion",
+          "score": 0.2605,
+          "bbox_xyxy": [
+            777.55,
+            325.47,
+            837.16,
+            414.94
+          ],
+          "mask": "masks/0017_17.png"
+        },
+        {
+          "det_id": "0017_18",
+          "class_name": "cushion",
+          "score": 0.2588,
+          "bbox_xyxy": [
+            821.93,
+            259.76,
+            859.82,
+            411.52
+          ],
+          "mask": "masks/0017_18.png"
+        },
+        {
+          "det_id": "0017_19",
+          "class_name": "hanging plant",
+          "score": 0.2554,
+          "bbox_xyxy": [
+            410.93,
+            218.53,
+            904.95,
+            576.32
+          ],
+          "mask": "masks/0017_19.png"
+        },
+        {
+          "det_id": "0017_20",
+          "class_name": "cushion",
+          "score": 0.255,
+          "bbox_xyxy": [
+            412.25,
+            277.25,
+            687.65,
+            571.46
+          ],
+          "mask": "masks/0017_20.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0018",
+      "detections": [
+        {
+          "det_id": "0018_00",
+          "class_name": "table",
+          "score": 0.4552,
+          "bbox_xyxy": [
+            708.51,
+            359.28,
+            818.52,
+            465.9
+          ],
+          "mask": "masks/0018_00.png"
+        },
+        {
+          "det_id": "0018_01",
+          "class_name": "plywood panel",
+          "score": 0.4531,
+          "bbox_xyxy": [
+            709.38,
+            359.87,
+            818.53,
+            465.44
+          ],
+          "mask": "masks/0018_01.png"
+        },
+        {
+          "det_id": "0018_02",
+          "class_name": "plywood panel",
+          "score": 0.3321,
+          "bbox_xyxy": [
+            667.95,
+            266.85,
+            744.2,
+            410.02
+          ],
+          "mask": "masks/0018_02.png"
+        },
+        {
+          "det_id": "0018_03",
+          "class_name": "laptop",
+          "score": 0.3255,
+          "bbox_xyxy": [
+            667.51,
+            267.58,
+            774.66,
+            435.19
+          ],
+          "mask": "masks/0018_03.png"
+        },
+        {
+          "det_id": "0018_04",
+          "class_name": "hanging plant",
+          "score": 0.3245,
+          "bbox_xyxy": [
+            544.14,
+            207.72,
+            607.11,
+            273.68
+          ],
+          "mask": "masks/0018_04.png"
+        },
+        {
+          "det_id": "0018_05",
+          "class_name": "window",
+          "score": 0.292,
+          "bbox_xyxy": [
+            672.27,
+            275.32,
+            741.46,
+            365.34
+          ],
+          "mask": "masks/0018_05.png"
+        },
+        {
+          "det_id": "0018_06",
+          "class_name": "laptop",
+          "score": 0.2906,
+          "bbox_xyxy": [
+            707.58,
+            361.14,
+            813.35,
+            464.44
+          ],
+          "mask": "masks/0018_06.png"
+        },
+        {
+          "det_id": "0018_07",
+          "class_name": "hanging plant",
+          "score": 0.283,
+          "bbox_xyxy": [
+            354.28,
+            211.27,
+            912.88,
+            553.77
+          ],
+          "mask": "masks/0018_07.png"
+        },
+        {
+          "det_id": "0018_08",
+          "class_name": "bench seat",
+          "score": 0.2758,
+          "bbox_xyxy": [
+            706.75,
+            359.96,
+            816.05,
+            467.18
+          ],
+          "mask": "masks/0018_08.png"
+        },
+        {
+          "det_id": "0018_09",
+          "class_name": "decorative plate",
+          "score": 0.2718,
+          "bbox_xyxy": [
+            349.17,
+            211.77,
+            686.09,
+            458.66
+          ],
+          "mask": "masks/0018_09.png"
+        },
+        {
+          "det_id": "0018_10",
+          "class_name": "artificial turf",
+          "score": 0.2717,
+          "bbox_xyxy": [
+            357.18,
+            203.91,
+            915.48,
+            541.78
+          ],
+          "mask": "masks/0018_10.png"
+        },
+        {
+          "det_id": "0018_11",
+          "class_name": "plywood panel",
+          "score": 0.2696,
+          "bbox_xyxy": [
+            665.66,
+            265.11,
+            903.19,
+            539.04
+          ],
+          "mask": "masks/0018_11.png"
+        },
+        {
+          "det_id": "0018_12",
+          "class_name": "window",
+          "score": 0.2687,
+          "bbox_xyxy": [
+            422.52,
+            295.44,
+            493.37,
+            397.74
+          ],
+          "mask": "masks/0018_12.png"
+        },
+        {
+          "det_id": "0018_13",
+          "class_name": "decorative plate",
+          "score": 0.2685,
+          "bbox_xyxy": [
+            353.94,
+            208.59,
+            911.81,
+            544.32
+          ],
+          "mask": "masks/0018_13.png"
+        },
+        {
+          "det_id": "0018_14",
+          "class_name": "artificial turf",
+          "score": 0.2664,
+          "bbox_xyxy": [
+            350.97,
+            215.22,
+            686.42,
+            458.51
+          ],
+          "mask": "masks/0018_14.png"
+        },
+        {
+          "det_id": "0018_15",
+          "class_name": "table",
+          "score": 0.2664,
+          "bbox_xyxy": [
+            663.01,
+            263.97,
+            906.31,
+            542.44
+          ],
+          "mask": "masks/0018_15.png"
+        },
+        {
+          "det_id": "0018_16",
+          "class_name": "plywood panel",
+          "score": 0.265,
+          "bbox_xyxy": [
+            667.63,
+            340.16,
+            766.74,
+            436.95
+          ],
+          "mask": "masks/0018_16.png"
+        },
+        {
+          "det_id": "0018_17",
+          "class_name": "decorative plate",
+          "score": 0.2649,
+          "bbox_xyxy": [
+            665.21,
+            261.93,
+            906.85,
+            543.59
+          ],
+          "mask": "masks/0018_17.png"
+        },
+        {
+          "det_id": "0018_18",
+          "class_name": "artificial turf",
+          "score": 0.2609,
+          "bbox_xyxy": [
+            407.24,
+            324.46,
+            686.09,
+            456.37
+          ],
+          "mask": "masks/0018_18.png"
+        },
+        {
+          "det_id": "0018_19",
+          "class_name": "decorative plate",
+          "score": 0.2562,
+          "bbox_xyxy": [
+            707.91,
+            360.0,
+            810.94,
+            464.9
+          ],
+          "mask": "masks/0018_19.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0019",
+      "detections": [
+        {
+          "det_id": "0019_00",
+          "class_name": "plywood panel",
+          "score": 0.4371,
+          "bbox_xyxy": [
+            658.9,
+            316.55,
+            769.59,
+            422.4
+          ],
+          "mask": "masks/0019_00.png"
+        },
+        {
+          "det_id": "0019_01",
+          "class_name": "plywood panel",
+          "score": 0.4221,
+          "bbox_xyxy": [
+            680.28,
+            425.74,
+            803.34,
+            508.84
+          ],
+          "mask": "masks/0019_01.png"
+        },
+        {
+          "det_id": "0019_02",
+          "class_name": "table",
+          "score": 0.4027,
+          "bbox_xyxy": [
+            677.88,
+            425.76,
+            802.32,
+            519.07
+          ],
+          "mask": "masks/0019_02.png"
+        },
+        {
+          "det_id": "0019_03",
+          "class_name": "laptop",
+          "score": 0.3791,
+          "bbox_xyxy": [
+            721.41,
+            432.37,
+            771.99,
+            464.2
+          ],
+          "mask": "masks/0019_03.png"
+        },
+        {
+          "det_id": "0019_04",
+          "class_name": "cushion",
+          "score": 0.3723,
+          "bbox_xyxy": [
+            659.26,
+            316.68,
+            769.54,
+            421.99
+          ],
+          "mask": "masks/0019_04.png"
+        },
+        {
+          "det_id": "0019_05",
+          "class_name": "bench seat",
+          "score": 0.3227,
+          "bbox_xyxy": [
+            677.99,
+            424.0,
+            802.63,
+            512.83
+          ],
+          "mask": "masks/0019_05.png"
+        },
+        {
+          "det_id": "0019_06",
+          "class_name": "cushion",
+          "score": 0.3168,
+          "bbox_xyxy": [
+            372.53,
+            236.62,
+            579.86,
+            344.94
+          ],
+          "mask": "masks/0019_06.png"
+        },
+        {
+          "det_id": "0019_07",
+          "class_name": "decorative plate",
+          "score": 0.3111,
+          "bbox_xyxy": [
+            655.16,
+            309.36,
+            861.29,
+            647.53
+          ],
+          "mask": "masks/0019_07.png"
+        },
+        {
+          "det_id": "0019_08",
+          "class_name": "hanging plant",
+          "score": 0.3011,
+          "bbox_xyxy": [
+            364.98,
+            171.23,
+            861.55,
+            654.37
+          ],
+          "mask": "masks/0019_08.png"
+        },
+        {
+          "det_id": "0019_09",
+          "class_name": "plywood panel",
+          "score": 0.2921,
+          "bbox_xyxy": [
+            658.81,
+            315.22,
+            822.8,
+            567.19
+          ],
+          "mask": "masks/0019_09.png"
+        },
+        {
+          "det_id": "0019_10",
+          "class_name": "plywood panel",
+          "score": 0.2887,
+          "bbox_xyxy": [
+            663.59,
+            390.12,
+            788.37,
+            467.82
+          ],
+          "mask": "masks/0019_10.png"
+        },
+        {
+          "det_id": "0019_11",
+          "class_name": "bench seat",
+          "score": 0.2856,
+          "bbox_xyxy": [
+            704.84,
+            485.98,
+            828.16,
+            563.02
+          ],
+          "mask": "masks/0019_11.png"
+        },
+        {
+          "det_id": "0019_12",
+          "class_name": "artificial turf",
+          "score": 0.2835,
+          "bbox_xyxy": [
+            369.47,
+            176.18,
+            668.28,
+            384.07
+          ],
+          "mask": "masks/0019_12.png"
+        },
+        {
+          "det_id": "0019_13",
+          "class_name": "table",
+          "score": 0.2746,
+          "bbox_xyxy": [
+            659.06,
+            317.08,
+            805.57,
+            529.15
+          ],
+          "mask": "masks/0019_13.png"
+        },
+        {
+          "det_id": "0019_14",
+          "class_name": "plywood panel",
+          "score": 0.2743,
+          "bbox_xyxy": [
+            706.73,
+            487.87,
+            826.04,
+            564.15
+          ],
+          "mask": "masks/0019_14.png"
+        },
+        {
+          "det_id": "0019_15",
+          "class_name": "artificial turf",
+          "score": 0.2698,
+          "bbox_xyxy": [
+            369.06,
+            170.24,
+            862.22,
+            653.0
+          ],
+          "mask": "masks/0019_15.png"
+        },
+        {
+          "det_id": "0019_16",
+          "class_name": "artificial turf",
+          "score": 0.2607,
+          "bbox_xyxy": [
+            659.05,
+            311.26,
+            857.87,
+            648.4
+          ],
+          "mask": "masks/0019_16.png"
+        },
+        {
+          "det_id": "0019_17",
+          "class_name": "bench seat",
+          "score": 0.2589,
+          "bbox_xyxy": [
+            372.88,
+            236.21,
+            579.18,
+            346.8
+          ],
+          "mask": "masks/0019_17.png"
+        },
+        {
+          "det_id": "0019_18",
+          "class_name": "table",
+          "score": 0.2511,
+          "bbox_xyxy": [
+            705.03,
+            486.99,
+            826.8,
+            565.5
+          ],
+          "mask": "masks/0019_18.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0020",
+      "detections": [
+        {
+          "det_id": "0020_00",
+          "class_name": "plywood panel",
+          "score": 0.6621,
+          "bbox_xyxy": [
+            620.27,
+            346.57,
+            763.6,
+            606.91
+          ],
+          "mask": "masks/0020_00.png"
+        },
+        {
+          "det_id": "0020_01",
+          "class_name": "decorative plate",
+          "score": 0.5639,
+          "bbox_xyxy": [
+            620.4,
+            345.97,
+            766.36,
+            607.61
+          ],
+          "mask": "masks/0020_01.png"
+        },
+        {
+          "det_id": "0020_02",
+          "class_name": "table",
+          "score": 0.5258,
+          "bbox_xyxy": [
+            620.32,
+            345.9,
+            764.99,
+            605.09
+          ],
+          "mask": "masks/0020_02.png"
+        },
+        {
+          "det_id": "0020_03",
+          "class_name": "cushion",
+          "score": 0.4878,
+          "bbox_xyxy": [
+            619.12,
+            345.41,
+            765.18,
+            604.67
+          ],
+          "mask": "masks/0020_03.png"
+        },
+        {
+          "det_id": "0020_04",
+          "class_name": "laptop",
+          "score": 0.4601,
+          "bbox_xyxy": [
+            683.59,
+            478.26,
+            720.9,
+            502.66
+          ],
+          "mask": "masks/0020_04.png"
+        },
+        {
+          "det_id": "0020_05",
+          "class_name": "phone",
+          "score": 0.4528,
+          "bbox_xyxy": [
+            665.14,
+            448.96,
+            686.03,
+            461.15
+          ],
+          "mask": "masks/0020_05.png"
+        },
+        {
+          "det_id": "0020_06",
+          "class_name": "hanging plant",
+          "score": 0.424,
+          "bbox_xyxy": [
+            453.93,
+            129.07,
+            693.43,
+            297.1
+          ],
+          "mask": "masks/0020_06.png"
+        },
+        {
+          "det_id": "0020_07",
+          "class_name": "bench seat",
+          "score": 0.3567,
+          "bbox_xyxy": [
+            620.16,
+            345.08,
+            764.92,
+            604.65
+          ],
+          "mask": "masks/0020_07.png"
+        },
+        {
+          "det_id": "0020_08",
+          "class_name": "artificial turf",
+          "score": 0.3338,
+          "bbox_xyxy": [
+            520.91,
+            276.76,
+            803.63,
+            691.78
+          ],
+          "mask": "masks/0020_08.png"
+        },
+        {
+          "det_id": "0020_09",
+          "class_name": "cushion",
+          "score": 0.314,
+          "bbox_xyxy": [
+            454.75,
+            196.83,
+            654.77,
+            290.52
+          ],
+          "mask": "masks/0020_09.png"
+        },
+        {
+          "det_id": "0020_10",
+          "class_name": "artificial turf",
+          "score": 0.3106,
+          "bbox_xyxy": [
+            619.02,
+            345.21,
+            765.88,
+            607.95
+          ],
+          "mask": "masks/0020_10.png"
+        },
+        {
+          "det_id": "0020_11",
+          "class_name": "light switch",
+          "score": 0.3073,
+          "bbox_xyxy": [
+            622.12,
+            347.73,
+            764.57,
+            607.14
+          ],
+          "mask": "masks/0020_11.png"
+        },
+        {
+          "det_id": "0020_12",
+          "class_name": "hanging plant",
+          "score": 0.3055,
+          "bbox_xyxy": [
+            453.44,
+            125.16,
+            803.1,
+            695.93
+          ],
+          "mask": "masks/0020_12.png"
+        },
+        {
+          "det_id": "0020_13",
+          "class_name": "bench seat",
+          "score": 0.2862,
+          "bbox_xyxy": [
+            453.94,
+            196.32,
+            655.49,
+            290.93
+          ],
+          "mask": "masks/0020_13.png"
+        },
+        {
+          "det_id": "0020_14",
+          "class_name": "decorative plate",
+          "score": 0.2666,
+          "bbox_xyxy": [
+            454.18,
+            196.39,
+            657.16,
+            291.17
+          ],
+          "mask": "masks/0020_14.png"
+        },
+        {
+          "det_id": "0020_15",
+          "class_name": "bench seat",
+          "score": 0.2558,
+          "bbox_xyxy": [
+            625.85,
+            548.25,
+            680.98,
+            586.45
+          ],
+          "mask": "masks/0020_15.png"
+        },
+        {
+          "det_id": "0020_16",
+          "class_name": "cushion",
+          "score": 0.2528,
+          "bbox_xyxy": [
+            643.74,
+            346.82,
+            758.46,
+            443.49
+          ],
+          "mask": "masks/0020_16.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0021",
+      "detections": [
+        {
+          "det_id": "0021_00",
+          "class_name": "cushion",
+          "score": 0.4875,
+          "bbox_xyxy": [
+            510.81,
+            349.58,
+            637.03,
+            550.08
+          ],
+          "mask": "masks/0021_00.png"
+        },
+        {
+          "det_id": "0021_01",
+          "class_name": "plywood panel",
+          "score": 0.4166,
+          "bbox_xyxy": [
+            510.91,
+            347.68,
+            724.7,
+            596.67
+          ],
+          "mask": "masks/0021_01.png"
+        },
+        {
+          "det_id": "0021_02",
+          "class_name": "hanging plant",
+          "score": 0.4045,
+          "bbox_xyxy": [
+            572.04,
+            87.21,
+            746.32,
+            309.56
+          ],
+          "mask": "masks/0021_02.png"
+        },
+        {
+          "det_id": "0021_03",
+          "class_name": "table",
+          "score": 0.401,
+          "bbox_xyxy": [
+            551.18,
+            456.32,
+            686.91,
+            585.94
+          ],
+          "mask": "masks/0021_03.png"
+        },
+        {
+          "det_id": "0021_04",
+          "class_name": "bench seat",
+          "score": 0.3966,
+          "bbox_xyxy": [
+            510.28,
+            345.34,
+            728.69,
+            593.57
+          ],
+          "mask": "masks/0021_04.png"
+        },
+        {
+          "det_id": "0021_05",
+          "class_name": "laptop",
+          "score": 0.3844,
+          "bbox_xyxy": [
+            612.17,
+            485.74,
+            652.73,
+            519.62
+          ],
+          "mask": "masks/0021_05.png"
+        },
+        {
+          "det_id": "0021_06",
+          "class_name": "decorative plate",
+          "score": 0.3417,
+          "bbox_xyxy": [
+            510.05,
+            347.77,
+            731.18,
+            600.16
+          ],
+          "mask": "masks/0021_06.png"
+        },
+        {
+          "det_id": "0021_07",
+          "class_name": "artificial turf",
+          "score": 0.3314,
+          "bbox_xyxy": [
+            496.28,
+            237.62,
+            770.03,
+            671.2
+          ],
+          "mask": "masks/0021_07.png"
+        },
+        {
+          "det_id": "0021_08",
+          "class_name": "bench seat",
+          "score": 0.3271,
+          "bbox_xyxy": [
+            603.74,
+            428.63,
+            720.5,
+            541.53
+          ],
+          "mask": "masks/0021_08.png"
+        },
+        {
+          "det_id": "0021_09",
+          "class_name": "plywood panel",
+          "score": 0.3,
+          "bbox_xyxy": [
+            559.78,
+            452.76,
+            684.37,
+            562.4
+          ],
+          "mask": "masks/0021_09.png"
+        },
+        {
+          "det_id": "0021_10",
+          "class_name": "decorative plate",
+          "score": 0.2926,
+          "bbox_xyxy": [
+            572.74,
+            143.86,
+            736.04,
+            305.49
+          ],
+          "mask": "masks/0021_10.png"
+        },
+        {
+          "det_id": "0021_11",
+          "class_name": "window",
+          "score": 0.2891,
+          "bbox_xyxy": [
+            573.55,
+            149.87,
+            734.59,
+            298.13
+          ],
+          "mask": "masks/0021_11.png"
+        },
+        {
+          "det_id": "0021_12",
+          "class_name": "table",
+          "score": 0.2886,
+          "bbox_xyxy": [
+            509.63,
+            347.13,
+            728.84,
+            595.95
+          ],
+          "mask": "masks/0021_12.png"
+        },
+        {
+          "det_id": "0021_13",
+          "class_name": "cushion",
+          "score": 0.2837,
+          "bbox_xyxy": [
+            589.2,
+            433.49,
+            714.53,
+            531.46
+          ],
+          "mask": "masks/0021_13.png"
+        },
+        {
+          "det_id": "0021_14",
+          "class_name": "bench seat",
+          "score": 0.2756,
+          "bbox_xyxy": [
+            567.0,
+            549.15,
+            643.51,
+            622.71
+          ],
+          "mask": "masks/0021_14.png"
+        },
+        {
+          "det_id": "0021_15",
+          "class_name": "window",
+          "score": 0.2735,
+          "bbox_xyxy": [
+            629.21,
+            360.4,
+            706.49,
+            433.8
+          ],
+          "mask": "masks/0021_15.png"
+        },
+        {
+          "det_id": "0021_16",
+          "class_name": "decorative plate",
+          "score": 0.2707,
+          "bbox_xyxy": [
+            492.35,
+            108.49,
+            766.44,
+            678.0
+          ],
+          "mask": "masks/0021_16.png"
+        },
+        {
+          "det_id": "0021_17",
+          "class_name": "bench seat",
+          "score": 0.2685,
+          "bbox_xyxy": [
+            496.34,
+            550.17,
+            643.51,
+            673.42
+          ],
+          "mask": "masks/0021_17.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0022",
+      "detections": [
+        {
+          "det_id": "0022_00",
+          "class_name": "cushion",
+          "score": 0.5977,
+          "bbox_xyxy": [
+            440.31,
+            339.69,
+            630.56,
+            483.21
+          ],
+          "mask": "masks/0022_00.png"
+        },
+        {
+          "det_id": "0022_01",
+          "class_name": "artificial turf",
+          "score": 0.4597,
+          "bbox_xyxy": [
+            396.85,
+            279.56,
+            784.72,
+            618.29
+          ],
+          "mask": "masks/0022_01.png"
+        },
+        {
+          "det_id": "0022_02",
+          "class_name": "table",
+          "score": 0.4274,
+          "bbox_xyxy": [
+            511.67,
+            429.37,
+            604.12,
+            559.98
+          ],
+          "mask": "masks/0022_02.png"
+        },
+        {
+          "det_id": "0022_03",
+          "class_name": "plywood panel",
+          "score": 0.4217,
+          "bbox_xyxy": [
+            440.39,
+            338.85,
+            647.2,
+            485.21
+          ],
+          "mask": "masks/0022_03.png"
+        },
+        {
+          "det_id": "0022_04",
+          "class_name": "plywood panel",
+          "score": 0.3694,
+          "bbox_xyxy": [
+            514.03,
+            429.21,
+            603.71,
+            548.61
+          ],
+          "mask": "masks/0022_04.png"
+        },
+        {
+          "det_id": "0022_05",
+          "class_name": "bench seat",
+          "score": 0.3686,
+          "bbox_xyxy": [
+            574.83,
+            421.84,
+            665.09,
+            546.07
+          ],
+          "mask": "masks/0022_05.png"
+        },
+        {
+          "det_id": "0022_06",
+          "class_name": "window",
+          "score": 0.3594,
+          "bbox_xyxy": [
+            694.51,
+            153.21,
+            797.69,
+            357.63
+          ],
+          "mask": "masks/0022_06.png"
+        },
+        {
+          "det_id": "0022_07",
+          "class_name": "plywood panel",
+          "score": 0.3458,
+          "bbox_xyxy": [
+            574.89,
+            420.25,
+            663.99,
+            543.49
+          ],
+          "mask": "masks/0022_07.png"
+        },
+        {
+          "det_id": "0022_08",
+          "class_name": "decorative plate",
+          "score": 0.3425,
+          "bbox_xyxy": [
+            438.73,
+            339.82,
+            630.5,
+            484.78
+          ],
+          "mask": "masks/0022_08.png"
+        },
+        {
+          "det_id": "0022_09",
+          "class_name": "cushion",
+          "score": 0.334,
+          "bbox_xyxy": [
+            571.04,
+            422.87,
+            659.86,
+            544.33
+          ],
+          "mask": "masks/0022_09.png"
+        },
+        {
+          "det_id": "0022_10",
+          "class_name": "plywood panel",
+          "score": 0.316,
+          "bbox_xyxy": [
+            398.49,
+            340.77,
+            678.97,
+            605.7
+          ],
+          "mask": "masks/0022_10.png"
+        },
+        {
+          "det_id": "0022_11",
+          "class_name": "bench seat",
+          "score": 0.2949,
+          "bbox_xyxy": [
+            411.77,
+            498.7,
+            498.1,
+            604.26
+          ],
+          "mask": "masks/0022_11.png"
+        },
+        {
+          "det_id": "0022_12",
+          "class_name": "hanging plant",
+          "score": 0.2927,
+          "bbox_xyxy": [
+            682.08,
+            93.78,
+            801.54,
+            364.47
+          ],
+          "mask": "masks/0022_12.png"
+        },
+        {
+          "det_id": "0022_13",
+          "class_name": "cushion",
+          "score": 0.2903,
+          "bbox_xyxy": [
+            477.58,
+            466.86,
+            545.85,
+            577.14
+          ],
+          "mask": "masks/0022_13.png"
+        },
+        {
+          "det_id": "0022_14",
+          "class_name": "cushion",
+          "score": 0.2869,
+          "bbox_xyxy": [
+            412.2,
+            500.8,
+            497.74,
+            599.54
+          ],
+          "mask": "masks/0022_14.png"
+        },
+        {
+          "det_id": "0022_15",
+          "class_name": "bench seat",
+          "score": 0.2804,
+          "bbox_xyxy": [
+            440.82,
+            339.72,
+            650.73,
+            488.38
+          ],
+          "mask": "masks/0022_15.png"
+        },
+        {
+          "det_id": "0022_16",
+          "class_name": "table",
+          "score": 0.2804,
+          "bbox_xyxy": [
+            410.92,
+            338.89,
+            678.07,
+            601.38
+          ],
+          "mask": "masks/0022_16.png"
+        },
+        {
+          "det_id": "0022_17",
+          "class_name": "laptop",
+          "score": 0.2743,
+          "bbox_xyxy": [
+            511.52,
+            429.58,
+            595.41,
+            510.38
+          ],
+          "mask": "masks/0022_17.png"
+        },
+        {
+          "det_id": "0022_18",
+          "class_name": "bench seat",
+          "score": 0.2742,
+          "bbox_xyxy": [
+            467.93,
+            483.39,
+            549.12,
+            584.31
+          ],
+          "mask": "masks/0022_18.png"
+        },
+        {
+          "det_id": "0022_19",
+          "class_name": "decorative plate",
+          "score": 0.267,
+          "bbox_xyxy": [
+            690.54,
+            152.97,
+            799.73,
+            353.68
+          ],
+          "mask": "masks/0022_19.png"
+        },
+        {
+          "det_id": "0022_20",
+          "class_name": "hanging plant",
+          "score": 0.2615,
+          "bbox_xyxy": [
+            686.93,
+            156.42,
+            784.97,
+            319.79
+          ],
+          "mask": "masks/0022_20.png"
+        },
+        {
+          "det_id": "0022_21",
+          "class_name": "plywood panel",
+          "score": 0.2578,
+          "bbox_xyxy": [
+            475.52,
+            492.12,
+            547.63,
+            574.7
+          ],
+          "mask": "masks/0022_21.png"
+        },
+        {
+          "det_id": "0022_22",
+          "class_name": "decorative plate",
+          "score": 0.2544,
+          "bbox_xyxy": [
+            537.98,
+            376.17,
+            572.94,
+            398.49
+          ],
+          "mask": "masks/0022_22.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0023",
+      "detections": [
+        {
+          "det_id": "0023_00",
+          "class_name": "plywood panel",
+          "score": 0.4831,
+          "bbox_xyxy": [
+            362.58,
+            303.94,
+            616.8,
+            524.97
+          ],
+          "mask": "masks/0023_00.png"
+        },
+        {
+          "det_id": "0023_01",
+          "class_name": "table",
+          "score": 0.4054,
+          "bbox_xyxy": [
+            359.23,
+            303.8,
+            618.48,
+            524.7
+          ],
+          "mask": "masks/0023_01.png"
+        },
+        {
+          "det_id": "0023_02",
+          "class_name": "plywood panel",
+          "score": 0.4015,
+          "bbox_xyxy": [
+            480.04,
+            388.0,
+            557.24,
+            490.21
+          ],
+          "mask": "masks/0023_02.png"
+        },
+        {
+          "det_id": "0023_03",
+          "class_name": "table",
+          "score": 0.3979,
+          "bbox_xyxy": [
+            478.84,
+            389.35,
+            565.14,
+            512.1
+          ],
+          "mask": "masks/0023_03.png"
+        },
+        {
+          "det_id": "0023_04",
+          "class_name": "cushion",
+          "score": 0.3717,
+          "bbox_xyxy": [
+            427.41,
+            305.84,
+            610.6,
+            414.37
+          ],
+          "mask": "masks/0023_04.png"
+        },
+        {
+          "det_id": "0023_05",
+          "class_name": "decorative plate",
+          "score": 0.3605,
+          "bbox_xyxy": [
+            361.75,
+            304.33,
+            616.83,
+            526.92
+          ],
+          "mask": "masks/0023_05.png"
+        },
+        {
+          "det_id": "0023_06",
+          "class_name": "artificial turf",
+          "score": 0.3257,
+          "bbox_xyxy": [
+            375.5,
+            241.11,
+            843.35,
+            572.37
+          ],
+          "mask": "masks/0023_06.png"
+        },
+        {
+          "det_id": "0023_07",
+          "class_name": "hanging plant",
+          "score": 0.3203,
+          "bbox_xyxy": [
+            359.78,
+            304.68,
+            619.58,
+            527.57
+          ],
+          "mask": "masks/0023_07.png"
+        },
+        {
+          "det_id": "0023_08",
+          "class_name": "cushion",
+          "score": 0.3155,
+          "bbox_xyxy": [
+            361.38,
+            304.52,
+            615.88,
+            521.85
+          ],
+          "mask": "masks/0023_08.png"
+        },
+        {
+          "det_id": "0023_09",
+          "class_name": "window",
+          "score": 0.3105,
+          "bbox_xyxy": [
+            366.58,
+            305.11,
+            617.12,
+            525.49
+          ],
+          "mask": "masks/0023_09.png"
+        },
+        {
+          "det_id": "0023_10",
+          "class_name": "decorative plate",
+          "score": 0.3018,
+          "bbox_xyxy": [
+            788.46,
+            212.68,
+            851.45,
+            417.41
+          ],
+          "mask": "masks/0023_10.png"
+        },
+        {
+          "det_id": "0023_11",
+          "class_name": "cushion",
+          "score": 0.2975,
+          "bbox_xyxy": [
+            485.12,
+            388.31,
+            559.69,
+            489.86
+          ],
+          "mask": "masks/0023_11.png"
+        },
+        {
+          "det_id": "0023_12",
+          "class_name": "hanging plant",
+          "score": 0.2867,
+          "bbox_xyxy": [
+            386.05,
+            160.61,
+            855.05,
+            575.61
+          ],
+          "mask": "masks/0023_12.png"
+        },
+        {
+          "det_id": "0023_13",
+          "class_name": "cushion",
+          "score": 0.2825,
+          "bbox_xyxy": [
+            790.42,
+            211.61,
+            851.1,
+            420.4
+          ],
+          "mask": "masks/0023_13.png"
+        },
+        {
+          "det_id": "0023_14",
+          "class_name": "bench seat",
+          "score": 0.2794,
+          "bbox_xyxy": [
+            368.5,
+            378.22,
+            494.92,
+            506.76
+          ],
+          "mask": "masks/0023_14.png"
+        },
+        {
+          "det_id": "0023_15",
+          "class_name": "bench seat",
+          "score": 0.277,
+          "bbox_xyxy": [
+            542.85,
+            411.26,
+            609.27,
+            524.89
+          ],
+          "mask": "masks/0023_15.png"
+        },
+        {
+          "det_id": "0023_16",
+          "class_name": "decorative plate",
+          "score": 0.2737,
+          "bbox_xyxy": [
+            358.62,
+            155.07,
+            848.43,
+            568.6
+          ],
+          "mask": "masks/0023_16.png"
+        },
+        {
+          "det_id": "0023_17",
+          "class_name": "cushion",
+          "score": 0.2604,
+          "bbox_xyxy": [
+            543.0,
+            415.08,
+            608.58,
+            523.96
+          ],
+          "mask": "masks/0023_17.png"
+        },
+        {
+          "det_id": "0023_18",
+          "class_name": "bench seat",
+          "score": 0.2517,
+          "bbox_xyxy": [
+            362.66,
+            304.97,
+            616.08,
+            522.07
+          ],
+          "mask": "masks/0023_18.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0024",
+      "detections": [
+        {
+          "det_id": "0024_00",
+          "class_name": "artificial turf",
+          "score": 0.4827,
+          "bbox_xyxy": [
+            392.02,
+            306.86,
+            911.64,
+            535.17
+          ],
+          "mask": "masks/0024_00.png"
+        },
+        {
+          "det_id": "0024_01",
+          "class_name": "plywood panel",
+          "score": 0.4009,
+          "bbox_xyxy": [
+            376.48,
+            222.1,
+            617.43,
+            480.34
+          ],
+          "mask": "masks/0024_01.png"
+        },
+        {
+          "det_id": "0024_02",
+          "class_name": "plywood panel",
+          "score": 0.3857,
+          "bbox_xyxy": [
+            408.86,
+            272.27,
+            491.33,
+            379.3
+          ],
+          "mask": "masks/0024_02.png"
+        },
+        {
+          "det_id": "0024_03",
+          "class_name": "bench seat",
+          "score": 0.37,
+          "bbox_xyxy": [
+            423.8,
+            329.44,
+            520.5,
+            418.73
+          ],
+          "mask": "masks/0024_03.png"
+        },
+        {
+          "det_id": "0024_04",
+          "class_name": "table",
+          "score": 0.3667,
+          "bbox_xyxy": [
+            459.9,
+            330.79,
+            570.18,
+            448.53
+          ],
+          "mask": "masks/0024_04.png"
+        },
+        {
+          "det_id": "0024_05",
+          "class_name": "hanging plant",
+          "score": 0.3559,
+          "bbox_xyxy": [
+            673.87,
+            307.33,
+            747.81,
+            410.73
+          ],
+          "mask": "masks/0024_05.png"
+        },
+        {
+          "det_id": "0024_06",
+          "class_name": "plywood panel",
+          "score": 0.3472,
+          "bbox_xyxy": [
+            501.83,
+            330.32,
+            569.61,
+            387.33
+          ],
+          "mask": "masks/0024_06.png"
+        },
+        {
+          "det_id": "0024_07",
+          "class_name": "hanging plant",
+          "score": 0.3376,
+          "bbox_xyxy": [
+            374.61,
+            223.33,
+            616.39,
+            494.87
+          ],
+          "mask": "masks/0024_07.png"
+        },
+        {
+          "det_id": "0024_08",
+          "class_name": "table",
+          "score": 0.3317,
+          "bbox_xyxy": [
+            375.29,
+            222.63,
+            616.9,
+            491.39
+          ],
+          "mask": "masks/0024_08.png"
+        },
+        {
+          "det_id": "0024_09",
+          "class_name": "phone",
+          "score": 0.3293,
+          "bbox_xyxy": [
+            563.3,
+            396.61,
+            580.67,
+            413.73
+          ],
+          "mask": "masks/0024_09.png"
+        },
+        {
+          "det_id": "0024_10",
+          "class_name": "bench seat",
+          "score": 0.3215,
+          "bbox_xyxy": [
+            504.33,
+            373.68,
+            611.34,
+            485.5
+          ],
+          "mask": "masks/0024_10.png"
+        },
+        {
+          "det_id": "0024_11",
+          "class_name": "decorative plate",
+          "score": 0.3157,
+          "bbox_xyxy": [
+            375.13,
+            221.98,
+            616.63,
+            489.34
+          ],
+          "mask": "masks/0024_11.png"
+        },
+        {
+          "det_id": "0024_12",
+          "class_name": "cushion",
+          "score": 0.315,
+          "bbox_xyxy": [
+            408.07,
+            269.66,
+            492.84,
+            378.62
+          ],
+          "mask": "masks/0024_12.png"
+        },
+        {
+          "det_id": "0024_13",
+          "class_name": "decorative plate",
+          "score": 0.2983,
+          "bbox_xyxy": [
+            459.77,
+            367.9,
+            531.12,
+            430.41
+          ],
+          "mask": "masks/0024_13.png"
+        },
+        {
+          "det_id": "0024_14",
+          "class_name": "table",
+          "score": 0.2949,
+          "bbox_xyxy": [
+            461.92,
+            375.6,
+            531.86,
+            449.75
+          ],
+          "mask": "masks/0024_14.png"
+        },
+        {
+          "det_id": "0024_15",
+          "class_name": "decorative plate",
+          "score": 0.294,
+          "bbox_xyxy": [
+            372.53,
+            220.12,
+            907.86,
+            534.16
+          ],
+          "mask": "masks/0024_15.png"
+        },
+        {
+          "det_id": "0024_16",
+          "class_name": "decorative plate",
+          "score": 0.2913,
+          "bbox_xyxy": [
+            477.83,
+            371.66,
+            509.92,
+            394.95
+          ],
+          "mask": "masks/0024_16.png"
+        },
+        {
+          "det_id": "0024_17",
+          "class_name": "cushion",
+          "score": 0.2875,
+          "bbox_xyxy": [
+            395.07,
+            221.79,
+            607.15,
+            393.91
+          ],
+          "mask": "masks/0024_17.png"
+        },
+        {
+          "det_id": "0024_18",
+          "class_name": "cushion",
+          "score": 0.283,
+          "bbox_xyxy": [
+            501.07,
+            330.43,
+            570.4,
+            387.35
+          ],
+          "mask": "masks/0024_18.png"
+        },
+        {
+          "det_id": "0024_19",
+          "class_name": "bench seat",
+          "score": 0.2543,
+          "bbox_xyxy": [
+            508.51,
+            416.09,
+            580.13,
+            475.46
+          ],
+          "mask": "masks/0024_19.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0025",
+      "detections": [
+        {
+          "det_id": "0025_00",
+          "class_name": "decorative plate",
+          "score": 0.5228,
+          "bbox_xyxy": [
+            450.18,
+            165.02,
+            623.54,
+            441.78
+          ],
+          "mask": "masks/0025_00.png"
+        },
+        {
+          "det_id": "0025_01",
+          "class_name": "plywood panel",
+          "score": 0.5204,
+          "bbox_xyxy": [
+            451.47,
+            165.51,
+            622.79,
+            429.09
+          ],
+          "mask": "masks/0025_01.png"
+        },
+        {
+          "det_id": "0025_02",
+          "class_name": "bench seat",
+          "score": 0.4637,
+          "bbox_xyxy": [
+            505.25,
+            347.49,
+            618.88,
+            412.86
+          ],
+          "mask": "masks/0025_02.png"
+        },
+        {
+          "det_id": "0025_03",
+          "class_name": "table",
+          "score": 0.407,
+          "bbox_xyxy": [
+            448.52,
+            164.15,
+            623.43,
+            439.01
+          ],
+          "mask": "masks/0025_03.png"
+        },
+        {
+          "det_id": "0025_04",
+          "class_name": "artificial turf",
+          "score": 0.375,
+          "bbox_xyxy": [
+            451.01,
+            270.84,
+            920.66,
+            551.97
+          ],
+          "mask": "masks/0025_04.png"
+        },
+        {
+          "det_id": "0025_05",
+          "class_name": "hanging plant",
+          "score": 0.3659,
+          "bbox_xyxy": [
+            647.45,
+            329.52,
+            682.06,
+            436.86
+          ],
+          "mask": "masks/0025_05.png"
+        },
+        {
+          "det_id": "0025_06",
+          "class_name": "table",
+          "score": 0.3566,
+          "bbox_xyxy": [
+            485.37,
+            284.36,
+            602.57,
+            377.02
+          ],
+          "mask": "masks/0025_06.png"
+        },
+        {
+          "det_id": "0025_07",
+          "class_name": "hanging plant",
+          "score": 0.3411,
+          "bbox_xyxy": [
+            450.9,
+            164.15,
+            624.09,
+            434.47
+          ],
+          "mask": "masks/0025_07.png"
+        },
+        {
+          "det_id": "0025_08",
+          "class_name": "plywood panel",
+          "score": 0.3351,
+          "bbox_xyxy": [
+            485.37,
+            291.18,
+            601.05,
+            365.27
+          ],
+          "mask": "masks/0025_08.png"
+        },
+        {
+          "det_id": "0025_09",
+          "class_name": "plywood panel",
+          "score": 0.3299,
+          "bbox_xyxy": [
+            467.12,
+            218.12,
+            564.36,
+            293.51
+          ],
+          "mask": "masks/0025_09.png"
+        },
+        {
+          "det_id": "0025_10",
+          "class_name": "backpack",
+          "score": 0.3185,
+          "bbox_xyxy": [
+            521.2,
+            263.44,
+            566.93,
+            296.06
+          ],
+          "mask": "masks/0025_10.png"
+        },
+        {
+          "det_id": "0025_11",
+          "class_name": "cushion",
+          "score": 0.314,
+          "bbox_xyxy": [
+            449.86,
+            166.85,
+            623.2,
+            396.87
+          ],
+          "mask": "masks/0025_11.png"
+        },
+        {
+          "det_id": "0025_12",
+          "class_name": "light switch",
+          "score": 0.3099,
+          "bbox_xyxy": [
+            452.55,
+            166.6,
+            620.66,
+            441.17
+          ],
+          "mask": "masks/0025_12.png"
+        },
+        {
+          "det_id": "0025_13",
+          "class_name": "decorative plate",
+          "score": 0.2969,
+          "bbox_xyxy": [
+            442.15,
+            156.95,
+            922.31,
+            546.88
+          ],
+          "mask": "masks/0025_13.png"
+        },
+        {
+          "det_id": "0025_14",
+          "class_name": "plywood panel",
+          "score": 0.2881,
+          "bbox_xyxy": [
+            506.86,
+            348.46,
+            618.16,
+            415.65
+          ],
+          "mask": "masks/0025_14.png"
+        },
+        {
+          "det_id": "0025_15",
+          "class_name": "cushion",
+          "score": 0.2728,
+          "bbox_xyxy": [
+            470.39,
+            218.66,
+            563.48,
+            292.16
+          ],
+          "mask": "masks/0025_15.png"
+        },
+        {
+          "det_id": "0025_16",
+          "class_name": "artificial turf",
+          "score": 0.2639,
+          "bbox_xyxy": [
+            451.06,
+            164.21,
+            624.91,
+            440.94
+          ],
+          "mask": "masks/0025_16.png"
+        },
+        {
+          "det_id": "0025_17",
+          "class_name": "artificial turf",
+          "score": 0.2568,
+          "bbox_xyxy": [
+            475.51,
+            430.1,
+            875.53,
+            552.78
+          ],
+          "mask": "masks/0025_17.png"
+        },
+        {
+          "det_id": "0025_18",
+          "class_name": "table",
+          "score": 0.2528,
+          "bbox_xyxy": [
+            508.8,
+            294.3,
+            599.76,
+            349.36
+          ],
+          "mask": "masks/0025_18.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0026",
+      "detections": [
+        {
+          "det_id": "0026_00",
+          "class_name": "backpack",
+          "score": 0.5096,
+          "bbox_xyxy": [
+            604.37,
+            238.34,
+            646.17,
+            276.18
+          ],
+          "mask": "masks/0026_00.png"
+        },
+        {
+          "det_id": "0026_01",
+          "class_name": "plywood panel",
+          "score": 0.4977,
+          "bbox_xyxy": [
+            524.21,
+            142.0,
+            658.3,
+            386.32
+          ],
+          "mask": "masks/0026_01.png"
+        },
+        {
+          "det_id": "0026_02",
+          "class_name": "hanging plant",
+          "score": 0.4718,
+          "bbox_xyxy": [
+            519.52,
+            122.53,
+            657.89,
+            404.54
+          ],
+          "mask": "masks/0026_02.png"
+        },
+        {
+          "det_id": "0026_03",
+          "class_name": "decorative plate",
+          "score": 0.447,
+          "bbox_xyxy": [
+            519.25,
+            140.49,
+            658.61,
+            394.04
+          ],
+          "mask": "masks/0026_03.png"
+        },
+        {
+          "det_id": "0026_04",
+          "class_name": "bench seat",
+          "score": 0.4465,
+          "bbox_xyxy": [
+            530.59,
+            324.99,
+            640.59,
+            380.67
+          ],
+          "mask": "masks/0026_04.png"
+        },
+        {
+          "det_id": "0026_05",
+          "class_name": "table",
+          "score": 0.4018,
+          "bbox_xyxy": [
+            524.03,
+            140.94,
+            657.19,
+            390.79
+          ],
+          "mask": "masks/0026_05.png"
+        },
+        {
+          "det_id": "0026_06",
+          "class_name": "artificial turf",
+          "score": 0.3927,
+          "bbox_xyxy": [
+            479.14,
+            351.03,
+            781.99,
+            579.52
+          ],
+          "mask": "masks/0026_06.png"
+        },
+        {
+          "det_id": "0026_07",
+          "class_name": "cushion",
+          "score": 0.3045,
+          "bbox_xyxy": [
+            554.94,
+            145.69,
+            656.79,
+            250.39
+          ],
+          "mask": "masks/0026_07.png"
+        },
+        {
+          "det_id": "0026_08",
+          "class_name": "cushion",
+          "score": 0.3009,
+          "bbox_xyxy": [
+            578.29,
+            230.22,
+            608.68,
+            254.46
+          ],
+          "mask": "masks/0026_08.png"
+        },
+        {
+          "det_id": "0026_09",
+          "class_name": "window",
+          "score": 0.3005,
+          "bbox_xyxy": [
+            521.47,
+            140.68,
+            657.72,
+            400.8
+          ],
+          "mask": "masks/0026_09.png"
+        },
+        {
+          "det_id": "0026_10",
+          "class_name": "table",
+          "score": 0.2946,
+          "bbox_xyxy": [
+            538.92,
+            234.34,
+            650.36,
+            329.67
+          ],
+          "mask": "masks/0026_10.png"
+        },
+        {
+          "det_id": "0026_11",
+          "class_name": "cushion",
+          "score": 0.2896,
+          "bbox_xyxy": [
+            522.53,
+            141.67,
+            658.26,
+            387.82
+          ],
+          "mask": "masks/0026_11.png"
+        },
+        {
+          "det_id": "0026_12",
+          "class_name": "plywood panel",
+          "score": 0.2884,
+          "bbox_xyxy": [
+            554.08,
+            146.09,
+            656.93,
+            251.07
+          ],
+          "mask": "masks/0026_12.png"
+        },
+        {
+          "det_id": "0026_13",
+          "class_name": "bench seat",
+          "score": 0.2879,
+          "bbox_xyxy": [
+            550.36,
+            236.12,
+            650.25,
+            284.4
+          ],
+          "mask": "masks/0026_13.png"
+        },
+        {
+          "det_id": "0026_14",
+          "class_name": "headphones",
+          "score": 0.2854,
+          "bbox_xyxy": [
+            566.74,
+            269.93,
+            587.17,
+            291.69
+          ],
+          "mask": "masks/0026_14.png"
+        },
+        {
+          "det_id": "0026_15",
+          "class_name": "plywood panel",
+          "score": 0.2795,
+          "bbox_xyxy": [
+            541.57,
+            265.98,
+            647.89,
+            324.44
+          ],
+          "mask": "masks/0026_15.png"
+        },
+        {
+          "det_id": "0026_16",
+          "class_name": "cushion",
+          "score": 0.27,
+          "bbox_xyxy": [
+            603.63,
+            238.65,
+            645.73,
+            275.55
+          ],
+          "mask": "masks/0026_16.png"
+        },
+        {
+          "det_id": "0026_17",
+          "class_name": "cushion",
+          "score": 0.2696,
+          "bbox_xyxy": [
+            532.1,
+            326.06,
+            639.96,
+            378.15
+          ],
+          "mask": "masks/0026_17.png"
+        },
+        {
+          "det_id": "0026_18",
+          "class_name": "cushion",
+          "score": 0.2668,
+          "bbox_xyxy": [
+            550.59,
+            236.69,
+            647.1,
+            283.2
+          ],
+          "mask": "masks/0026_18.png"
+        },
+        {
+          "det_id": "0026_19",
+          "class_name": "headphones",
+          "score": 0.2622,
+          "bbox_xyxy": [
+            566.71,
+            269.83,
+            602.21,
+            294.9
+          ],
+          "mask": "masks/0026_19.png"
+        },
+        {
+          "det_id": "0026_20",
+          "class_name": "decorative plate",
+          "score": 0.2529,
+          "bbox_xyxy": [
+            566.27,
+            275.9,
+            605.95,
+            295.98
+          ],
+          "mask": "masks/0026_20.png"
+        },
+        {
+          "det_id": "0026_21",
+          "class_name": "plywood panel",
+          "score": 0.2522,
+          "bbox_xyxy": [
+            530.79,
+            323.84,
+            641.65,
+            379.99
+          ],
+          "mask": "masks/0026_21.png"
+        }
+      ]
+    }
+  ]
+}

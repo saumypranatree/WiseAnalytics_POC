@@ -1,0 +1,1017 @@
+{
+  "detector": "IDEA-Research/grounding-dino-base",
+  "segmenter": "facebook/sam-vit-base",
+  "prompts": [
+    "window",
+    "cabinet",
+    "decorative plate",
+    "plywood panel",
+    "artificial turf"
+  ],
+  "box_threshold": 0.3,
+  "text_threshold": 0.25,
+  "frames": [
+    {
+      "frame_id": "0000",
+      "detections": [
+        {
+          "det_id": "0000_00",
+          "class_name": "plywood panel",
+          "score": 0.4668,
+          "bbox_xyxy": [
+            591.81,
+            172.54,
+            730.08,
+            280.77
+          ],
+          "mask": "masks/0000_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0001",
+      "detections": [
+        {
+          "det_id": "0001_00",
+          "class_name": "artificial turf",
+          "score": 0.395,
+          "bbox_xyxy": [
+            758.23,
+            287.31,
+            903.33,
+            375.99
+          ],
+          "mask": "masks/0001_00.png"
+        },
+        {
+          "det_id": "0001_01",
+          "class_name": "plywood panel",
+          "score": 0.3706,
+          "bbox_xyxy": [
+            760.04,
+            172.83,
+            907.13,
+            295.74
+          ],
+          "mask": "masks/0001_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0002",
+      "detections": [
+        {
+          "det_id": "0002_00",
+          "class_name": "plywood panel",
+          "score": 0.4078,
+          "bbox_xyxy": [
+            903.46,
+            195.28,
+            1040.09,
+            341.37
+          ],
+          "mask": "masks/0002_00.png"
+        },
+        {
+          "det_id": "0002_01",
+          "class_name": "artificial turf",
+          "score": 0.3483,
+          "bbox_xyxy": [
+            899.48,
+            309.99,
+            1027.82,
+            437.08
+          ],
+          "mask": "masks/0002_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0003",
+      "detections": [
+        {
+          "det_id": "0003_00",
+          "class_name": "plywood panel",
+          "score": 0.4753,
+          "bbox_xyxy": [
+            985.15,
+            232.15,
+            1046.0,
+            407.75
+          ],
+          "mask": "masks/0003_00.png"
+        },
+        {
+          "det_id": "0003_01",
+          "class_name": "decorative plate",
+          "score": 0.418,
+          "bbox_xyxy": [
+            802.61,
+            341.71,
+            852.47,
+            388.26
+          ],
+          "mask": "masks/0003_01.png"
+        },
+        {
+          "det_id": "0003_02",
+          "class_name": "artificial turf",
+          "score": 0.392,
+          "bbox_xyxy": [
+            683.97,
+            212.62,
+            994.57,
+            514.52
+          ],
+          "mask": "masks/0003_02.png"
+        },
+        {
+          "det_id": "0003_03",
+          "class_name": "decorative plate",
+          "score": 0.3371,
+          "bbox_xyxy": [
+            766.53,
+            383.96,
+            824.25,
+            438.51
+          ],
+          "mask": "masks/0003_03.png"
+        },
+        {
+          "det_id": "0003_04",
+          "class_name": "decorative plate",
+          "score": 0.3313,
+          "bbox_xyxy": [
+            826.54,
+            379.6,
+            902.51,
+            446.99
+          ],
+          "mask": "masks/0003_04.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0004",
+      "detections": [
+        {
+          "det_id": "0004_00",
+          "class_name": "decorative plate",
+          "score": 0.3738,
+          "bbox_xyxy": [
+            760.27,
+            369.77,
+            806.79,
+            420.99
+          ],
+          "mask": "masks/0004_00.png"
+        },
+        {
+          "det_id": "0004_01",
+          "class_name": "plywood panel",
+          "score": 0.3727,
+          "bbox_xyxy": [
+            531.27,
+            221.77,
+            666.73,
+            402.61
+          ],
+          "mask": "masks/0004_01.png"
+        },
+        {
+          "det_id": "0004_02",
+          "class_name": "decorative plate",
+          "score": 0.3724,
+          "bbox_xyxy": [
+            728.95,
+            409.17,
+            780.11,
+            467.58
+          ],
+          "mask": "masks/0004_02.png"
+        },
+        {
+          "det_id": "0004_03",
+          "class_name": "window",
+          "score": 0.339,
+          "bbox_xyxy": [
+            466.24,
+            161.31,
+            519.76,
+            299.94
+          ],
+          "mask": "masks/0004_03.png"
+        },
+        {
+          "det_id": "0004_04",
+          "class_name": "artificial turf",
+          "score": 0.313,
+          "bbox_xyxy": [
+            535.88,
+            366.32,
+            667.94,
+            509.52
+          ],
+          "mask": "masks/0004_04.png"
+        },
+        {
+          "det_id": "0004_05",
+          "class_name": "plywood panel",
+          "score": 0.3125,
+          "bbox_xyxy": [
+            530.11,
+            497.76,
+            916.93,
+            679.82
+          ],
+          "mask": "masks/0004_05.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0005",
+      "detections": [
+        {
+          "det_id": "0005_00",
+          "class_name": "artificial turf",
+          "score": 0.5061,
+          "bbox_xyxy": [
+            443.59,
+            367.51,
+            631.45,
+            477.53
+          ],
+          "mask": "masks/0005_00.png"
+        },
+        {
+          "det_id": "0005_01",
+          "class_name": "plywood panel",
+          "score": 0.4004,
+          "bbox_xyxy": [
+            440.4,
+            216.6,
+            635.33,
+            374.27
+          ],
+          "mask": "masks/0005_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0006",
+      "detections": [
+        {
+          "det_id": "0006_00",
+          "class_name": "plywood panel",
+          "score": 0.4508,
+          "bbox_xyxy": [
+            435.68,
+            204.67,
+            599.53,
+            357.84
+          ],
+          "mask": "masks/0006_00.png"
+        },
+        {
+          "det_id": "0006_01",
+          "class_name": "artificial turf",
+          "score": 0.3238,
+          "bbox_xyxy": [
+            436.81,
+            344.84,
+            599.71,
+            456.52
+          ],
+          "mask": "masks/0006_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0007",
+      "detections": [
+        {
+          "det_id": "0007_00",
+          "class_name": "plywood panel",
+          "score": 0.4461,
+          "bbox_xyxy": [
+            501.82,
+            188.74,
+            587.72,
+            348.64
+          ],
+          "mask": "masks/0007_00.png"
+        },
+        {
+          "det_id": "0007_01",
+          "class_name": "plywood panel",
+          "score": 0.3045,
+          "bbox_xyxy": [
+            492.11,
+            187.48,
+            589.34,
+            477.48
+          ],
+          "mask": "masks/0007_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0008",
+      "detections": [
+        {
+          "det_id": "0008_00",
+          "class_name": "plywood panel",
+          "score": 0.3867,
+          "bbox_xyxy": [
+            310.5,
+            202.96,
+            373.1,
+            451.59
+          ],
+          "mask": "masks/0008_00.png"
+        },
+        {
+          "det_id": "0008_01",
+          "class_name": "plywood panel",
+          "score": 0.3036,
+          "bbox_xyxy": [
+            312.69,
+            186.58,
+            607.24,
+            479.39
+          ],
+          "mask": "masks/0008_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0009",
+      "detections": [
+        {
+          "det_id": "0009_00",
+          "class_name": "plywood panel",
+          "score": 0.3854,
+          "bbox_xyxy": [
+            430.47,
+            173.13,
+            540.77,
+            298.45
+          ],
+          "mask": "masks/0009_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0010",
+      "detections": [
+        {
+          "det_id": "0010_00",
+          "class_name": "plywood panel",
+          "score": 0.4431,
+          "bbox_xyxy": [
+            524.05,
+            89.85,
+            661.18,
+            203.73
+          ],
+          "mask": "masks/0010_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0011",
+      "detections": [
+        {
+          "det_id": "0011_00",
+          "class_name": "plywood panel",
+          "score": 0.4164,
+          "bbox_xyxy": [
+            700.87,
+            106.49,
+            854.36,
+            200.49
+          ],
+          "mask": "masks/0011_00.png"
+        },
+        {
+          "det_id": "0011_01",
+          "class_name": "decorative plate",
+          "score": 0.3634,
+          "bbox_xyxy": [
+            665.22,
+            19.27,
+            875.73,
+            472.91
+          ],
+          "mask": "masks/0011_01.png"
+        },
+        {
+          "det_id": "0011_02",
+          "class_name": "artificial turf",
+          "score": 0.3017,
+          "bbox_xyxy": [
+            699.24,
+            195.45,
+            847.75,
+            277.86
+          ],
+          "mask": "masks/0011_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0012",
+      "detections": [
+        {
+          "det_id": "0012_00",
+          "class_name": "plywood panel",
+          "score": 0.3517,
+          "bbox_xyxy": [
+            850.8,
+            134.13,
+            1023.85,
+            372.18
+          ],
+          "mask": "masks/0012_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0013",
+      "detections": [
+        {
+          "det_id": "0013_00",
+          "class_name": "plywood panel",
+          "score": 0.3617,
+          "bbox_xyxy": [
+            968.6,
+            294.0,
+            1077.48,
+            433.34
+          ],
+          "mask": "masks/0013_00.png"
+        },
+        {
+          "det_id": "0013_01",
+          "class_name": "plywood panel",
+          "score": 0.3282,
+          "bbox_xyxy": [
+            689.89,
+            202.68,
+            1078.95,
+            584.3
+          ],
+          "mask": "masks/0013_01.png"
+        },
+        {
+          "det_id": "0013_02",
+          "class_name": "decorative plate",
+          "score": 0.3004,
+          "bbox_xyxy": [
+            800.98,
+            331.66,
+            847.6,
+            370.94
+          ],
+          "mask": "masks/0013_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0014",
+      "detections": [
+        {
+          "det_id": "0014_00",
+          "class_name": "window",
+          "score": 0.4192,
+          "bbox_xyxy": [
+            393.24,
+            26.43,
+            575.77,
+            256.93
+          ],
+          "mask": "masks/0014_00.png"
+        },
+        {
+          "det_id": "0014_01",
+          "class_name": "decorative plate",
+          "score": 0.3753,
+          "bbox_xyxy": [
+            804.68,
+            438.82,
+            879.28,
+            503.54
+          ],
+          "mask": "masks/0014_01.png"
+        },
+        {
+          "det_id": "0014_02",
+          "class_name": "plywood panel",
+          "score": 0.3679,
+          "bbox_xyxy": [
+            581.59,
+            247.21,
+            681.57,
+            469.03
+          ],
+          "mask": "masks/0014_02.png"
+        },
+        {
+          "det_id": "0014_03",
+          "class_name": "decorative plate",
+          "score": 0.3378,
+          "bbox_xyxy": [
+            746.04,
+            429.53,
+            801.67,
+            475.17
+          ],
+          "mask": "masks/0014_03.png"
+        },
+        {
+          "det_id": "0014_04",
+          "class_name": "plywood panel",
+          "score": 0.3083,
+          "bbox_xyxy": [
+            586.33,
+            230.32,
+            975.3,
+            667.5
+          ],
+          "mask": "masks/0014_04.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0015",
+      "detections": [
+        {
+          "det_id": "0015_00",
+          "class_name": "window",
+          "score": 0.3866,
+          "bbox_xyxy": [
+            551.03,
+            56.86,
+            805.78,
+            210.36
+          ],
+          "mask": "masks/0015_00.png"
+        },
+        {
+          "det_id": "0015_01",
+          "class_name": "artificial turf",
+          "score": 0.3652,
+          "bbox_xyxy": [
+            459.86,
+            243.88,
+            821.78,
+            716.39
+          ],
+          "mask": "masks/0015_01.png"
+        },
+        {
+          "det_id": "0015_02",
+          "class_name": "plywood panel",
+          "score": 0.362,
+          "bbox_xyxy": [
+            454.42,
+            247.05,
+            648.6,
+            439.58
+          ],
+          "mask": "masks/0015_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0016",
+      "detections": [
+        {
+          "det_id": "0016_00",
+          "class_name": "plywood panel",
+          "score": 0.3896,
+          "bbox_xyxy": [
+            417.55,
+            233.05,
+            611.04,
+            377.86
+          ],
+          "mask": "masks/0016_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0017",
+      "detections": [
+        {
+          "det_id": "0017_00",
+          "class_name": "plywood panel",
+          "score": 0.3893,
+          "bbox_xyxy": [
+            462.4,
+            170.94,
+            589.27,
+            360.74
+          ],
+          "mask": "masks/0017_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0018",
+      "detections": [
+        {
+          "det_id": "0018_00",
+          "class_name": "plywood panel",
+          "score": 0.3139,
+          "bbox_xyxy": [
+            269.65,
+            138.2,
+            592.88,
+            480.73
+          ],
+          "mask": "masks/0018_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0019",
+      "detections": [
+        {
+          "det_id": "0019_00",
+          "class_name": "plywood panel",
+          "score": 0.3554,
+          "bbox_xyxy": [
+            366.65,
+            94.36,
+            474.65,
+            357.22
+          ],
+          "mask": "masks/0019_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0020",
+      "detections": [
+        {
+          "det_id": "0020_00",
+          "class_name": "plywood panel",
+          "score": 0.4413,
+          "bbox_xyxy": [
+            471.48,
+            2.64,
+            614.57,
+            146.98
+          ],
+          "mask": "masks/0020_00.png"
+        },
+        {
+          "det_id": "0020_01",
+          "class_name": "artificial turf",
+          "score": 0.3906,
+          "bbox_xyxy": [
+            494.76,
+            147.91,
+            757.77,
+            385.41
+          ],
+          "mask": "masks/0020_01.png"
+        },
+        {
+          "det_id": "0020_02",
+          "class_name": "decorative plate",
+          "score": 0.3331,
+          "bbox_xyxy": [
+            470.29,
+            1.85,
+            807.64,
+            386.36
+          ],
+          "mask": "masks/0020_02.png"
+        },
+        {
+          "det_id": "0020_03",
+          "class_name": "decorative plate",
+          "score": 0.3225,
+          "bbox_xyxy": [
+            493.55,
+            145.38,
+            754.38,
+            386.45
+          ],
+          "mask": "masks/0020_03.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0021",
+      "detections": [
+        {
+          "det_id": "0021_00",
+          "class_name": "decorative plate",
+          "score": 0.3582,
+          "bbox_xyxy": [
+            650.99,
+            5.71,
+            876.03,
+            413.21
+          ],
+          "mask": "masks/0021_00.png"
+        },
+        {
+          "det_id": "0021_01",
+          "class_name": "plywood panel",
+          "score": 0.3208,
+          "bbox_xyxy": [
+            666.73,
+            60.36,
+            823.88,
+            115.54
+          ],
+          "mask": "masks/0021_01.png"
+        },
+        {
+          "det_id": "0021_02",
+          "class_name": "plywood panel",
+          "score": 0.3066,
+          "bbox_xyxy": [
+            657.43,
+            176.82,
+            823.69,
+            390.81
+          ],
+          "mask": "masks/0021_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0022",
+      "detections": [
+        {
+          "det_id": "0022_00",
+          "class_name": "decorative plate",
+          "score": 0.3451,
+          "bbox_xyxy": [
+            684.47,
+            32.53,
+            1052.85,
+            508.34
+          ],
+          "mask": "masks/0022_00.png"
+        },
+        {
+          "det_id": "0022_01",
+          "class_name": "plywood panel",
+          "score": 0.303,
+          "bbox_xyxy": [
+            682.3,
+            32.74,
+            1055.97,
+            503.27
+          ],
+          "mask": "masks/0022_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0023",
+      "detections": [
+        {
+          "det_id": "0023_00",
+          "class_name": "plywood panel",
+          "score": 0.3407,
+          "bbox_xyxy": [
+            951.33,
+            206.1,
+            1087.24,
+            425.86
+          ],
+          "mask": "masks/0023_00.png"
+        },
+        {
+          "det_id": "0023_01",
+          "class_name": "plywood panel",
+          "score": 0.3407,
+          "bbox_xyxy": [
+            692.25,
+            179.35,
+            1077.21,
+            575.19
+          ],
+          "mask": "masks/0023_01.png"
+        },
+        {
+          "det_id": "0023_02",
+          "class_name": "artificial turf",
+          "score": 0.3353,
+          "bbox_xyxy": [
+            933.8,
+            291.77,
+            1039.92,
+            475.51
+          ],
+          "mask": "masks/0023_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0024",
+      "detections": [
+        {
+          "det_id": "0024_00",
+          "class_name": "decorative plate",
+          "score": 0.3908,
+          "bbox_xyxy": [
+            616.29,
+            286.01,
+            1018.11,
+            679.15
+          ],
+          "mask": "masks/0024_00.png"
+        },
+        {
+          "det_id": "0024_01",
+          "class_name": "plywood panel",
+          "score": 0.3132,
+          "bbox_xyxy": [
+            621.02,
+            295.11,
+            686.57,
+            591.08
+          ],
+          "mask": "masks/0024_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0025",
+      "detections": [
+        {
+          "det_id": "0025_00",
+          "class_name": "window",
+          "score": 0.4181,
+          "bbox_xyxy": [
+            497.23,
+            2.47,
+            767.84,
+            249.29
+          ],
+          "mask": "masks/0025_00.png"
+        },
+        {
+          "det_id": "0025_01",
+          "class_name": "plywood panel",
+          "score": 0.4145,
+          "bbox_xyxy": [
+            475.97,
+            306.51,
+            655.06,
+            484.98
+          ],
+          "mask": "masks/0025_01.png"
+        },
+        {
+          "det_id": "0025_02",
+          "class_name": "artificial turf",
+          "score": 0.3965,
+          "bbox_xyxy": [
+            502.55,
+            305.48,
+            866.39,
+            715.57
+          ],
+          "mask": "masks/0025_02.png"
+        },
+        {
+          "det_id": "0025_03",
+          "class_name": "decorative plate",
+          "score": 0.3004,
+          "bbox_xyxy": [
+            503.8,
+            306.05,
+            864.83,
+            714.93
+          ],
+          "mask": "masks/0025_03.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0026",
+      "detections": [
+        {
+          "det_id": "0026_00",
+          "class_name": "plywood panel",
+          "score": 0.3932,
+          "bbox_xyxy": [
+            412.27,
+            298.2,
+            617.0,
+            381.96
+          ],
+          "mask": "masks/0026_00.png"
+        },
+        {
+          "det_id": "0026_01",
+          "class_name": "plywood panel",
+          "score": 0.3189,
+          "bbox_xyxy": [
+            415.22,
+            299.44,
+            617.49,
+            465.08
+          ],
+          "mask": "masks/0026_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0027",
+      "detections": [
+        {
+          "det_id": "0027_00",
+          "class_name": "plywood panel",
+          "score": 0.3712,
+          "bbox_xyxy": [
+            435.41,
+            192.21,
+            594.21,
+            436.14
+          ],
+          "mask": "masks/0027_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0028",
+      "detections": [
+        {
+          "det_id": "0028_00",
+          "class_name": "plywood panel",
+          "score": 0.3631,
+          "bbox_xyxy": [
+            227.97,
+            63.38,
+            593.21,
+            489.93
+          ],
+          "mask": "masks/0028_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0029",
+      "detections": [
+        {
+          "det_id": "0029_00",
+          "class_name": "plywood panel",
+          "score": 0.3387,
+          "bbox_xyxy": [
+            320.85,
+            75.06,
+            413.23,
+            248.89
+          ],
+          "mask": "masks/0029_00.png"
+        },
+        {
+          "det_id": "0029_01",
+          "class_name": "decorative plate",
+          "score": 0.3167,
+          "bbox_xyxy": [
+            368.39,
+            203.13,
+            649.04,
+            399.96
+          ],
+          "mask": "masks/0029_01.png"
+        },
+        {
+          "det_id": "0029_02",
+          "class_name": "decorative plate",
+          "score": 0.31,
+          "bbox_xyxy": [
+            319.09,
+            31.94,
+            652.2,
+            399.78
+          ],
+          "mask": "masks/0029_02.png"
+        },
+        {
+          "det_id": "0029_03",
+          "class_name": "plywood panel",
+          "score": 0.3039,
+          "bbox_xyxy": [
+            367.47,
+            204.48,
+            647.58,
+            399.38
+          ],
+          "mask": "masks/0029_03.png"
+        }
+      ]
+    }
+  ]
+}

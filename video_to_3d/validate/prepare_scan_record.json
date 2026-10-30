@@ -1,0 +1,76 @@
+{
+ "schema": 1,
+ "scan_id": "IMG_5198_check",
+ "source_file": "IMG_5198.usdz",
+ "source_path": "source/IMG_5198.usdz",
+ "source_bytes": 21783945,
+ "source_sha256": "58cc37c25fbca98ed8609fd882b04327aee7d0a11ef21c92dfa37691ca2cdc0d",
+ "uploaded_at": "2026-10-15T01:54:52+05:30",
+ "root_layer": "extracted/IMG_5198.usdc",
+ "stage": "scene.usda",
+ "up_axis": "Y",
+ "meters_per_unit": 1.0,
+ "default_prim": "/World",
+ "reference_prim": null,
+ "reference_has_xform": false,
+ "num_meshes": 1,
+ "num_triangles": 353622,
+ "orientation": {
+  "flip_applied": false,
+  "source": "auto",
+  "flip_recommended": false,
+  "confidence": "low",
+  "evidence": {
+   "up_axis_vector": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "vertical_min_m": -0.0278,
+   "vertical_max_m": 2.0041,
+   "vertical_extent_m": 2.0319,
+   "total_area_m2": 7.156,
+   "horizontal_area_m2": 1.238,
+   "dominant_surface_height_m": 1.0864,
+   "dominant_surface_area_m2": 0.266,
+   "dominant_surface_rel_height": 0.5484,
+   "dominant_surface_mean_normal_up": 0.5723,
+   "dominant_surface_share_of_horizontal": 0.215,
+   "support_band_m": [
+    0.25,
+    1.25
+   ],
+   "support_up_facing_area_m2": 0.32,
+   "support_down_facing_area_m2": 0.059,
+   "nonhorizontal_mean_rel_height": 0.5026,
+   "votes": {
+    "position": 0.2903,
+    "normal": -1.0,
+    "support": -0.6865,
+    "mass": 0.026
+   },
+   "weights": {
+    "position": 1.0,
+    "normal": 1.0,
+    "support": 1.0,
+    "mass": 0.5
+   },
+   "score": -1.3833
+  },
+  "updated_at": "2026-10-15T01:54:52+05:30"
+ },
+ "status": "uploaded",
+ "stale": false,
+ "scene_bounds": {
+  "min": [
+   -1.4194,
+   -0.0278,
+   -0.4467
+  ],
+  "max": [
+   1.416,
+   2.0041,
+   0.3942
+  ]
+ }
+}

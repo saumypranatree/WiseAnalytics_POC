@@ -1,0 +1,17 @@
+{
+ "facade_normal": [
+  0.6594836007826035,
+  -0.10157214904658812,
+  -0.7448251330593441
+ ],
+ "up": [
+  -0.12997572238751348,
+  -0.9913133683957904,
+  0.02010266722691554
+ ],
+ "facade_area_share": 0.3242508740651181,
+ "up_offset_from_projected_camera_up_deg": 4.0,
+ "angle_up_vs_mean_camera_up_deg": 5.210787019847515,
+ "pan_direction_deviation_from_horizontal_deg": 4.384304122511077,
+ "horizontal_area_share": 0.0914264311945874
+}

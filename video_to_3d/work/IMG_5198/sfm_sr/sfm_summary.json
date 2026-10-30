@@ -1,0 +1,37 @@
+{
+ "args": {
+  "work": "work/IMG_5198",
+  "max_image_size": 1600,
+  "overlap": 15,
+  "max_features": 8192,
+  "camera_model": "SIMPLE_RADIAL",
+  "camera_params": "1600,540,960,0",
+  "fix_focal": false,
+  "threads": 12,
+  "name": "sfm_sr"
+ },
+ "num_keyframes": 100,
+ "models": {
+  "0": {
+   "registered": 100,
+   "points3D": 30908,
+   "mean_reproj_error": 0.7170808689686771,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1684.6105733689315,
+      540.0,
+      960.0,
+      0.047540982427763355
+     ]
+    }
+   }
+  }
+ },
+ "seconds": {
+  "extract": 21.0,
+  "match": 29.7,
+  "map": 175.0
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "num_keyframes": 100,
+ "models": {
+  "0": {
+   "registered": 7,
+   "points3D": 12,
+   "mean_reproj_error": 0.4220529789117961,
+   "cameras": {
+    "1": "Camera:\n    camera_id = 1\n    sensor_id: sensor_t:\n        type = SensorType.CAMERA\n        id = 1\n    model = CameraModelId.OPENCV\n    model_name = OPENCV\n    width = 1080\n    height = 1920\n    focal_length_x = 4228.785325595168\n    focal_length_y = 4749.685823898484\n    has_prior_focal_length = False\n    principal_point_x = 540.0\n    principal_point_y = 960.0\n    params_info = fx, fy, cx, cy, k1, k2, p1, p2\n    params = [ ... 8 elements ... ]"
+   }
+  },
+  "1": {
+   "registered": 100,
+   "points3D": 33504,
+   "mean_reproj_error": 0.8354448919472637,
+   "cameras": {
+    "1": "Camera:\n    camera_id = 1\n    sensor_id: sensor_t:\n        type = SensorType.CAMERA\n        id = 1\n    model = CameraModelId.OPENCV\n    model_name = OPENCV\n    width = 1080\n    height = 1920\n    focal_length_x = 2155.501209359755\n    focal_length_y = 2115.6386136523665\n    has_prior_focal_length = False\n    principal_point_x = 540.0\n    principal_point_y = 960.0\n    params_info = fx, fy, cx, cy, k1, k2, p1, p2\n    params = [ ... 8 elements ... ]"
+   }
+  }
+ },
+ "seconds": {
+  "extract": 22.9,
+  "match": 32.9,
+  "map": 495.1
+ }
+}

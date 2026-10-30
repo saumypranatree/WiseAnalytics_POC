@@ -1,0 +1,21 @@
+{
+ "views": 9,
+ "detections": [
+  {
+   "view": "view_005",
+   "box_px": [
+    359.5,
+    544.9,
+    421.2,
+    619.5
+   ],
+   "score": 0.2547
+  }
+ ],
+ "camera": {
+  "width": 1280,
+  "height": 960,
+  "hfov_deg": 60.0,
+  "distance_m": 1.2
+ }
+}

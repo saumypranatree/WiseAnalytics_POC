@@ -1,0 +1,79 @@
+{
+ "atlas_count": 6,
+ "atlas_sizes": [
+  [
+   2300,
+   2329
+  ],
+  [
+   2275,
+   2279
+  ],
+  [
+   2310,
+   2326
+  ],
+  [
+   2367,
+   2339
+  ],
+  [
+   2370,
+   2352
+  ],
+  [
+   2350,
+   2316
+  ]
+ ],
+ "uv_tiles": 6,
+ "utilization": [
+  0.7928767800331116,
+  0.8137338161468506,
+  0.785768449306488,
+  0.7591449618339539,
+  0.7327684164047241,
+  0.7545002102851868
+ ],
+ "triangles": 355374,
+ "unseen_triangles": 37792,
+ "views_used": 100,
+ "textures": [
+  {
+   "file": "atlas_0.jpg",
+   "triangles": 59211,
+   "filled_frac": 0.5932796311161723
+  },
+  {
+   "file": "atlas_1.jpg",
+   "triangles": 59218,
+   "filled_frac": 0.6132454469619893
+  },
+  {
+   "file": "atlas_2.jpg",
+   "triangles": 59209,
+   "filled_frac": 0.5916522428560261
+  },
+  {
+   "file": "atlas_3.jpg",
+   "triangles": 59206,
+   "filled_frac": 0.5744457647939198
+  },
+  {
+   "file": "atlas_4.jpg",
+   "triangles": 59219,
+   "filled_frac": 0.569705825368122
+  },
+  {
+   "file": "atlas_5.jpg",
+   "triangles": 59214,
+   "filled_frac": 0.5835247859478926
+  }
+ ],
+ "seconds": {
+  "view_scoring": 5.8,
+  "label_smoothing": 2.1,
+  "xatlas": 57.9,
+  "bake": 35.5
+ }
+}

@@ -1,0 +1,92 @@
+{
+  "scene_id": "room_scan",
+  "objects": [
+    {
+      "class_name": "plywood panel",
+      "confidence": 0.4418,
+      "position_world": {
+        "x": 0.3413,
+        "y": 0.2474,
+        "z": 1.9256
+      },
+      "bounding_box_3d": {
+        "min": [
+          0.0351,
+          -0.1135,
+          1.5275
+        ],
+        "max": [
+          0.6579,
+          0.7128,
+          2.3372
+        ]
+      },
+      "num_views": 6,
+      "num_points": 13838,
+      "source_detections": [
+        "0000_00",
+        "0002_00",
+        "0003_00",
+        "0010_00",
+        "0011_00",
+        "0020_00"
+      ]
+    },
+    {
+      "class_name": "plywood panel",
+      "confidence": 0.4279,
+      "position_world": {
+        "x": 1.8322,
+        "y": 0.255,
+        "z": 0.8842
+      },
+      "bounding_box_3d": {
+        "min": [
+          1.4784,
+          -0.1383,
+          0.4333
+        ],
+        "max": [
+          2.1198,
+          0.7202,
+          1.2481
+        ]
+      },
+      "num_views": 4,
+      "num_points": 13016,
+      "source_detections": [
+        "0005_01",
+        "0006_00",
+        "0007_00",
+        "0025_01"
+      ]
+    },
+    {
+      "class_name": "window",
+      "confidence": 0.4187,
+      "position_world": {
+        "x": 4.6558,
+        "y": 0.2016,
+        "z": 0.9356
+      },
+      "bounding_box_3d": {
+        "min": [
+          4.0404,
+          -1.1679,
+          0.3109
+        ],
+        "max": [
+          5.3836,
+          1.0742,
+          1.9626
+        ]
+      },
+      "num_views": 2,
+      "num_points": 13331,
+      "source_detections": [
+        "0014_00",
+        "0025_00"
+      ]
+    }
+  ]
+}

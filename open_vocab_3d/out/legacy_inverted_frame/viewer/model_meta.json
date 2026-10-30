@@ -1,0 +1,20 @@
+{
+  "scene_id": "room_scan",
+  "usd_path": "/home/saumy/pranatree_work/room_scan/room_scan.usda",
+  "up_axis": "Y",
+  "meters_per_unit": 1.0,
+  "bounds": {
+    "min": [
+      -0.5030990242958069,
+      -1.7906700372695923,
+      -0.2525010108947754
+    ],
+    "max": [
+      5.454529762268066,
+      1.3304599523544312,
+      2.672869920730591
+    ]
+  },
+  "num_meshes": 3,
+  "num_triangles": 17566
+}

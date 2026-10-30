@@ -1,0 +1,91 @@
+{
+  "config": {
+    "_comment": [
+      "Defaults for POST /api/run. Reloaded on every run, so values can be tuned without restarting the server.",
+      "Each stage: 'script' (path relative to open_vocab_3d/) or 'cmd' (full argv prefix; '{python}' = the server's interpreter), plus 'args' mapped generically to CLI flags:",
+      "  true -> '--flag'; false/null -> omitted; list -> '--flag=a,b'; anything else -> '--flag=value'.",
+      "The server injects the I/O flags itself: render --usd/--out, detect --renders/--out/--prompts, lift --renders/--detections/--out.",
+      "lift '--save-ply': true is replaced by the run dir's clusters.ply path.",
+      "POST /api/run body overrides: prompts -> detect --prompts, num_views -> render --num-views, mode -> render --mode."
+    ],
+    "prompts": [
+      "window",
+      "cabinet",
+      "decorative plate",
+      "plywood panel",
+      "artificial turf"
+    ],
+    "stages": {
+      "render": {
+        "script": "render_views_lite.py",
+        "args": {
+          "--mode": "dome",
+          "--num-views": 30,
+          "--rings": "15,35,55",
+          "--radius-scale": 0.6,
+          "--width": 1280,
+          "--height": 720
+        }
+      },
+      "detect": {
+        "script": "detect_2d.py",
+        "args": {
+          "--model-id": "IDEA-Research/grounding-dino-base",
+          "--box-threshold": 0.3,
+          "--text-threshold": 0.25,
+          "--sam": true,
+          "--device": "auto",
+          "--vis": true
+        }
+      },
+      "lift": {
+        "script": "lift_cluster.py",
+        "args": {
+          "--min-score": 0.4,
+          "--extended": true,
+          "--save-ply": true
+        }
+      }
+    }
+  },
+  "commands": {
+    "render": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/render_views_lite.py",
+      "--usd=/home/saumy/pranatree_work/room_scan/room_scan.usda",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/renders",
+      "--mode=dome",
+      "--num-views=30",
+      "--rings=15,35,55",
+      "--radius-scale=0.6",
+      "--width=1280",
+      "--height=720"
+    ],
+    "detect": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/detect_2d.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/renders",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/detections",
+      "--prompts=window,cabinet,decorative plate,plywood panel,artificial turf",
+      "--model-id=IDEA-Research/grounding-dino-base",
+      "--box-threshold=0.3",
+      "--text-threshold=0.25",
+      "--sam",
+      "--device=auto",
+      "--vis"
+    ],
+    "lift": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/lift_cluster.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/renders",
+      "--detections=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/detections",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/scene_objects.json",
+      "--min-score=0.4",
+      "--extended",
+      "--save-ply=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-122513-a5ee6a/clusters.ply"
+    ]
+  }
+}

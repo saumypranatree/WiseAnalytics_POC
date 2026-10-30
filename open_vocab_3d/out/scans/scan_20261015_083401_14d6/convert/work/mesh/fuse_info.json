@@ -1,0 +1,12 @@
+{
+ "median_depth_sfm": 43.387678146362305,
+ "voxel_sfm": 0.26032606887817383,
+ "frames": 100,
+ "mean_pixels_kept_after_edge_filter": 0.9755053240740742,
+ "tris_raw": 757989,
+ "tris_after_components": 729083,
+ "tris_final": 399999,
+ "verts_final": 215981,
+ "seconds_fuse": 2.0,
+ "seconds_total": 5.9
+}

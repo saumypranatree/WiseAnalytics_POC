@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "scan_id": "scan_20261015_083401_14d6",
+  "scan_type": "shelf",
+  "source_file": "IMG_5196_2.mov",
+  "source_path": "source/IMG_5196_2.mov",
+  "source_bytes": 20459015,
+  "source_sha256": "a402b5e21100d9dcc0a51c1a287b23a4f0bd7df68c31ad6c3124ded2d9d7f94f",
+  "uploaded_at": "2026-10-15T08:34:01+05:30",
+  "scale": {
+    "status": "approximate",
+    "method": "assumed_height",
+    "assumed_height_m": 1.9
+  },
+  "status": "done",
+  "progress": 1.0,
+  "message": "gaps: dino 7, depth 47",
+  "stale": false,
+  "num_objects": null,
+  "updated_at": "2026-10-15T11:46:54+05:30",
+  "job_stage": "lift",
+  "job_id": "job_20261015_114228_68a727",
+  "prompts": [],
+  "error": null,
+  "queued_at": "2026-10-15T11:42:28+05:30",
+  "root_layer": "extracted/scan.usdc",
+  "stage": "scene.usda",
+  "up_axis": "Y",
+  "meters_per_unit": 1.0,
+  "default_prim": "/World",
+  "reference_prim": null,
+  "reference_has_xform": false,
+  "num_meshes": 7,
+  "num_triangles": 399999,
+  "orientation": {
+    "flip_applied": false,
+    "source": "auto",
+    "flip_recommended": false,
+    "confidence": "low",
+    "evidence": {
+      "reason": "gravity-aligned during video conversion"
+    },
+    "updated_at": "2026-10-15T08:40:36+05:30"
+  },
+  "scene_bounds": {
+    "min": [
+      -2.0383,
+      -0.0371,
+      -0.426
+    ],
+    "max": [
+      2.1035,
+      1.9626,
+      0.433
+    ]
+  },
+  "converted_at": "2026-10-15T08:40:36+05:30",
+  "glb_error": null,
+  "source_video": {
+    "file": "IMG_5196_2.mp4",
+    "path": "source/video.mp4",
+    "bytes": 32983759,
+    "content_type": "video/mp4",
+    "attached_at": "2026-10-15T08:40:36+05:30"
+  },
+  "gaps_at": "2026-10-15T11:46:54+05:30",
+  "gaps_scale_factor": 1.0
+}

@@ -43,15 +43,27 @@ The test set is small (20 images), so treat the differences as indicative.
 
 ## What is and is not in git
 
-This repository holds source code, configuration, documentation and small reference files. The following are **not** committed because they are too large for GitHub (100 MB per file limit) or are generated:
+This repository holds source code, configuration, documentation, and the generated results. Large binaries are stored with **Git LFS** (see `.gitattributes`), which covers:
 
-- Virtual environments (`.venv/`), about 8 to 15 GB each
-- Model weights and checkpoints (`*.pt`, `*.pth`, `*.ckpt`)
+- Model weights and checkpoints (`*.pt`, `*.pth`, `*.ckpt`, `*.safetensors`, `*.onnx`, `*.bin`)
 - Input videos (`video/`)
-- Generated outputs (`out/`, `work/`, `runs/`, `validate/`), such as `.usdz`, `.glb`, `.ply`, and COLMAP `database.db` files
-- The benchmark dataset (`benchmark/data/`). It is CC BY-NC-SA 4.0, for benchmark use only, and must be downloaded separately (see `benchmark/README.md`)
+- Generated scan outputs and intermediates (`out/`, `work/`, `runs/`, `validate/`, `models/`, `weights/`), including `.usdz`, `.glb`, `.ply`, COLMAP `database.db`, and frame images
 
-See `.gitignore` for the full list. Keep a copy of the excluded files somewhere else (external drive or cloud storage) before deleting the local folder. Regenerate outputs with the pipelines below, and re-download model weights with the commands given.
+Not committed:
+
+- Virtual environments (`.venv/`). Rebuild them from the requirements files below.
+- The benchmark dataset (`benchmark/data/`). It is CC BY-NC-SA 4.0, for benchmark use only, and must be downloaded separately (see `benchmark/README.md`).
+- Python caches and logs (see `.gitignore`).
+
+**Cloning:** install Git LFS before cloning, or the large files arrive as small pointer files:
+
+```bash
+sudo apt install git-lfs      # or see https://git-lfs.com
+git lfs install
+git clone https://github.com/saumypranatree/WiseAnalytics_POC.git room_scan
+```
+
+If you cloned before installing LFS, run `git lfs pull` inside the repo.
 
 ## Prerequisites
 

@@ -1,0 +1,93 @@
+{
+  "_format": [
+    "Owned by pipeline_runner.py (app v2). Read at the start of every run, so it can be tuned without restarting the server.",
+    "stages.<render|detect|lift>: 'script' (path relative to open_vocab_3d/, run with the runner's interpreter: python -u script) or 'cmd' (full argv prefix; '{python}' = the runner's interpreter), plus 'args'.",
+    "args are mapped to CLI flags: true -> '--flag'; false/null -> omitted; list -> '--flag=a,b'; anything else -> '--flag=value'. Keys starting with '_' are ignored.",
+    "stages.*.args are shared by both passes. pass1.render_args / pass1.lift_args and two_pass.render_args / two_pass.lift_args are merged on top (a null value removes a shared flag).",
+    "The runner injects the I/O flags itself: render --usd/--out (and --focus-domes in pass 2), detect --renders/--out/--prompts, lift --renders/--detections/--out; lift '--save-ply': true becomes <run dir>/<pass>/clusters.ply.",
+    "two_pass: the pass-1 lift objects whose class is in anchor_classes give the focus centres (box centres, confidence-weighted when merged). With no anchor, fallback: any object whose larger horizontal box side is >= fallback_min_extent_m. Centres closer than merge_distance_m are merged; at most max_focus are kept (most supporting views first). Each focus centre becomes one --focus-domes entry 'x,y,z,focus_radius_m,focus_num_views'. With no centre, pass 2 is skipped and the final lift runs on pass 1 alone. enabled=false always skips pass 2.",
+    "prompts: the UI default prompt list."
+  ],
+  "_notes": "Two-pass layout (2026-10-07) replaces the scene-specific focus dome below with automatic focus centres from pass-1 anchors; all other values are the R&D retune. R&D retune 2026-10-07 for scenes/room_scan_upright.usda (13 classes), validated by projecting the 3D boxes onto renders. RENDER: the wide dome (30 views, radius-scale 0.4) frames the whole scan (booth, window wall, floor), but the table items are too small in it: phone ~30 px, light switch ~18 px. --focus-domes (new) adds 30 views on a 2.0 m dome around the booth table (1.15,-0.5,-1.4), which brings the phone to ~80 px, the light switch to ~50 px and the headphones to ~170 px. A 1.5 m focus dome loses the wall plates. Interior views (eye height, any pitch set) see the table items in only 0-3 frames, and 'both' adds no coverage that the focus dome lacks. DETECT: one 13-phrase caption leaves headphones, phone and light switch at 0 detections, and ~100+ boxes come back with empty phrases. --prompt-group-size 2 (new) runs 7 short captions per frame; headphones, phone, light switch and all 3 plates appear, at ~3.4 s/frame instead of ~1.2 s. Group size 1 is ~6 s/frame with no better 3D result. Group size 5 zeroes small classes again, because results depend on which phrases share a caption. A box threshold of 0.2 is filtered in lift; text threshold 0.3 gave identical 3D results. LIFT: --min-score 0.3. The per-class size limits come from measured true sizes (table 1.1, bench 1.0, cushion 0.3, laptop 0.42, backpack 0.47, headphones 0.3, phone 0.15, plate 0.25-0.4, light switch 0.08 m), with margin, below the size of whole-booth or whole-seating-area boxes (1.6-2 m). Detection-centroid clustering separates small touching or neighbouring objects (plates, phones, headphones, switch, cushions). --cross-class-nms 0.3 resolves phone vs 'hanging plant' and similar double labels. --min-views 5, with table/bench 10 and phone 6: true large objects have 22-60 supporting views, while the false positives (a bench labelled table, the mouse labelled phone, the crumpled bag labelled cushion) have 3-7. KNOWN: no cabinet. The 'hanging plant' hits are mostly the plant-picture plates; a dark ceiling fragment at (3.2,1.5,-0.5) is sometimes boxed as a hanging plant and can't be verified. The window box includes the white wall below it (~2.1 m tall). Only 1 of the 2 turf panels is found, and results shift with the dome seed.",
+  "prompts": [
+    "table",
+    "bench seat",
+    "cushion",
+    "laptop",
+    "backpack",
+    "headphones",
+    "phone",
+    "decorative plate",
+    "window",
+    "light switch",
+    "hanging plant",
+    "artificial turf",
+    "plywood panel"
+  ],
+  "stages": {
+    "render": {
+      "script": "render_views_lite.py",
+      "args": {
+        "--width": 1280,
+        "--height": 720
+      }
+    },
+    "detect": {
+      "script": "detect_2d.py",
+      "args": {
+        "--model-id": "IDEA-Research/grounding-dino-base",
+        "--box-threshold": 0.2,
+        "--text-threshold": 0.25,
+        "--prompt-group-size": 2,
+        "--sam": true,
+        "--device": "auto",
+        "--vis": true
+      }
+    },
+    "lift": {
+      "script": "lift_cluster.py",
+      "args": {
+        "--min-score": 0.3,
+        "--max-extent-per-class": "table=1.6,bench seat=1.4,cushion=0.6,laptop=0.6,backpack=0.8,headphones=0.4,phone=0.3,decorative plate=0.5,window=2.5,light switch=0.25,hanging plant=1.0,artificial turf=1.5,plywood panel=1.5",
+        "--det-cluster-classes": "decorative plate,phone,headphones,light switch,cushion",
+        "--min-views": 5,
+        "--min-views-per-class": "table=10,bench seat=10,phone=6",
+        "--cross-class-nms": true,
+        "--nms-iou": 0.3,
+        "--extended": true,
+        "--save-ply": true
+      }
+    }
+  },
+  "pass1": {
+    "render_args": {
+      "--mode": "dome",
+      "--num-views": 30,
+      "--rings": "15,35,55",
+      "--radius-scale": 0.4
+    },
+    "lift_args": {}
+  },
+  "two_pass": {
+    "enabled": true,
+    "anchor_classes": [
+      "table",
+      "bench seat",
+      "desk",
+      "counter",
+      "shelf",
+      "sofa",
+      "chair"
+    ],
+    "fallback_min_extent_m": 0.4,
+    "merge_distance_m": 1.5,
+    "max_focus": 3,
+    "focus_radius_m": 2.0,
+    "focus_num_views": 30,
+    "render_args": {
+      "--mode": "focus",
+      "--focus-rings": "25,45,65"
+    },
+    "lift_args": {}
+  }
+}

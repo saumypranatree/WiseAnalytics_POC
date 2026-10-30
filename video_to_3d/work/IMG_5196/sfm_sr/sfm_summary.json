@@ -1,0 +1,38 @@
+{
+ "args": {
+  "work": "/home/saumy/pranatree_work/room_scan/video_to_3d/work/IMG_5196",
+  "max_image_size": 1600,
+  "overlap": 15,
+  "max_features": 8192,
+  "camera_model": "SIMPLE_RADIAL",
+  "camera_params": "1599.4,540.0,960.0,0",
+  "focal_factor": 0.833,
+  "fix_focal": false,
+  "threads": 12,
+  "name": "sfm_sr"
+ },
+ "num_keyframes": 100,
+ "models": {
+  "0": {
+   "registered": 100,
+   "points3D": 34925,
+   "mean_reproj_error": 0.6941165921158807,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1637.5907891533136,
+      540.0,
+      960.0,
+      0.02017182876276815
+     ]
+    }
+   }
+  }
+ },
+ "seconds": {
+  "extract": 20.9,
+  "match": 27.0,
+  "map": 161.6
+ }
+}

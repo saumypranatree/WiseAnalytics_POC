@@ -1,0 +1,100 @@
+{
+  "config": {
+    "_comment": [
+      "Defaults for POST /api/run. Reloaded on every run, so values can be tuned without restarting the server.",
+      "Each stage: 'script' (path relative to open_vocab_3d/) or 'cmd' (full argv prefix; '{python}' = the server's interpreter), plus 'args' mapped generically to CLI flags:",
+      "  true -> '--flag'; false/null -> omitted; list -> '--flag=a,b'; anything else -> '--flag=value'.",
+      "The server injects the I/O flags itself: render --usd/--out, detect --renders/--out/--prompts, lift --renders/--detections/--out.",
+      "lift '--save-ply': true is replaced by the run dir's clusters.ply path.",
+      "POST /api/run body overrides: prompts -> detect --prompts, num_views -> render --num-views, mode -> render --mode."
+    ],
+    "_notes": "R&D tuning 2026-10-07 for room_scan.usda (5 target classes), validated by projecting the 3D boxes back onto renders. RENDER: dome at --radius-scale 0.4 (was 0.6) makes the booth fill the frame; the ~25-40 cm plates go from a median 41-63 px to 59-91 px and the detector stops preferring whole-structure boxes. 40 views gives each plate ~19 visible views; 30 or 48 views and seeds 0/1/2 gave the same 8 objects. Interior and dome+interior ('--mode both', now supported) were worse: close-ups mostly yield full-frame turf/wall boxes that bridge clusters. DETECT: --text-threshold 0.35 (was 0.25) stops Grounding DINO from emitting merged phrases such as 'plywood panel artificial turf' that boxed whole walls. The user's prompt strings are kept: rephrasing ('round decorative plate', 'green artificial turf', 'plywood board') was not better, and 'wooden cabinet' only boxed the whole 2 m booth. LIFT: --min-score 0.35, window 0.4 (low-score window boxes cover the white wall under the window and doubled its height). --max-extent-per-class drops single detections and clusters too large for the class (a decorative plate is under 0.5 m), which removes whole-booth boxes. --det-cluster-classes groups plates by per-detection 3D centroids, because the three plates touch on the wall and point-DBSCAN merges them into one 0.6 m blob. --min-views 3 adds margin; every true object has 4+ views. Expected result: 1 window, 2 plywood panel, 2 artificial turf, 3 decorative plate, 0 cabinet.",
+    "prompts": [
+      "window",
+      "cabinet",
+      "decorative plate",
+      "plywood panel",
+      "artificial turf"
+    ],
+    "stages": {
+      "render": {
+        "script": "render_views_lite.py",
+        "args": {
+          "--mode": "dome",
+          "--num-views": 40,
+          "--rings": "15,35,55",
+          "--radius-scale": 0.4,
+          "--width": 1280,
+          "--height": 720
+        }
+      },
+      "detect": {
+        "script": "detect_2d.py",
+        "args": {
+          "--model-id": "IDEA-Research/grounding-dino-base",
+          "--box-threshold": 0.3,
+          "--text-threshold": 0.35,
+          "--sam": true,
+          "--device": "auto",
+          "--vis": true
+        }
+      },
+      "lift": {
+        "script": "lift_cluster.py",
+        "args": {
+          "--min-score": 0.35,
+          "--min-score-per-class": "window=0.4",
+          "--max-extent-per-class": "window=2.5,decorative plate=0.5,plywood panel=1.5,artificial turf=1.5,cabinet=2.5",
+          "--det-cluster-classes": "decorative plate",
+          "--min-views": 3,
+          "--extended": true,
+          "--save-ply": true
+        }
+      }
+    }
+  },
+  "commands": {
+    "render": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/render_views_lite.py",
+      "--usd=/home/saumy/pranatree_work/room_scan/room_scan.usda",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/renders",
+      "--mode=dome",
+      "--num-views=40",
+      "--rings=15,35,55",
+      "--radius-scale=0.4",
+      "--width=1280",
+      "--height=720"
+    ],
+    "detect": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/detect_2d.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/renders",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/detections",
+      "--prompts=window,cabinet,decorative plate,plywood panel,artificial turf",
+      "--model-id=IDEA-Research/grounding-dino-base",
+      "--box-threshold=0.3",
+      "--text-threshold=0.35",
+      "--sam",
+      "--device=auto",
+      "--vis"
+    ],
+    "lift": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/lift_cluster.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/renders",
+      "--detections=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/detections",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/scene_objects.json",
+      "--min-score=0.35",
+      "--min-score-per-class=window=0.4",
+      "--max-extent-per-class=window=2.5,decorative plate=0.5,plywood panel=1.5,artificial turf=1.5,cabinet=2.5",
+      "--det-cluster-classes=decorative plate",
+      "--min-views=3",
+      "--extended",
+      "--save-ply=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/clusters.ply"
+    ]
+  }
+}

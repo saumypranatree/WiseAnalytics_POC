@@ -1,0 +1,26 @@
+{
+ "atlas_count": 1,
+ "atlas_size": [
+  4701,
+  4670
+ ],
+ "utilization": [
+  0.7961242198944092
+ ],
+ "triangles": 400000,
+ "unseen_triangles": 52969,
+ "views_used": 100,
+ "textures": [
+  {
+   "file": "atlas_0.jpg",
+   "triangles": 400000,
+   "filled_frac": 0.5795956211421598
+  }
+ ],
+ "seconds": {
+  "view_scoring": 3.9,
+  "label_smoothing": 1.3,
+  "xatlas": 247.2,
+  "bake": 30.3
+ }
+}

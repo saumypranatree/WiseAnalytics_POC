@@ -1,0 +1,53 @@
+{
+  "job_id": "20261007-125046-4d3a8c",
+  "state": "done",
+  "progress": 1.0,
+  "message": "done: 8 objects",
+  "log_tail": [
+    "  window                   12",
+    "  cabinet                  0",
+    "  decorative plate         28",
+    "  plywood panel            35",
+    "  artificial turf          25",
+    "$ /home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python -u /home/saumy/pranatree_work/room_scan/open_vocab_3d/lift_cluster.py --renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/renders --detections=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/detections --out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/scene_objects.json --min-score=0.35 --min-score-per-class=window=0.4 --max-extent-per-class=window=2.5,decorative plate=0.5,plywood panel=1.5,artificial turf=1.5,cabinet=2.5 --det-cluster-classes=decorative plate --min-views=3 --extended --save-ply=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/clusters.ply",
+    "[lift_cluster] 40 frames, 99 detections",
+    "[lift_cluster] artificial turf: dropped 4 detections larger than 1.50 m in 3D",
+    "[lift_cluster] decorative plate: dropped 8 detections larger than 0.50 m in 3D",
+    "[lift_cluster] plywood panel: dropped 10 detections larger than 1.50 m in 3D",
+    "[lift_cluster] artificial turf: 108273 points -> 2 clusters, 2 kept",
+    "[lift_cluster] decorative plate: 19459 points -> 3 clusters, 3 kept",
+    "[lift_cluster] drop plywood panel cluster @ [0.28 0.85 1.28]: 0 views < 3",
+    "[lift_cluster] drop plywood panel cluster @ [0.65 0.61 1.03]: 0 views < 3",
+    "[lift_cluster] drop plywood panel cluster @ [0.58 0.84 1.34]: 0 views < 3",
+    "[lift_cluster] drop plywood panel cluster @ [0.86 0.49 1.04]: 0 views < 3",
+    "[lift_cluster] drop plywood panel cluster @ [1.29 0.86 0.53]: 0 views < 3",
+    "[lift_cluster] drop plywood panel cluster @ [1.2  0.83 0.94]: 0 views < 3",
+    "[lift_cluster] plywood panel: 158764 points -> 8 clusters, 2 kept",
+    "[lift_cluster] drop window cluster @ [ 1.03 -0.23  1.66]: 1 views < 3",
+    "[lift_cluster] drop window cluster @ [0.28 1.16 1.83]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [0.74 0.59 0.96]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [0.61 0.96 1.05]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [0.82 0.5  1.02]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [0.84 0.74 1.98]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [0.92 0.39 1.22]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [1.15 0.9  0.69]: 0 views < 3",
+    "[lift_cluster] drop window cluster @ [ 2.07 -0.06  1.35]: 0 views < 3",
+    "[lift_cluster] window: 181409 points -> 10 clusters, 1 kept",
+    "[lift_cluster] wrote 8 objects -> /home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c/scene_objects.json"
+  ],
+  "num_objects": 8,
+  "request": {
+    "prompts": [
+      "window",
+      "cabinet",
+      "decorative plate",
+      "plywood panel",
+      "artificial turf"
+    ],
+    "num_views": null,
+    "mode": null
+  },
+  "run_dir": "/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/runs/20261007-125046-4d3a8c",
+  "created": 1791357646.0847094,
+  "finished": 1791357726.5238495
+}

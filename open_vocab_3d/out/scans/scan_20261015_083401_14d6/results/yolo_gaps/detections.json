@@ -1,0 +1,10 @@
+{
+ "views": 15,
+ "detections": [],
+ "camera": {
+  "width": 1280,
+  "height": 960,
+  "hfov_deg": 60.0,
+  "distance_m": 1.2
+ }
+}

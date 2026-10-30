@@ -42,4 +42,4 @@ This writes `data/split/{train,valid,test}/` in YOLO format and a COCO `_annotat
 .venv/bin/python scripts/evaluate.py
 ```
 
-Trained weights are written to `runs/` and are not committed (`*.pt`, `*.pth`, `*.ckpt`). Re-run training to regenerate them.
+Trained weights are in `runs/` and are stored with Git LFS. Re-run training to regenerate them.

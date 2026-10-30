@@ -1,0 +1,143 @@
+{
+  "job_id": "job_20261007_231137_8a8627",
+  "scan_id": "scan_20261007_231137_fd6c",
+  "prompts": [
+    "table",
+    "bench seat",
+    "cushion",
+    "laptop",
+    "backpack",
+    "headphones",
+    "phone",
+    "decorative plate",
+    "window",
+    "light switch",
+    "hanging plant",
+    "artificial turf",
+    "plywood panel"
+  ],
+  "started_at": "2026-10-07T23:11:37+05:30",
+  "config": "/home/saumy/pranatree_work/room_scan/open_vocab_3d/app/pipeline_config.json",
+  "state": "done",
+  "finished_at": "2026-10-07T23:19:43+05:30",
+  "total_seconds": 485.4,
+  "focus_centres": [
+    {
+      "centre": [
+        1.0566,
+        -0.6207,
+        -1.3498
+      ],
+      "members": [
+        "table@[1.09, -0.47, -1.38]",
+        "bench seat@[1.6, -0.75, -0.99]",
+        "bench seat@[0.36, -0.73, -1.72]"
+      ],
+      "views": 64
+    }
+  ],
+  "focus_centre_source": "anchor",
+  "pass2_skipped_reason": null,
+  "num_objects": 20,
+  "result": "/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/results/scene_objects_raw.json",
+  "stage_seconds": {
+    "render1": 39.1,
+    "detect1": 190.6,
+    "lift1": 5.1,
+    "render2": 51.7,
+    "detect2": 184.6,
+    "lift": 14.2,
+    "export": 0.0
+  },
+  "commands": {
+    "render1": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/render_views_lite.py",
+      "--usd=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/scene.usda",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/renders",
+      "--width=1280",
+      "--height=720",
+      "--mode=dome",
+      "--num-views=30",
+      "--rings=15,35,55",
+      "--radius-scale=0.4"
+    ],
+    "detect1": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/detect_2d.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/renders",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/detections",
+      "--prompts=table,bench seat,cushion,laptop,backpack,headphones,phone,decorative plate,window,light switch,hanging plant,artificial turf,plywood panel",
+      "--model-id=IDEA-Research/grounding-dino-base",
+      "--box-threshold=0.2",
+      "--text-threshold=0.25",
+      "--prompt-group-size=2",
+      "--sam",
+      "--device=auto",
+      "--vis"
+    ],
+    "lift1": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/lift_cluster.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/renders",
+      "--detections=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/detections",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/scene_objects.json",
+      "--min-score=0.3",
+      "--max-extent-per-class=table=1.6,bench seat=1.4,cushion=0.6,laptop=0.6,backpack=0.8,headphones=0.4,phone=0.3,decorative plate=0.5,window=2.5,light switch=0.25,hanging plant=1.0,artificial turf=1.5,plywood panel=1.5",
+      "--det-cluster-classes=decorative plate,phone,headphones,light switch,cushion",
+      "--min-views=5",
+      "--min-views-per-class=table=10,bench seat=10,phone=6",
+      "--cross-class-nms",
+      "--nms-iou=0.3",
+      "--extended",
+      "--save-ply=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass1/clusters.ply"
+    ],
+    "render2": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/render_views_lite.py",
+      "--usd=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/scene.usda",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass2/renders",
+      "--width=1280",
+      "--height=720",
+      "--mode=focus",
+      "--focus-rings=25,45,65",
+      "--focus-domes=1.0566,-0.6207,-1.3498,2.0,30"
+    ],
+    "detect2": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/detect_2d.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass2/renders",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/pass2/detections",
+      "--prompts=table,bench seat,cushion,laptop,backpack,headphones,phone,decorative plate,window,light switch,hanging plant,artificial turf,plywood panel",
+      "--model-id=IDEA-Research/grounding-dino-base",
+      "--box-threshold=0.2",
+      "--text-threshold=0.25",
+      "--prompt-group-size=2",
+      "--sam",
+      "--device=auto",
+      "--vis"
+    ],
+    "lift": [
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/.venv/bin/python",
+      "-u",
+      "/home/saumy/pranatree_work/room_scan/open_vocab_3d/lift_cluster.py",
+      "--renders=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/merged/renders",
+      "--detections=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/merged/detections",
+      "--out=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/merged/scene_objects.json",
+      "--min-score=0.3",
+      "--max-extent-per-class=table=1.6,bench seat=1.4,cushion=0.6,laptop=0.6,backpack=0.8,headphones=0.4,phone=0.3,decorative plate=0.5,window=2.5,light switch=0.25,hanging plant=1.0,artificial turf=1.5,plywood panel=1.5",
+      "--det-cluster-classes=decorative plate,phone,headphones,light switch,cushion",
+      "--min-views=5",
+      "--min-views-per-class=table=10,bench seat=10,phone=6",
+      "--cross-class-nms",
+      "--nms-iou=0.3",
+      "--extended",
+      "--save-ply=/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261007_231137_fd6c/runs/job_20261007_231137_8a8627/merged/clusters.ply"
+    ]
+  }
+}

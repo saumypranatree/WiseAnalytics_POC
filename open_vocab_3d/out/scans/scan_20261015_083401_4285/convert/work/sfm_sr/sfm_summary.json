@@ -1,0 +1,38 @@
+{
+ "args": {
+  "work": "/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261015_083401_4285/convert/work",
+  "max_image_size": 1600,
+  "overlap": 15,
+  "max_features": 8192,
+  "camera_model": "SIMPLE_RADIAL",
+  "camera_params": "1599.4,540.0,960.0,0",
+  "focal_factor": 0.833,
+  "fix_focal": false,
+  "threads": 12,
+  "name": "sfm_sr"
+ },
+ "num_keyframes": 153,
+ "models": {
+  "0": {
+   "registered": 150,
+   "points3D": 45207,
+   "mean_reproj_error": 0.7200334157271457,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1670.2503313576008,
+      540.0,
+      960.0,
+      0.033610565263526355
+     ]
+    }
+   }
+  }
+ },
+ "seconds": {
+  "extract": 28.1,
+  "match": 33.7,
+  "map": 98.6
+ }
+}

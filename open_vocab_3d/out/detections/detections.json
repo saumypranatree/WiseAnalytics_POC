@@ -1,0 +1,973 @@
+{
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "segmenter": "facebook/sam-vit-base",
+  "prompts": [
+    "window",
+    "cabinet",
+    "wall clock",
+    "decorative plate",
+    "shelf",
+    "door",
+    "lamp",
+    "chair",
+    "table",
+    "box"
+  ],
+  "box_threshold": 0.3,
+  "text_threshold": 0.25,
+  "frames": [
+    {
+      "frame_id": "0000",
+      "detections": [
+        {
+          "det_id": "0000_00",
+          "class_name": "wall clock",
+          "score": 0.4166,
+          "bbox_xyxy": [
+            586.04,
+            87.27,
+            848.5,
+            481.82
+          ],
+          "mask": "masks/0000_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0001",
+      "detections": [
+        {
+          "det_id": "0001_00",
+          "class_name": "wall clock",
+          "score": 0.4395,
+          "bbox_xyxy": [
+            673.45,
+            91.94,
+            938.35,
+            526.95
+          ],
+          "mask": "masks/0001_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0002",
+      "detections": [
+        {
+          "det_id": "0002_00",
+          "class_name": "cabinet",
+          "score": 0.3795,
+          "bbox_xyxy": [
+            690.84,
+            102.09,
+            1106.84,
+            563.56
+          ],
+          "mask": "masks/0002_00.png"
+        },
+        {
+          "det_id": "0002_01",
+          "class_name": "window",
+          "score": 0.3286,
+          "bbox_xyxy": [
+            690.97,
+            102.67,
+            1106.74,
+            563.16
+          ],
+          "mask": "masks/0002_01.png"
+        },
+        {
+          "det_id": "0002_02",
+          "class_name": "door",
+          "score": 0.3279,
+          "bbox_xyxy": [
+            692.61,
+            192.17,
+            792.05,
+            497.41
+          ],
+          "mask": "masks/0002_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0003",
+      "detections": [
+        {
+          "det_id": "0003_00",
+          "class_name": "decorative plate",
+          "score": 0.4955,
+          "bbox_xyxy": [
+            802.97,
+            341.95,
+            852.16,
+            388.15
+          ],
+          "mask": "masks/0003_00.png"
+        },
+        {
+          "det_id": "0003_01",
+          "class_name": "wall clock",
+          "score": 0.3373,
+          "bbox_xyxy": [
+            642.27,
+            120.69,
+            1189.46,
+            579.17
+          ],
+          "mask": "masks/0003_01.png"
+        },
+        {
+          "det_id": "0003_02",
+          "class_name": "window",
+          "score": 0.3091,
+          "bbox_xyxy": [
+            668.47,
+            136.14,
+            1054.64,
+            530.06
+          ],
+          "mask": "masks/0003_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0004",
+      "detections": [
+        {
+          "det_id": "0004_00",
+          "class_name": "decorative plate",
+          "score": 0.4678,
+          "bbox_xyxy": [
+            760.96,
+            369.62,
+            806.49,
+            420.27
+          ],
+          "mask": "masks/0004_00.png"
+        },
+        {
+          "det_id": "0004_01",
+          "class_name": "window",
+          "score": 0.3928,
+          "bbox_xyxy": [
+            452.23,
+            111.39,
+            1102.25,
+            681.43
+          ],
+          "mask": "masks/0004_01.png"
+        },
+        {
+          "det_id": "0004_02",
+          "class_name": "wall clock",
+          "score": 0.348,
+          "bbox_xyxy": [
+            728.93,
+            408.85,
+            780.46,
+            468.33
+          ],
+          "mask": "masks/0004_02.png"
+        },
+        {
+          "det_id": "0004_03",
+          "class_name": "wall clock",
+          "score": 0.3259,
+          "bbox_xyxy": [
+            760.99,
+            369.6,
+            806.79,
+            420.21
+          ],
+          "mask": "masks/0004_03.png"
+        },
+        {
+          "det_id": "0004_04",
+          "class_name": "door",
+          "score": 0.3085,
+          "bbox_xyxy": [
+            528.81,
+            216.63,
+            668.1,
+            528.72
+          ],
+          "mask": "masks/0004_04.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0005",
+      "detections": [
+        {
+          "det_id": "0005_00",
+          "class_name": "box",
+          "score": 0.4667,
+          "bbox_xyxy": [
+            438.94,
+            213.0,
+            643.93,
+            377.5
+          ],
+          "mask": "masks/0005_00.png"
+        },
+        {
+          "det_id": "0005_01",
+          "class_name": "window",
+          "score": 0.3417,
+          "bbox_xyxy": [
+            652.88,
+            151.13,
+            879.24,
+            280.59
+          ],
+          "mask": "masks/0005_01.png"
+        },
+        {
+          "det_id": "0005_02",
+          "class_name": "wall clock",
+          "score": 0.3256,
+          "bbox_xyxy": [
+            418.03,
+            113.7,
+            879.85,
+            706.49
+          ],
+          "mask": "masks/0005_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0006",
+      "detections": [
+        {
+          "det_id": "0006_00",
+          "class_name": "wall clock",
+          "score": 0.385,
+          "bbox_xyxy": [
+            146.27,
+            115.61,
+            1076.69,
+            613.36
+          ],
+          "mask": "masks/0006_00.png"
+        },
+        {
+          "det_id": "0006_01",
+          "class_name": "door",
+          "score": 0.3782,
+          "bbox_xyxy": [
+            432.48,
+            202.4,
+            601.12,
+            486.44
+          ],
+          "mask": "masks/0006_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0007",
+      "detections": [
+        {
+          "det_id": "0007_00",
+          "class_name": "door",
+          "score": 0.4606,
+          "bbox_xyxy": [
+            492.66,
+            188.43,
+            586.97,
+            486.17
+          ],
+          "mask": "masks/0007_00.png"
+        },
+        {
+          "det_id": "0007_01",
+          "class_name": "wall clock",
+          "score": 0.3041,
+          "bbox_xyxy": [
+            62.88,
+            115.72,
+            590.61,
+            552.26
+          ],
+          "mask": "masks/0007_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0008",
+      "detections": [
+        {
+          "det_id": "0008_00",
+          "class_name": "wall clock",
+          "score": 0.371,
+          "bbox_xyxy": [
+            174.76,
+            95.29,
+            1050.66,
+            712.47
+          ],
+          "mask": "masks/0008_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0009",
+      "detections": [
+        {
+          "det_id": "0009_00",
+          "class_name": "door",
+          "score": 0.3908,
+          "bbox_xyxy": [
+            431.36,
+            169.04,
+            542.83,
+            403.04
+          ],
+          "mask": "masks/0009_00.png"
+        },
+        {
+          "det_id": "0009_01",
+          "class_name": "wall clock",
+          "score": 0.315,
+          "bbox_xyxy": [
+            391.78,
+            91.76,
+            847.94,
+            477.88
+          ],
+          "mask": "masks/0009_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0010",
+      "detections": [
+        {
+          "det_id": "0010_00",
+          "class_name": "wall clock",
+          "score": 0.4898,
+          "bbox_xyxy": [
+            389.31,
+            482.63,
+            479.95,
+            558.59
+          ],
+          "mask": "masks/0010_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0011",
+      "detections": [
+        {
+          "det_id": "0011_00",
+          "class_name": "box",
+          "score": 0.4328,
+          "bbox_xyxy": [
+            700.58,
+            105.76,
+            853.71,
+            205.85
+          ],
+          "mask": "masks/0011_00.png"
+        },
+        {
+          "det_id": "0011_01",
+          "class_name": "wall clock",
+          "score": 0.3916,
+          "bbox_xyxy": [
+            662.09,
+            24.94,
+            877.03,
+            475.04
+          ],
+          "mask": "masks/0011_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0012",
+      "detections": [
+        {
+          "det_id": "0012_00",
+          "class_name": "wall clock",
+          "score": 0.4481,
+          "bbox_xyxy": [
+            684.48,
+            66.44,
+            1073.0,
+            548.08
+          ],
+          "mask": "masks/0012_00.png"
+        },
+        {
+          "det_id": "0012_01",
+          "class_name": "decorative plate",
+          "score": 0.3591,
+          "bbox_xyxy": [
+            685.91,
+            67.94,
+            1070.55,
+            547.09
+          ],
+          "mask": "masks/0012_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0013",
+      "detections": [
+        {
+          "det_id": "0013_00",
+          "class_name": "decorative plate",
+          "score": 0.4825,
+          "bbox_xyxy": [
+            800.37,
+            331.75,
+            847.34,
+            371.39
+          ],
+          "mask": "masks/0013_00.png"
+        },
+        {
+          "det_id": "0013_01",
+          "class_name": "window",
+          "score": 0.348,
+          "bbox_xyxy": [
+            687.61,
+            153.29,
+            1103.18,
+            598.24
+          ],
+          "mask": "masks/0013_01.png"
+        },
+        {
+          "det_id": "0013_02",
+          "class_name": "wall clock",
+          "score": 0.3369,
+          "bbox_xyxy": [
+            683.67,
+            142.83,
+            1190.84,
+            601.34
+          ],
+          "mask": "masks/0013_02.png"
+        },
+        {
+          "det_id": "0013_03",
+          "class_name": "lamp",
+          "score": 0.3225,
+          "bbox_xyxy": [
+            825.55,
+            358.29,
+            889.21,
+            409.59
+          ],
+          "mask": "masks/0013_03.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0014",
+      "detections": [
+        {
+          "det_id": "0014_00",
+          "class_name": "wall clock",
+          "score": 0.3631,
+          "bbox_xyxy": [
+            387.85,
+            24.31,
+            1107.06,
+            713.87
+          ],
+          "mask": "masks/0014_00.png"
+        },
+        {
+          "det_id": "0014_01",
+          "class_name": "window",
+          "score": 0.3443,
+          "bbox_xyxy": [
+            555.04,
+            197.77,
+            1002.79,
+            708.8
+          ],
+          "mask": "masks/0014_01.png"
+        },
+        {
+          "det_id": "0014_02",
+          "class_name": "decorative plate",
+          "score": 0.3155,
+          "bbox_xyxy": [
+            806.03,
+            439.13,
+            878.16,
+            503.58
+          ],
+          "mask": "masks/0014_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0015",
+      "detections": [
+        {
+          "det_id": "0015_00",
+          "class_name": "wall clock",
+          "score": 0.391,
+          "bbox_xyxy": [
+            431.87,
+            190.16,
+            824.32,
+            716.55
+          ],
+          "mask": "masks/0015_00.png"
+        },
+        {
+          "det_id": "0015_01",
+          "class_name": "window",
+          "score": 0.3382,
+          "bbox_xyxy": [
+            528.52,
+            24.69,
+            810.0,
+            217.24
+          ],
+          "mask": "masks/0015_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0016",
+      "detections": [
+        {
+          "det_id": "0016_00",
+          "class_name": "wall clock",
+          "score": 0.3942,
+          "bbox_xyxy": [
+            685.37,
+            51.55,
+            1026.15,
+            341.21
+          ],
+          "mask": "masks/0016_00.png"
+        },
+        {
+          "det_id": "0016_01",
+          "class_name": "box",
+          "score": 0.392,
+          "bbox_xyxy": [
+            419.27,
+            239.29,
+            610.15,
+            379.23
+          ],
+          "mask": "masks/0016_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0017",
+      "detections": [
+        {
+          "det_id": "0017_00",
+          "class_name": "door",
+          "score": 0.323,
+          "bbox_xyxy": [
+            460.75,
+            167.28,
+            589.79,
+            467.31
+          ],
+          "mask": "masks/0017_00.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0018",
+      "detections": [
+        {
+          "det_id": "0018_00",
+          "class_name": "wall clock",
+          "score": 0.3675,
+          "bbox_xyxy": [
+            919.49,
+            153.64,
+            1119.89,
+            609.62
+          ],
+          "mask": "masks/0018_00.png"
+        },
+        {
+          "det_id": "0018_01",
+          "class_name": "decorative plate",
+          "score": 0.3092,
+          "bbox_xyxy": [
+            311.0,
+            327.69,
+            590.07,
+            481.0
+          ],
+          "mask": "masks/0018_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0019",
+      "detections": [
+        {
+          "det_id": "0019_00",
+          "class_name": "wall clock",
+          "score": 0.3347,
+          "bbox_xyxy": [
+            363.62,
+            74.49,
+            675.47,
+            437.72
+          ],
+          "mask": "masks/0019_00.png"
+        },
+        {
+          "det_id": "0019_01",
+          "class_name": "decorative plate",
+          "score": 0.3346,
+          "bbox_xyxy": [
+            391.37,
+            267.1,
+            674.54,
+            436.67
+          ],
+          "mask": "masks/0019_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0020",
+      "detections": [
+        {
+          "det_id": "0020_00",
+          "class_name": "wall clock",
+          "score": 0.3858,
+          "bbox_xyxy": [
+            469.46,
+            1.14,
+            760.3,
+            386.11
+          ],
+          "mask": "masks/0020_00.png"
+        },
+        {
+          "det_id": "0020_01",
+          "class_name": "lamp",
+          "score": 0.3343,
+          "bbox_xyxy": [
+            481.49,
+            655.16,
+            548.17,
+            718.9
+          ],
+          "mask": "masks/0020_01.png"
+        },
+        {
+          "det_id": "0020_02",
+          "class_name": "decorative plate",
+          "score": 0.3246,
+          "bbox_xyxy": [
+            493.16,
+            145.68,
+            757.18,
+            386.12
+          ],
+          "mask": "masks/0020_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0021",
+      "detections": [
+        {
+          "det_id": "0021_00",
+          "class_name": "box",
+          "score": 0.3707,
+          "bbox_xyxy": [
+            657.75,
+            8.66,
+            842.11,
+            193.7
+          ],
+          "mask": "masks/0021_00.png"
+        },
+        {
+          "det_id": "0021_01",
+          "class_name": "wall clock",
+          "score": 0.3362,
+          "bbox_xyxy": [
+            651.09,
+            4.36,
+            878.78,
+            417.13
+          ],
+          "mask": "masks/0021_01.png"
+        },
+        {
+          "det_id": "0021_02",
+          "class_name": "window",
+          "score": 0.308,
+          "bbox_xyxy": [
+            652.18,
+            4.89,
+            877.61,
+            416.85
+          ],
+          "mask": "masks/0021_02.png"
+        },
+        {
+          "det_id": "0021_03",
+          "class_name": "lamp",
+          "score": 0.3013,
+          "bbox_xyxy": [
+            213.79,
+            466.14,
+            312.01,
+            583.64
+          ],
+          "mask": "masks/0021_03.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0022",
+      "detections": [
+        {
+          "det_id": "0022_00",
+          "class_name": "wall clock",
+          "score": 0.4803,
+          "bbox_xyxy": [
+            680.91,
+            33.01,
+            1061.52,
+            509.13
+          ],
+          "mask": "masks/0022_00.png"
+        },
+        {
+          "det_id": "0022_01",
+          "class_name": "decorative plate",
+          "score": 0.3344,
+          "bbox_xyxy": [
+            682.17,
+            37.13,
+            1056.06,
+            506.5
+          ],
+          "mask": "masks/0022_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0023",
+      "detections": [
+        {
+          "det_id": "0023_00",
+          "class_name": "wall clock",
+          "score": 0.3952,
+          "bbox_xyxy": [
+            689.51,
+            166.51,
+            1190.51,
+            580.83
+          ],
+          "mask": "masks/0023_00.png"
+        },
+        {
+          "det_id": "0023_01",
+          "class_name": "decorative plate",
+          "score": 0.36,
+          "bbox_xyxy": [
+            797.66,
+            313.33,
+            841.62,
+            345.37
+          ],
+          "mask": "masks/0023_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0024",
+      "detections": [
+        {
+          "det_id": "0024_00",
+          "class_name": "wall clock",
+          "score": 0.3612,
+          "bbox_xyxy": [
+            586.96,
+            265.87,
+            1126.94,
+            696.27
+          ],
+          "mask": "masks/0024_00.png"
+        },
+        {
+          "det_id": "0024_01",
+          "class_name": "decorative plate",
+          "score": 0.3253,
+          "bbox_xyxy": [
+            790.82,
+            408.83,
+            839.18,
+            441.49
+          ],
+          "mask": "masks/0024_01.png"
+        },
+        {
+          "det_id": "0024_02",
+          "class_name": "decorative plate",
+          "score": 0.3026,
+          "bbox_xyxy": [
+            733.21,
+            499.57,
+            848.87,
+            545.15
+          ],
+          "mask": "masks/0024_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0025",
+      "detections": [
+        {
+          "det_id": "0025_00",
+          "class_name": "window",
+          "score": 0.456,
+          "bbox_xyxy": [
+            482.51,
+            0.02,
+            765.97,
+            241.7
+          ],
+          "mask": "masks/0025_00.png"
+        },
+        {
+          "det_id": "0025_01",
+          "class_name": "wall clock",
+          "score": 0.4316,
+          "bbox_xyxy": [
+            449.29,
+            297.27,
+            867.26,
+            717.61
+          ],
+          "mask": "masks/0025_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0026",
+      "detections": [
+        {
+          "det_id": "0026_00",
+          "class_name": "door",
+          "score": 0.3977,
+          "bbox_xyxy": [
+            420.23,
+            449.84,
+            619.6,
+            718.53
+          ],
+          "mask": "masks/0026_00.png"
+        },
+        {
+          "det_id": "0026_01",
+          "class_name": "wall clock",
+          "score": 0.3869,
+          "bbox_xyxy": [
+            652.3,
+            4.75,
+            1004.19,
+            241.87
+          ],
+          "mask": "masks/0026_01.png"
+        },
+        {
+          "det_id": "0026_02",
+          "class_name": "window",
+          "score": 0.3293,
+          "bbox_xyxy": [
+            654.13,
+            4.96,
+            1004.33,
+            240.9
+          ],
+          "mask": "masks/0026_02.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0027",
+      "detections": []
+    },
+    {
+      "frame_id": "0028",
+      "detections": [
+        {
+          "det_id": "0028_00",
+          "class_name": "wall clock",
+          "score": 0.3277,
+          "bbox_xyxy": [
+            213.74,
+            63.13,
+            594.1,
+            491.42
+          ],
+          "mask": "masks/0028_00.png"
+        },
+        {
+          "det_id": "0028_01",
+          "class_name": "wall clock",
+          "score": 0.3006,
+          "bbox_xyxy": [
+            907.25,
+            158.5,
+            1130.26,
+            609.77
+          ],
+          "mask": "masks/0028_01.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "0029",
+      "detections": [
+        {
+          "det_id": "0029_00",
+          "class_name": "wall clock",
+          "score": 0.4944,
+          "bbox_xyxy": [
+            316.87,
+            30.35,
+            655.65,
+            402.92
+          ],
+          "mask": "masks/0029_00.png"
+        },
+        {
+          "det_id": "0029_01",
+          "class_name": "decorative plate",
+          "score": 0.4137,
+          "bbox_xyxy": [
+            362.88,
+            202.11,
+            651.09,
+            400.4
+          ],
+          "mask": "masks/0029_01.png"
+        }
+      ]
+    }
+  ]
+}

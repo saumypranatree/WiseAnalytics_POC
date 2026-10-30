@@ -1,0 +1,15 @@
+{
+  "job_id": "job_20261015_083401_b056d0",
+  "seconds": {
+    "extract": 167.3,
+    "sfm": 160.6,
+    "depth": 14.2,
+    "fuse": 8.1,
+    "gravity": 1.7,
+    "texture": 84.8,
+    "export": 0.5
+  },
+  "height_m_assumed": 1.9,
+  "video_to_3d": "/home/saumy/pranatree_work/room_scan/video_to_3d",
+  "finished_at": "2026-10-15T08:54:01+0530"
+}

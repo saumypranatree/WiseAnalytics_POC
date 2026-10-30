@@ -1,0 +1,76 @@
+{
+ "args": {
+  "work": "/home/saumy/pranatree_work/room_scan/open_vocab_3d/out/scans/scan_20261015_083401_97b9/convert/work",
+  "max_image_size": 1600,
+  "overlap": 15,
+  "max_features": 8192,
+  "camera_model": "SIMPLE_RADIAL",
+  "camera_params": "1066.2,360.0,640.0,0",
+  "focal_factor": 0.833,
+  "fix_focal": false,
+  "threads": 12,
+  "name": "sfm_sr"
+ },
+ "num_keyframes": 236,
+ "models": {
+  "0": {
+   "registered": 2,
+   "points3D": 1797,
+   "mean_reproj_error": 0.49668778274426295,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      2524.925706615708,
+      360.0,
+      640.0,
+      3.189929845018063
+     ]
+    }
+   }
+  },
+  "1": {
+   "registered": 122,
+   "points3D": 20365,
+   "mean_reproj_error": 0.6031034923343362,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1017.4225300165886,
+      360.0,
+      640.0,
+      0.029649400971060842
+     ]
+    }
+   }
+  },
+  "2": {
+   "registered": 66,
+   "points3D": 10542,
+   "mean_reproj_error": 0.6485774629716715,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1017.8830014333046,
+      360.0,
+      640.0,
+      0.02849260702654215
+     ]
+    }
+   }
+  }
+ },
+ "used_model": {
+  "original_id": "1",
+  "saved_as": "sparse/0",
+  "registered": 122,
+  "coverage": 0.517
+ },
+ "seconds": {
+  "extract": 18.2,
+  "match": 34.8,
+  "map": 49.4
+ }
+}

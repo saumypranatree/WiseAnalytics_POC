@@ -1,0 +1,20 @@
+{
+  "scene_id": "room_scan_upright",
+  "usd_path": "/home/saumy/pranatree_work/room_scan/open_vocab_3d/scenes/room_scan_upright.usda",
+  "up_axis": "Y",
+  "meters_per_unit": 1.0,
+  "bounds": {
+    "min": [
+      -0.5030990242958069,
+      -1.3304599523544312,
+      -2.672869920730591
+    ],
+    "max": [
+      5.454529762268066,
+      1.7906700372695923,
+      0.2525010108947754
+    ]
+  },
+  "num_meshes": 3,
+  "num_triangles": 17566
+}

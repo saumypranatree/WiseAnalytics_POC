@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "scan_id": "scan_20261007_231137_fd6c",
+  "source_file": "room_scan.usdz",
+  "source_path": "source/room_scan.usdz",
+  "source_bytes": 2877358,
+  "source_sha256": "970a753e242544e9476e27424283d85d38bd6bc2337f7331f33e5a1ef928537b",
+  "uploaded_at": "2026-10-07T23:11:37+05:30",
+  "root_layer": "extracted/room_scan.usda",
+  "stage": "scene.usda",
+  "up_axis": "Y",
+  "meters_per_unit": 1.0,
+  "default_prim": "/World",
+  "reference_prim": null,
+  "reference_has_xform": false,
+  "num_meshes": 3,
+  "num_triangles": 17566,
+  "orientation": {
+    "flip_applied": true,
+    "source": "manual",
+    "flip_recommended": true,
+    "confidence": "high",
+    "evidence": {
+      "up_axis_vector": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "vertical_min_m": -1.7907,
+      "vertical_max_m": 1.3305,
+      "vertical_extent_m": 3.1211,
+      "total_area_m2": 29.683,
+      "horizontal_area_m2": 10.678,
+      "dominant_surface_height_m": 1.2156,
+      "dominant_surface_area_m2": 5.187,
+      "dominant_surface_rel_height": 0.9632,
+      "dominant_surface_mean_normal_up": -0.9877,
+      "dominant_surface_share_of_horizontal": 0.486,
+      "support_band_m": [
+        0.25,
+        1.25
+      ],
+      "support_up_facing_area_m2": 0.037,
+      "support_down_facing_area_m2": 2.034,
+      "nonhorizontal_mean_rel_height": 0.5595,
+      "votes": {
+        "position": 1.0,
+        "normal": 1.0,
+        "support": 0.9646,
+        "mass": 0.5946
+      },
+      "weights": {
+        "position": 1.0,
+        "normal": 1.0,
+        "support": 1.0,
+        "mass": 0.5
+      },
+      "score": 3.2619
+    },
+    "updated_at": "2026-10-17T13:22:24+05:30"
+  },
+  "status": "done",
+  "stale": true,
+  "scene_bounds": {
+    "min": [
+      -0.5031,
+      -1.3305,
+      -2.6729
+    ],
+    "max": [
+      5.4545,
+      1.7907,
+      0.2525
+    ]
+  },
+  "progress": 1.0,
+  "job_stage": "export",
+  "message": "done: 20 objects",
+  "prompts": [
+    "table",
+    "bench seat",
+    "cushion",
+    "laptop",
+    "backpack",
+    "headphones",
+    "phone",
+    "decorative plate",
+    "window",
+    "light switch",
+    "hanging plant",
+    "artificial turf",
+    "plywood panel"
+  ],
+  "num_objects": 20,
+  "error": null,
+  "updated_at": "2026-10-17T13:22:24+05:30",
+  "glb_error": null,
+  "job_id": "job_20261012_151654_7e7bb6",
+  "queued_at": "2026-10-12T15:16:54+05:30",
+  "reviewed_at": null,
+  "source_video": {
+    "file": "room_scan.mp4",
+    "path": "source/video.mp4",
+    "bytes": 4100934,
+    "content_type": "video/mp4",
+    "attached_at": "2026-10-09T17:17:06+05:30"
+  }
+}

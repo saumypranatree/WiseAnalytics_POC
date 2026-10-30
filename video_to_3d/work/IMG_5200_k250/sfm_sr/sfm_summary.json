@@ -1,0 +1,70 @@
+{
+ "args": {
+  "work": "work/IMG_5200_k250",
+  "max_image_size": 1600,
+  "overlap": 15,
+  "max_features": 8192,
+  "camera_model": "SIMPLE_RADIAL",
+  "camera_params": "1066.2,360.0,640.0,0",
+  "focal_factor": 0.833,
+  "fix_focal": false,
+  "threads": 12,
+  "name": "sfm_sr"
+ },
+ "num_keyframes": 250,
+ "models": {
+  "0": {
+   "registered": 129,
+   "points3D": 22023,
+   "mean_reproj_error": 0.5901992275380624,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1017.4486275575251,
+      360.0,
+      640.0,
+      0.030422415001831054
+     ]
+    }
+   }
+  },
+  "1": {
+   "registered": 48,
+   "points3D": 10646,
+   "mean_reproj_error": 0.8673626196143159,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1146.2470890444777,
+      360.0,
+      640.0,
+      0.06909542400541502
+     ]
+    }
+   }
+  },
+  "2": {
+   "registered": 25,
+   "points3D": 2878,
+   "mean_reproj_error": 0.7619959150968767,
+   "cameras": {
+    "1": {
+     "model": "SIMPLE_RADIAL",
+     "params": [
+      1022.0614251870136,
+      360.0,
+      640.0,
+      0.027216709808717637
+     ]
+    }
+   }
+  }
+ },
+ "seconds": {
+  "extract": 20.6,
+  "match": 54.8,
+  "map": 173.3
+ }
+}
